@@ -11,7 +11,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// Created by Jason Huggins
 	/// Modified by Jason Huggins (11/11/2021)
 	/// 
-	/// TODO: Set data annotations for attributes based on ERD.
+	/// TODO: Set data annotations for properties based on ERD.
 	/// </summary>
 	public class Staff
     {
