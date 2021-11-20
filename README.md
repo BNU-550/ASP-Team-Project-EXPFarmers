@@ -1,4 +1,5 @@
-# CO550 - ASP.NET Team Project
+# CO550 - ASP.NET Core Razor Team Project
+### "DigiGame" E-commerce Web Application
 ## Team Name: EXPFarmers
 Project Manager: Tyronne Bradburn<br>
 Designer: Dan Hale<br>
