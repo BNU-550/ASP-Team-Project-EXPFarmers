@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
 {
@@ -10,30 +11,32 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// on the storefront.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (11/11/2021)
-	/// 
-	/// TODO: Set data annotations for properties based on ERD.
+	/// Modified by Jason Huggins (20/11/2021)
 	/// </summary>
 	public class Order
 	{
 		/// <summary>
 		/// The order's ID, marked as the primary key.
 		/// </summary>
+		[Key]
 		public int OrderID { get; set; }
 
 		/// <summary>
 		/// The order's creation date.
 		/// </summary>
+		[Display(Name = "Date Created"), DataType(DataType.Date), Required]
 		public DateTime DateCreated { get; set; }
 
 		/// <summary>
 		/// The order's dispatch date.
 		/// </summary>
+		[Display(Name = "Dispatch Date"), DataType(DataType.Date)]
 		public DateTime DispatchDate { get; set; }
 
 		/// <summary>
 		/// False if the order hasn't been paid for yet (e.g. the customer is still browsing for products) and true if it has.
 		/// </summary>
+		[Display(Name = "Paid?"), Required]
 		public bool IsPaid { get; set; }
 
 		/// TODO: Foreign keys and objects to link.

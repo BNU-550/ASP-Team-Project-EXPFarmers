@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
 {
@@ -9,41 +10,45 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// be linked with numerous people in the database. 
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (11/11/2021)
-	/// 
-	/// TODO: Set data annotations for properties based on ERD.
+	/// Modified by Jason Huggins (20/11/2021)
 	/// </summary>
 	public class Address
     {
 		/// <summary>
 		/// The ID of the address.
 		/// </summary>
+		[Key]
 		public int AddressID { get; set; }
 
 		/// <summary>
 		/// The house number.
 		/// </summary>
+		[Display(Name = "House No."), StringLength(5), Required]
 		public string HouseNo { get; set; }
 
 		/// <summary>
 		/// The name of the house but can be left blank if only a house number exists.
 		/// </summary>
+		[Display(Name = "House Name"), StringLength(50)]
 		public string HouseName { get; set; }
 
 		/// <summary>
 		/// The street address.
 		/// </summary>
+		[StringLength(75), Required]
 		public string Street { get; set; }
 
 		/// <summary>
 		/// The address' town/city.
 		/// </summary>
+		[StringLength(35), Required]
 		public string City { get; set; }
 
 		/// <summary>
 		/// The address' postcode.
 		/// </summary>
-		public String Postcode { get; set; }
+		[StringLength(15), Required]
+		public string Postcode { get; set; }
 
 		/// TODO: Not sure about this one so commenting out for now.
 		/// private Person[] person;

@@ -5,7 +5,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// <summary>
 	/// Represents the PEGI age ratings in the database.
 	/// 
-	/// Created  by Jason Huggins
+	/// Created by Jason Huggins
 	/// Modified by Jason Huggins (11/11/2021)
 	/// </summary>
 	public enum PEGI

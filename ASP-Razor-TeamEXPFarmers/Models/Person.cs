@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
 {
@@ -9,50 +10,56 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// staff member.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (11/11/2021)
-	/// 
-	/// TODO: Set data annotations for properties based on ERD.
+	/// Modified by Jason Huggins (20/11/2021)
 	/// </summary>
 	public class Person
 	{
 		/// <summary>
 		/// The person's ID, acting as the database's primary key.
 		/// </summary>
+		[Key]
 		public int PersonID { get; set; }
 
 		/// <summary>
 		/// The person's first name.
 		/// </summary>
+		[Display(Name = "First Name"), StringLength(20), Required]
 		public string FirstName { get; set; }
 
 		/// <summary>
 		/// The person's last name.
 		/// </summary>
+		[Display(Name = "Last Name"), StringLength(30), Required]
 		public string LastName { get; set; }
 
 		/// <summary>
 		/// The person's email address.
 		/// </summary>
+		[Display(Name = "Email Address"), StringLength(128), Required]
 		public string Email { get; set; }
 
 		/// <summary>
 		/// The person's contact number.
 		/// </summary>
+		[Display(Name = "Contact No."), StringLength(30), Required]
 		public string ContactNumber { get; set; }
 
 		/// <summary>
 		/// The person's date of birth.
 		/// </summary>
+		[Display(Name = "Date of Birth"), DataType(DataType.Date), Required]
 		public DateTime DateOfBirth { get; set; }
 
 		/// <summary>
 		/// True if the person is a customer and false otherwise.
 		/// </summary>
+		[Display(Name = "Customer?"), Required]
 		public bool IsCustomer { get; set; }
 
 		/// <summary>
 		/// True if the person is a staff member and false otherwise.
 		/// </summary>
+		[Display(Name = "Staff?"), Required]
 		public bool IsStaff { get; set; }
 
 		/// TODO: Not sure where these go yet, so commenting out for now.

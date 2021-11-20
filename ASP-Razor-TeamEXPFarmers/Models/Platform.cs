@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
 {
@@ -9,20 +10,20 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// and a video game can be on many platforms.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (11/11/2021)
-	/// 
-	/// TODO: Set data annotations for properties based on ERD.
+	/// Modified by Jason Huggins (20/11/2021)
 	/// </summary>
 	public class Platform
 	{
 		/// <summary>
 		/// The platform ID which is its name (e.g. PlayStation 4, Xbox One, Nintendo Switch).
 		/// </summary>
+		[Key]
 		public string PlatformID { get; set; }
 
 		/// <summary>
 		/// The video games associated with this platform.
 		/// </summary>
+		[Display(Name = "Associated Games")]
 		public VideoGame[] VideoGames { get; set; }
 	}
 }

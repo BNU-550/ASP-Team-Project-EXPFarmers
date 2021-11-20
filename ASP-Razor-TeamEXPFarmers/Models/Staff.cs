@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
 {
@@ -9,20 +10,20 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// as the staff member's job position and salary.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (11/11/2021)
-	/// 
-	/// TODO: Set data annotations for properties based on ERD.
+	/// Modified by Jason Huggins (20/11/2021)
 	/// </summary>
 	public class Staff
     {
 		/// <summary>
 		/// The staff member's current job position.
 		/// </summary>
+		[Display(Name = "Job Position"), StringLength(50), Required]
 		public string JobPosition { get; set; }
 
 		/// <summary>
 		/// The staff member's salary.
 		/// </summary>
+		[Required]
 		public decimal Salary { get; set; }
 
 		/// TODO: Work out where this goes.
