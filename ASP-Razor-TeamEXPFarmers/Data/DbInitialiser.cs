@@ -55,8 +55,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = false
                 }
 
-                // Example above, add the rest below.
-
                 new Person
                 {
                     PersonID = 3,
