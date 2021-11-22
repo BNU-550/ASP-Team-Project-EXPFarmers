@@ -10,7 +10,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// 
 	/// Created by Jason Huggins
 	/// Modified by Jason Huggins (22/11/2021).
-    /// Modified by Tyronne Bradburn (22/11/2021). Added 9 new Person. Updated comments. 
+    /// Modified by Tyronne Bradburn (22/11/2021). Added 9 new Person. Added 5 Staff memebers. Updated comments. 
     /// </summary>
     public static class DbInitialiser
     {
@@ -64,7 +64,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ContactNumber = "01753894521",
                     DateOfBirth = DateTime.Parse("1980-10-05"), // YYYY-MM-DD,
                     IsCustomer = true,
-                    IsStaff = false,
+                    IsStaff = false
                 }
 
                 new Person
@@ -76,7 +76,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ContactNumber = "01729863547",
                     DateOfBirth = DateTime.Parse("1994-01-12"), // YYYY-MM-DD,
                     IsCustomer = true,
-                    IsStaff = false,
+                    IsStaff = false
                 }
 
                 new Person
@@ -88,7 +88,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ContactNumber = "017734755569",
                     DateOfBirth = DateTime.Parse("1965-12-25"), // YYYY-MM-DD,
                     IsCustomer = true,
-                    IsStaff = false,
+                    IsStaff = false
                 }
 
                 new Person
@@ -100,7 +100,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ContactNumber = "01799420217",
                     DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD,
                     IsCustomer = true,
-                    IsStaff = false,
+                    IsStaff = false
                 }
 
                 new Person
@@ -112,7 +112,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ContactNumber = "01799420217",
                     DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD,
                     IsCustomer = true,
-                    IsStaff = false,
+                    IsStaff = false
                 }
 
                 new Person
@@ -124,7 +124,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ContactNumber = "01749628730",
                     DateOfBirth = DateTime.Parse("1985-05-31"), // YYYY-MM-DD,
                     IsCustomer = true,
-                    IsStaff = false,
+                    IsStaff = false
                 }
 
                 new Person
@@ -136,7 +136,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ContactNumber = "01796315207",
                     DateOfBirth = DateTime.Parse("1999-03-25"), // YYYY-MM-DD,
                     IsCustomer = true,
-                    IsStaff = false,
+                    IsStaff = false
                 }
 
                 new Person
@@ -148,7 +148,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ContactNumber = "017",
                     DateOfBirth = DateTime.Parse("1991-07-10"), // YYYY-MM-DD,
                     IsCustomer = true,
-                    IsStaff = false,
+                    IsStaff = false
                 }
 
                 new Person
@@ -158,9 +158,9 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "Clayton",
                     Email = "vanessaclayton@mail.com",
                     ContactNumber = "01715876320",
-                    DateOfBirth = DateTime.Parse("--"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1993-04-10"), // YYYY-MM-DD,
                     IsCustomer = true,
-                    IsStaff = false,
+                    IsStaff = false
                 }
             };
 
@@ -176,16 +176,70 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     PersonID = 2, // should be a different PersonID to "var people" above
                     FirstName = "Tyler",
                     LastName = "Smith",
-                    Email = "t.smith37@mail.com",
+                    Email = "t.smith01@mail.com",
                     ContactNumber = "01634892243",
-                    DateOfBirth = DateTime.Parse("1980-06-23"),
+                    DateOfBirth = DateTime.Parse("1980-06-23"), // YYYY-MM-DD,
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Manager",
                     Salary = 30250
                 }
 
-                // Example above, add the rest below.
+                new Staff
+                {
+                    PersonID = 4, // should be a different PersonID to "var people" above
+                    FirstName = "Johnathon",
+                    LastName = "Curtis",
+                    Email = "j.curtis02@mail.com",
+                    ContactNumber = "01675438602",
+                    DateOfBirth = DateTime.Parse("1985-12-13"), // YYYY-MM-DD,
+                    IsCustomer = false,
+                    IsStaff = true,
+                    JobPosition = "Manager",
+                    Salary = 30250
+                }
+
+                new Staff
+                {
+                    PersonID = 6, // should be a different PersonID to "var people" above
+                    FirstName = "Jake",
+                    LastName = "Shaw",
+                    Email = "j.shaw03@mail.com",
+                    ContactNumber = "01695423601",
+                    DateOfBirth = DateTime.Parse("1990-01-10"), // YYYY-MM-DD,
+                    IsCustomer = false,
+                    IsStaff = true,
+                    JobPosition = "Sales Rep",
+                    Salary = 25500
+                }
+
+                new Staff
+                {
+                    PersonID = 8, // should be a different PersonID to "var people" above
+                    FirstName = "Sid",
+                    LastName = "Harding",
+                    Email = "s.harding04@mail.com",
+                    ContactNumber = "016238465210,
+                    DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD,
+                    IsCustomer = false,
+                    IsStaff = true,
+                    JobPosition = "Sales Rep",
+                    Salary = 25500
+                }
+
+                new Staff
+                {
+                    PersonID = 10, // should be a different PersonID to "var people" above
+                    FirstName = "Harlow",
+                    LastName = "Holmes",
+                    Email = "h.holmes05@mail.com",
+                    ContactNumber = "016238465210,
+                    DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD,
+                    IsCustomer = false,
+                    IsStaff = true,
+                    JobPosition = "Sales Rep",
+                    Salary = 25500
+                }
             };
 
             /// TODO: Only add this in after scaffolding the database.
