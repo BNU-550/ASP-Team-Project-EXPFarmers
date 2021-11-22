@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
@@ -13,7 +14,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// each video game are in stock.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (20/11/2021)
+	/// Modified by Jason Huggins (22/11/2021)
 	/// </summary>
 	public class VideoGame
 	{
@@ -94,8 +95,8 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		[Display(Name = "Quantity In Stock"), Required]
 		public int InStockQuantity { get; set; }
 
-		/// TODO: Work out how to link these to this class.
-		/// private OrderItem[] orderItem;
-		/// private Platform[] platform;
+		// Navigation properties
+		public virtual ICollection<OrderItem> OrderItems { get; set; }
+		public virtual ICollection<Platform> Platforms { get; set; }
 	}
 }

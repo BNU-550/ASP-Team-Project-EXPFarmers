@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
@@ -10,7 +11,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// staff member.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (20/11/2021)
+	/// Modified by Jason Huggins (22/11/2021)
 	/// </summary>
 	public class Person
 	{
@@ -19,6 +20,10 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// </summary>
 		[Key]
 		public int PersonID { get; set; }
+
+		// Foreign keys
+		public int AddressID { get; set; }
+		public int PaymentID { get; set; }
 
 		/// <summary>
 		/// The person's first name.
@@ -62,9 +67,9 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		[Display(Name = "Staff?"), Required]
 		public bool IsStaff { get; set; }
 
-		/// TODO: Not sure where these go yet, so commenting out for now.
-		/// private Staff staff;
-		/// private Payment transaction;
-		/// private Address address;
+		// Navigation properties
+		public virtual Address Address { get; set; }
+		public virtual Payment Payment { get; set; }
+		public virtual ICollection<Order> Orders { get; set; }
 	}
 }

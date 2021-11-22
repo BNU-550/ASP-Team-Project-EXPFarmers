@@ -12,10 +12,18 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// acting as an item in the customer's basket. 
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (20/11/2021)
+	/// Modified by Jason Huggins (22/11/2021)
 	/// </summary>
 	public class OrderItem
 	{
+		// Primary key
+		[Key]
+		public int OrderItemID { get; set; }
+
+		// Foreign keys
+		public int OrderID { get; set; }
+		public int VideoGameID { get; set; }
+
 		/// <summary>
 		/// The price the order item is sold for.
 		/// </summary>
@@ -46,8 +54,8 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		[Display(Name = "Customer Review Date"), DataType(DataType.Date)]
 		public DateTime CustomerReviewDate { get; set; }
 
-		/// TODO: Link these in this class.
-		/// private Order order;
-		/// private VideoGame product;
+		// Navigation properties
+		public virtual Order Order { get; set; }
+		public virtual VideoGame VideoGame { get; set; }
 	}
 }

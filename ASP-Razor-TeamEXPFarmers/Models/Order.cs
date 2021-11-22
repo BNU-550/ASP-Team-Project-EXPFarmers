@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
@@ -11,7 +12,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// on the storefront.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (20/11/2021)
+	/// Modified by Jason Huggins (22/11/2021)
 	/// </summary>
 	public class Order
 	{
@@ -20,6 +21,9 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// </summary>
 		[Key]
 		public int OrderID { get; set; }
+
+		// Foreign key
+		public int PersonID { get; set; }
 
 		/// <summary>
 		/// The order's creation date.
@@ -39,10 +43,12 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		[Display(Name = "Paid?"), Required]
 		public bool IsPaid { get; set; }
 
-		/// TODO: Foreign keys and objects to link.
-		/// private int personID;
-		///
-		/// private OrderItem[] orderItem;
+		// Navigation properties
+		public virtual ICollection<OrderItem> OrderItems { get; set; }
+		public virtual Person Person { get; set; }	
+
+		/// TODO: For multiple payment methods, add as evaluation point
+		/// but don't add this line in.
 		/// private Payment payment;
 	}
 }

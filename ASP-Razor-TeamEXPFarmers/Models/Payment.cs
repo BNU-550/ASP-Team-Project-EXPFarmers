@@ -10,10 +10,15 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// customer will be able to edit or delete their payment method.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (20/11/2021)
+	/// Modified by Jason Huggins (22/11/2021)
 	/// </summary>
 	public class Payment
 	{
+		// Primary key
+		// TODO: Might fail
+		[Key]
+		public int PersonID { get; set; }
+
 		/// <summary>
 		/// The payment card number.
 		/// </summary>
@@ -50,8 +55,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		[Display(Name = "Card CSV No."), MaxLength(3), Required]
 		public int CardCSV { get; set; }
 
-		/// TODO: Link these with this class.
-		/// private Order order;
-		/// private Person person;
+		// Navigation property
+		public virtual Person Person { get; set; }
 	}
 }

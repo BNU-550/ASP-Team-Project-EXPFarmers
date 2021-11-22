@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
@@ -10,7 +11,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// and a video game can be on many platforms.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (20/11/2021)
+	/// Modified by Jason Huggins (22/11/2021)
 	/// </summary>
 	public class Platform
 	{
@@ -21,9 +22,10 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		public string PlatformID { get; set; }
 
 		/// <summary>
+		/// Navigation property.
 		/// The video games associated with this platform.
 		/// </summary>
 		[Display(Name = "Associated Games")]
-		public VideoGame[] VideoGames { get; set; }
+		public virtual ICollection<VideoGame> VideoGames { get; set; }
 	}
 }

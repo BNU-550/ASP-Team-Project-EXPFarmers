@@ -49,8 +49,5 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// </summary>
 		[StringLength(15), Required]
 		public string Postcode { get; set; }
-
-		/// TODO: Not sure about this one so commenting out for now.
-		/// private Person[] person;
 	}
 }
