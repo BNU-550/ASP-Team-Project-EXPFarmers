@@ -240,6 +240,76 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     JobPosition = "Sales Rep",
                     Salary = 25500
                 }
+
+                new Staff
+                {
+                    PersonID = 12, // should be a different PersonID to "var people" above
+                    FirstName = "Sid",
+                    LastName = "Harding",
+                    Email = "s.harding@mail.com",
+                    ContactNumber = "016238465210,
+                    DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD,
+                    IsCustomer = false,
+                    IsStaff = true,
+                    JobPosition = "Sales Rep",
+                    Salary = 25500
+                }
+
+                new Staff
+                {
+                    PersonID = 14, // should be a different PersonID to "var people" above
+                    FirstName = "Maddison",
+                    LastName = "Rowley",
+                    Email = "m.rowley@mail.com",
+                    ContactNumber = "016647892036,
+                    DateOfBirth = DateTime.Parse("2000-02-02"), // YYYY-MM-DD,
+                    IsCustomer = false,
+                    IsStaff = true,
+                    JobPosition = "Sales Rep",
+                    Salary = 25500
+                }
+
+                new Staff
+                {
+                    PersonID = 16, // should be a different PersonID to "var people" above
+                    FirstName = "Carrie-Ann",
+                    LastName = "Partridge",
+                    Email = "c.partridge@mail.com",
+                    ContactNumber = "01602587692,
+                    DateOfBirth = DateTime.Parse("1983-08-10"), // YYYY-MM-DD,
+                    IsCustomer = false,
+                    IsStaff = true,
+                    JobPosition = "Sales Rep",
+                    Salary = 25500
+                }
+
+                new Staff
+                {
+                    PersonID = 18, // should be a different PersonID to "var people" above
+                    FirstName = "Viktoria",
+                    LastName = "Griffin",
+                    Email = "v.griffin@mail.com",
+                    ContactNumber = "01666598710,
+                    DateOfBirth = DateTime.Parse("1987-04-15"), // YYYY-MM-DD,
+                    IsCustomer = false,
+                    IsStaff = true,
+                    JobPosition = "Sales Rep",
+                    Salary = 25500
+                }
+
+                new Staff
+                {
+                    PersonID = 20, // should be a different PersonID to "var people" above
+                    FirstName = "Joyce",
+                    LastName = "Iles",
+                    Email = "j.iles@mail.com",
+                    ContactNumber = "01654896320,
+                    DateOfBirth = DateTime.Parse("1993-24-06"), // YYYY-MM-DD,
+                    IsCustomer = false,
+                    IsStaff = true,
+                    JobPosition = "Sales Rep",
+                    Salary = 25500
+                }
             };
 
             /// TODO: Only add this in after scaffolding the database.
