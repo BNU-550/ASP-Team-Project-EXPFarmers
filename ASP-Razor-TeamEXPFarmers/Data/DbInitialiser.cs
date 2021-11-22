@@ -64,7 +64,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             {
                 new Staff
                 {
-                    PersonID = 2,
+                    PersonID = 2, // should be a different PersonID to "var people" above
                     FirstName = "Tyler",
                     LastName = "Smith",
                     Email = "t.smith37@mail.com",
