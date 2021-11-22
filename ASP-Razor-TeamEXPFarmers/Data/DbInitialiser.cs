@@ -10,7 +10,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// 
 	/// Created by Jason Huggins
 	/// Modified by Jason Huggins (22/11/2021).
-    /// Modified by Tyronne Bradburn (22/11/2021). Added 9 new Person. 
+    /// Modified by Tyronne Bradburn (22/11/2021). Added 9 new Person. Updated comments. 
     /// </summary>
     public static class DbInitialiser
     {
