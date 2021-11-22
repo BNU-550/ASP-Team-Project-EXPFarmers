@@ -9,7 +9,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// in each table and demonstrating the relationships from the ERD.
     /// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (22/11/2021)
+	/// Modified by Jason Huggins (22/11/2021).
+    /// Modified by Tyronne Bradburn (22/11/2021). Added 9 new Person. 
     /// </summary>
     public static class DbInitialiser
     {
@@ -35,10 +36,11 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             /// ICollection<VideoGame> videoGameList = new List<VideoGame>();
             /// ICollection<Platform> platformList = new List<Platform>();
 
-            /// TODO: Complete seeding for the first half (Tyronne/Dan), 
+            /// TODO: Complete seeding for the first half (Tyronne), 
             /// at least 10 in each.
 
             // Add customers here, use "var staff" below for adding staff members.
+            // Customers PersonID number is odds(up to 19).
             var people = new Person[]
             {
                 new Person
@@ -54,12 +56,121 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 }
 
                 // Example above, add the rest below.
+
+                new Person
+                {
+                    PersonID = 3,
+                    FirstName = "Daniel",
+                    LastName = "Smith",
+                    Email = "danielsmith@mail.com",
+                    ContactNumber = "01753894521",
+                    DateOfBirth = DateTime.Parse("1980-10-05"), // YYYY-MM-DD,
+                    IsCustomer = true,
+                    IsStaff = false,
+                }
+
+                new Person
+                {
+                    PersonID = 5,
+                    FirstName = "Tom",
+                    LastName = "Jones",
+                    Email = "tomjones@mail.com",
+                    ContactNumber = "01729863547",
+                    DateOfBirth = DateTime.Parse("1994-01-12"), // YYYY-MM-DD,
+                    IsCustomer = true,
+                    IsStaff = false,
+                }
+
+                new Person
+                {
+                    PersonID = 7,
+                    FirstName = "Lisa",
+                    LastName = "McDonald",
+                    Email = "lisamcdonald@mail.com",
+                    ContactNumber = "017734755569",
+                    DateOfBirth = DateTime.Parse("1965-12-25"), // YYYY-MM-DD,
+                    IsCustomer = true,
+                    IsStaff = false,
+                }
+
+                new Person
+                {
+                    PersonID = 9,
+                    FirstName = "Monica",
+                    LastName = "Johnson",
+                    Email = "monicajohnson@mail.com",
+                    ContactNumber = "01799420217",
+                    DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD,
+                    IsCustomer = true,
+                    IsStaff = false,
+                }
+
+                new Person
+                {
+                    PersonID = 11,
+                    FirstName = "Monica",
+                    LastName = "Johnson",
+                    Email = "monicajohnson@mail.com",
+                    ContactNumber = "01799420217",
+                    DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD,
+                    IsCustomer = true,
+                    IsStaff = false,
+                }
+
+                new Person
+                {
+                    PersonID = 13,
+                    FirstName = "Mason",
+                    LastName = "Tickner",
+                    Email = "masontickner@mail.com",
+                    ContactNumber = "01749628730",
+                    DateOfBirth = DateTime.Parse("1985-05-31"), // YYYY-MM-DD,
+                    IsCustomer = true,
+                    IsStaff = false,
+                }
+
+                new Person
+                {
+                    PersonID = 15,
+                    FirstName = "Thomas",
+                    LastName = "White",
+                    Email = "thomaswhite@mail.com",
+                    ContactNumber = "01796315207",
+                    DateOfBirth = DateTime.Parse("1999-03-25"), // YYYY-MM-DD,
+                    IsCustomer = true,
+                    IsStaff = false,
+                }
+
+                new Person
+                {
+                    PersonID = 17,
+                    FirstName = "Bailey",
+                    LastName = "Norton",
+                    Email = "baileynorton@mail.com",
+                    ContactNumber = "017",
+                    DateOfBirth = DateTime.Parse("1991-07-10"), // YYYY-MM-DD,
+                    IsCustomer = true,
+                    IsStaff = false,
+                }
+
+                new Person
+                {
+                    PersonID = 19,
+                    FirstName = "Vanessa",
+                    LastName = "Clayton",
+                    Email = "vanessaclayton@mail.com",
+                    ContactNumber = "01715876320",
+                    DateOfBirth = DateTime.Parse("--"), // YYYY-MM-DD,
+                    IsCustomer = true,
+                    IsStaff = false,
+                }
             };
 
             /// TODO: Only add this in after scaffolding the database.
             /// context.Person.AddRange(people);
             /// context.SaveChanges();
 
+            /// Staffs PersonID number is even(up to 20)
             var staff = new Staff[]
             {
                 new Staff
@@ -101,6 +212,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             /// context.Staff.AddRange(staff);
             /// context.SaveChanges();
 
+            /// Customers PersonID is odds(up to 19).
+            /// Staffs Person ID is even(up to 20).
             var payments = new Payment[]
             {
                 new Payment
@@ -120,9 +233,11 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             /// context.SaveChanges();
 
 
-            /// TODO: Complete seeding for the second half (Tyronne/Dan),
+            /// TODO: Complete seeding for the second half (Dan),
             /// at least 10 in each.
 
+            /// Customers PersonID is odds(up to 19).
+            /// Staffs Person ID is even(up to 20).
             var orders = new Order[]
             {
                 new Order
