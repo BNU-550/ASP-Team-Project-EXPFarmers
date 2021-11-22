@@ -207,7 +207,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Staff.AddRange(staff);
+            /// context.Address.AddRange(addresses);
             /// context.SaveChanges();
 
             /// Customers PersonID is odds(up to 19).
@@ -227,7 +227,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Staff.AddRange(staff);
+            /// context.Payment.AddRange(payments);
             /// context.SaveChanges();
 
 
@@ -250,7 +250,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Staff.AddRange(staff);
+            /// context.Order.AddRange(orders);
             /// context.SaveChanges();
 
             var orderItems = new OrderItem[]
@@ -268,7 +268,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Staff.AddRange(staff);
+            /// context.OrderItems.AddRange(orderItems);
             /// context.SaveChanges();
 
             var platforms = new Platform[]
@@ -282,7 +282,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Staff.AddRange(staff);
+            /// context.Platform.AddRange(platforms);
             /// context.SaveChanges();
 
             var videoGames = new VideoGame[]
@@ -308,7 +308,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Staff.AddRange(staff);
+            /// context.VideoGames.AddRange(videoGames);
             /// context.SaveChanges();
         }
     }
