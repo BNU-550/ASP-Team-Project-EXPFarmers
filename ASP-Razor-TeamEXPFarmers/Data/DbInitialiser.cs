@@ -289,7 +289,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     FirstName = "Viktoria",
                     LastName = "Griffin",
                     Email = "v.griffin@mail.com",
-                    ContactNumber = "01666598710,
+                    ContactNumber = "01666598710",
                     DateOfBirth = DateTime.Parse("1987-04-15"), // YYYY-MM-DD,
                     IsCustomer = false,
                     IsStaff = true,
