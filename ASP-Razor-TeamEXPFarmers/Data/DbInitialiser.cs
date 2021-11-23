@@ -12,6 +12,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 	/// Modified by Jason Huggins (22/11/2021).
     /// Modified by Tyronne Bradburn (22/11/2021). Added 9 new Person. Added 9 new +
     /// Staff memebers. Updated comments. 
+    /// Modified by Tyronne Bradburn (23/11/2021). Added Adresses. Added Payment Cards
     /// </summary>
     public static class DbInitialiser
     {
@@ -328,7 +329,177 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Postcode = "RG98 3GW"
                 }
 
-                // Example above, add the rest below.
+                new Address
+                {
+                    AddressID = 2,
+                    HouseNo = "124",
+                    Street = "Nottingham Road",
+                    City = "Abedeen",
+                    Postcode = "AV2 2TJ"
+                }
+
+                new Address
+                {
+                    AddressID = 3,
+                    HouseNo = "60",
+                    Street = "Holburn Road",
+                    City = "Hele Bridge",
+                    Postcode = "EX20 3QX"
+                }
+
+                new Address
+                {
+                    AddressID = 4,
+                    HouseNo = "65",
+                    Street = "Copthorne Way",
+                    City = "Cameron",
+                    Postcode = "G83 4TN"
+                }
+
+                new Address
+                {
+                    AddressID = 5,
+                    HouseNo = "65",
+                    Street = "Guild Street",
+                    City = "London",
+                    Postcode = "NW1 1BE"
+                }
+
+                new Address
+                {
+                    AddressID = 6,
+                    HouseNo = "64",
+                    Street = "South Street",
+                    City = "London",
+                    Postcode = "SE14 8JW"
+                }
+
+                new Address
+                {
+                    AddressID = 7,
+                    HouseNo = "34",
+                    Street = "Shannon Way",
+                    City = "Chiddingfold",
+                    Postcode = "GU8 0JS"
+                }
+
+                new Address
+                {
+                    AddressID = 8,
+                    HouseNo = "83",
+                    Street = "Lairg Road",
+                    City = "Newbold",
+                    Postcode = "S42 9PU"
+                }
+
+                new Address
+                {
+                    AddressID = 9,
+                    HouseNo = "44",
+                    Street = "Duckpit lane",
+                    City = "Upton",
+                    Postcode = "EX14 1AF"
+                }
+
+                new Address
+                {
+                    AddressID = 10,
+                    HouseNo = "33",
+                    Street = "Wilthers Close",
+                    City = "Allesley",
+                    Postcode = "CV5 3LW"
+                }
+
+                new Address
+                {
+                    AddressID = 11,
+                    HouseNo = "66",
+                    Street = "Kingsway North",
+                    City = "Holme Pierrepont",
+                    Postcode = "NG12 8PZ"
+                }
+
+
+                new Address
+                {
+                    AddressID = 12,
+                    HouseNo = "98",
+                    Street = "Thornton Street",
+                    City = "Hundleby",
+                    Postcode = "PE23 6SJ"
+                }
+
+                new Address
+                {
+                    AddressID = 13,
+                    HouseNo = "70",
+                    Street = "Ross Road",
+                    City = "Martock",
+                    Postcode = "TA12 2QE"
+                }
+
+                new Address
+                {
+                    AddressID = 14,
+                    HouseNo = "117",
+                    Street = "Winchester Road",
+                    City = "Merthyr Cynog",
+                    Postcode = "LD3 2DR"
+                }
+
+                new Address
+                {
+                    AddressID = 15,
+                    HouseNo = "133",
+                    Street = "Witney Way",
+                    City = "Knockentiber",
+                    Postcode = "KA2 0PN"
+                }
+
+                new Address
+                {
+                    AddressID = 16,
+                    HouseNo = "126",
+                    Street = "Goldern Knowes Road",
+                    City = "Foxley",
+                    Postcode = "SN16 7RD"
+                }
+
+                new Address
+                {
+                    AddressID = 17,
+                    HouseNo = "48",
+                    Street = "Grey Street",
+                    City = "Kentmere",
+                    Postcode = "LA8 9PG"
+                }
+
+                new Address
+                {
+                    AddressID = 18,
+                    HouseNo = "39",
+                    Street = "Whitby Road",
+                    City = "Derbyhaven",
+                    Postcode = "IM9 6YF"
+                }
+
+                new Address
+                {
+                    AddressID = 19,
+                    HouseNo = "54",
+                    Street = "Fulford Road",
+                    City = "Pentlepoir",
+                    Postcode = "SA69 5FN"
+                }
+
+                new Address
+                {
+                    AddressID = 20,
+                    HouseNo = "66",
+                    Street = "Clasper Way",
+                    City = "Hever",
+                    Postcode = "TN8 2WL"
+                }
             };
 
             /// TODO: Only add this in after scaffolding the database.
@@ -348,7 +519,176 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardCSV = 999 // 3 digits
                 }
 
-                // Example above, add the rest below.
+                new Payment
+                {
+                    PersonID = 2, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "8888888888888888", // 16 digits
+                    CardExpiryMonth = 12, // 2 digits
+                    CardExpiryYear = 2025, // 4 digits
+                    CardCSV = 888 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 3, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "7777777777777777", // 16 digits
+                    CardExpiryMonth = 01, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 777 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 4, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "6666666666666666", // 16 digits
+                    CardExpiryMonth = 02, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 666 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 5, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "5555555555555555", // 16 digits
+                    CardExpiryMonth = 03, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 555 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 6, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "4444444444444444", // 16 digits
+                    CardExpiryMonth = 04, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 444 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 7, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "3333333333333333", // 16 digits
+                    CardExpiryMonth = 05, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 333 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 8, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "2222222222222222", // 16 digits
+                    CardExpiryMonth = 06, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 222 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 9, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1111111111111111", // 16 digits
+                    CardExpiryMonth = 07, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 111 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 10, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1010101010101010", // 16 digits
+                    CardExpiryMonth = 08, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 101 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 11, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "0101010101010101", // 16 digits
+                    CardExpiryMonth = 09, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 010 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 12, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1212121212121212", // 16 digits
+                    CardExpiryMonth = 10, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 121 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 13, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1313131313131313", // 16 digits
+                    CardExpiryMonth = 11, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 131 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 14, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1414141414141414", // 16 digits
+                    CardExpiryMonth = 12, // 2 digits
+                    CardExpiryYear = 2026, // 4 digits
+                    CardCSV = 141 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 15, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1515151515151515", // 16 digits
+                    CardExpiryMonth = 01, // 2 digits
+                    CardExpiryYear = 2027, // 4 digits
+                    CardCSV = 151 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 16, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1616161616161616", // 16 digits
+                    CardExpiryMonth = 02, // 2 digits
+                    CardExpiryYear = 2027, // 4 digits
+                    CardCSV = 161 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 17, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1717171717171717", // 16 digits
+                    CardExpiryMonth = 03, // 2 digits
+                    CardExpiryYear = 2027, // 4 digits
+                    CardCSV = 171 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 18, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1818181818181818", // 16 digits
+                    CardExpiryMonth = 04, // 2 digits
+                    CardExpiryYear = 2027, // 4 digits
+                    CardCSV = 181 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 19, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "1919191919191919", // 16 digits
+                    CardExpiryMonth = 05, // 2 digits
+                    CardExpiryYear = 2027, // 4 digits
+                    CardCSV = 191 // 3 digits
+                }
+
+                new Payment
+                {
+                    PersonID = 20, // Make sure this ID matches an existing person ID above
+                    PaymentCardNo = "2020202020202020", // 16 digits
+                    CardExpiryMonth = 06, // 2 digits
+                    CardExpiryYear = 2027, // 4 digits
+                    CardCSV = 202 // 3 digits
+                }
             };
 
             /// TODO: Only add this in after scaffolding the database.
