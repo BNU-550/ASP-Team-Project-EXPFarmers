@@ -9,23 +9,17 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// in each table and demonstrating the relationships from the ERD.
     /// 
 	/// Created by Jason Huggins
-	/// Modified by: Jason Huggins (23/11/2021) - fixed formatting.
-    /// Modified by: Tyronne Bradburn (25/11/2021) - Completed Part One. Completed Part Two. Updated comments. 
+	/// Modified by: 
+    /// - Jason Huggins (25/11/2021) - Refactored class by splitting object instantiation
+    /// into separate methods categorised by entity.
+    /// - Tyronne Bradburn (25/11/2021) - Completed seeding process. Updated comments. 
     /// </summary>
     public static class DbInitialiser
     {
-        /// TODO: Start with seeding Person, Staff, Address, Payment [first half] 
-        /// Order, OrderItem, Platform, VideoGame [second half] in that order.
-        /// 
-        /// At least 10 of each.
-        /// 
-        /// Ensure an order has many items on it, a video game has been sold
-        /// many times, a video game has many platforms etc (check ERD for
-        /// relationships).
-        /// 
-        /// See Contoso example for guidance:
-        /// "https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?
-        /// view=aspnetcore-6.0&tabs=visual-studio#seed-the-database" [URL]
+        /// <summary>
+        /// Initialises the database with seeded data, calling each method to
+        /// create test data for each model. 
+        /// </summary>
         public static void Initialise(ApplicationDbContext context)
         {
             /// Instantiating lists using ICollection. Commenting out as
@@ -36,12 +30,28 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             /// ICollection<VideoGame> videoGameList = new List<VideoGame>();
             /// ICollection<Platform> platformList = new List<Platform>();
 
-            /// TODO: Complete seeding for the first half (Tyronne), 
-            /// at least 10 in each.
+            AddCustomers(context);
+            AddStaff(context);
+            AddAddresses(context);
+            AddPayments(context);
+            AddOrders(context);
+            AddOrderItems(context);
+            AddPlatforms(context);
+            AddVideoGames(context);
+        }
+
+        private static void AddCustomers(ApplicationDbContext context)
+        {
+            /// To be added after scaffolding.
+            /// Look for any customers.
+            /// if (context.Person.Any())
+            /// {
+            ///     return; // Database has been seeded.
+            /// }
 
             // Add customers here, use "var staff" below for adding staff members.
-            // Customers PersonID number is odds(up to 19).
-            var people = new Person[]
+            // Customers' PersonID number is odd (up to 19).
+            var customers = new Person[]
             {
                 new Person
                 {
@@ -50,7 +60,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "Wayne",
                     Email = "markwayne10@mail.com",
                     ContactNumber = "01732927421",
-                    DateOfBirth = DateTime.Parse("1976-05-03"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1976-05-03"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -62,7 +72,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "Smith",
                     Email = "danielsmith@mail.com",
                     ContactNumber = "01753894521",
-                    DateOfBirth = DateTime.Parse("1980-10-05"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1980-10-05"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -74,7 +84,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "Jones",
                     Email = "tomjones@mail.com",
                     ContactNumber = "01729863547",
-                    DateOfBirth = DateTime.Parse("1994-01-12"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1994-01-12"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -86,7 +96,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "McDonald",
                     Email = "lisamcdonald@mail.com",
                     ContactNumber = "017734755569",
-                    DateOfBirth = DateTime.Parse("1965-12-25"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1965-12-25"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -98,7 +108,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "Johnson",
                     Email = "monicajohnson@mail.com",
                     ContactNumber = "01799420217",
-                    DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -110,7 +120,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "Johnson",
                     Email = "monicajohnson@mail.com",
                     ContactNumber = "01799420217",
-                    DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -122,7 +132,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "Tickner",
                     Email = "masontickner@mail.com",
                     ContactNumber = "01749628730",
-                    DateOfBirth = DateTime.Parse("1985-05-31"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1985-05-31"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -134,7 +144,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "White",
                     Email = "thomaswhite@mail.com",
                     ContactNumber = "01796315207",
-                    DateOfBirth = DateTime.Parse("1999-03-25"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1999-03-25"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -146,7 +156,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "Norton",
                     Email = "baileynorton@mail.com",
                     ContactNumber = "017",
-                    DateOfBirth = DateTime.Parse("1991-07-10"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1991-07-10"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -158,7 +168,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     LastName = "Clayton",
                     Email = "vanessaclayton@mail.com",
                     ContactNumber = "01715876320",
-                    DateOfBirth = DateTime.Parse("1993-04-10"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1993-04-10"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
                 },
@@ -167,18 +177,28 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             /// TODO: Only add this in after scaffolding the database.
             /// context.Person.AddRange(people);
             /// context.SaveChanges();
+        }
 
-            /// Staffs PersonID number is even(up to 20)
+        private static void AddStaff(ApplicationDbContext context)
+        {
+            /// To be added after scaffolding.
+            /// Look for any staff members.
+            /// if (context.Staff.Any())
+            /// {
+            ///     return; // Database has been seeded.
+            /// }
+
+            /// Staff members' PersonID number is even (up to 20).
             var staff = new Staff[]
             {
                 new Staff
                 {
-                    PersonID = 2, // should be a different PersonID to "var people" above
+                    PersonID = 2,
                     FirstName = "Tyler",
                     LastName = "Smith",
                     Email = "t.smith01@mail.com",
                     ContactNumber = "01634892243",
-                    DateOfBirth = DateTime.Parse("1980-06-23"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1980-06-23"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Manager",
@@ -187,12 +207,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 4, // should be a different PersonID to "var people" above
+                    PersonID = 4,
                     FirstName = "Johnathon",
                     LastName = "Curtis",
                     Email = "j.curtis02@mail.com",
                     ContactNumber = "01675438602",
-                    DateOfBirth = DateTime.Parse("1985-12-13"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1985-12-13"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Manager",
@@ -201,12 +221,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 6, // should be a different PersonID to "var people" above
+                    PersonID = 6,
                     FirstName = "Jake",
                     LastName = "Shaw",
                     Email = "j.shaw03@mail.com",
                     ContactNumber = "01695423601",
-                    DateOfBirth = DateTime.Parse("1990-01-10"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1990-01-10"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Sales Rep",
@@ -215,12 +235,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 8, // should be a different PersonID to "var people" above
+                    PersonID = 8,
                     FirstName = "Sid",
                     LastName = "Harding",
                     Email = "s.harding04@mail.com",
                     ContactNumber = "016238465210",
-                    DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Sales Rep",
@@ -229,12 +249,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 10, // should be a different PersonID to "var people" above
+                    PersonID = 10,
                     FirstName = "Harlow",
                     LastName = "Holmes",
                     Email = "h.holmes05@mail.com",
                     ContactNumber = "016238465210",
-                    DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Sales Rep",
@@ -243,12 +263,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 12, // should be a different PersonID to "var people" above
+                    PersonID = 12,
                     FirstName = "Sid",
                     LastName = "Harding",
                     Email = "s.harding@mail.com",
                     ContactNumber = "016238465210",
-                    DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Sales Rep",
@@ -257,12 +277,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 14, // should be a different PersonID to "var people" above
+                    PersonID = 14,
                     FirstName = "Maddison",
                     LastName = "Rowley",
                     Email = "m.rowley@mail.com",
                     ContactNumber = "016647892036",
-                    DateOfBirth = DateTime.Parse("2000-02-02"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("2000-02-02"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Sales Rep",
@@ -271,12 +291,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 16, // should be a different PersonID to "var people" above
+                    PersonID = 16,
                     FirstName = "Carrie-Ann",
                     LastName = "Partridge",
                     Email = "c.partridge@mail.com",
                     ContactNumber = "01602587692",
-                    DateOfBirth = DateTime.Parse("1983-08-10"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1983-08-10"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Sales Rep",
@@ -285,12 +305,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 18, // should be a different PersonID to "var people" above
+                    PersonID = 18,
                     FirstName = "Viktoria",
                     LastName = "Griffin",
                     Email = "v.griffin@mail.com",
                     ContactNumber = "01666598710",
-                    DateOfBirth = DateTime.Parse("1987-04-15"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1987-04-15"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Sales Rep",
@@ -299,22 +319,32 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 20, // should be a different PersonID to "var people" above
+                    PersonID = 20,
                     FirstName = "Joyce",
                     LastName = "Iles",
                     Email = "j.iles@mail.com",
                     ContactNumber = "01654896320",
-                    DateOfBirth = DateTime.Parse("1993-24-06"), // YYYY-MM-DD,
+                    DateOfBirth = DateTime.Parse("1993-24-06"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Sales Rep",
                     Salary = 25500
                 },
-                };
+            };
 
             /// TODO: Only add this in after scaffolding the database.
             /// context.Staff.AddRange(staff);
             /// context.SaveChanges();
+        }
+
+        private static void AddAddresses(ApplicationDbContext context)
+        {
+            /// To be added after scaffolding.
+            /// Look for any addresses.
+            /// if (context.Address.Any())
+            /// {
+            ///     return; // Database has been seeded.
+            /// }
 
             var addresses = new Address[]
             {
@@ -503,14 +533,24 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             /// TODO: Only add this in after scaffolding the database.
             /// context.Address.AddRange(addresses);
             /// context.SaveChanges();
+        }
 
-            /// Customers PersonID is odds(up to 19).
-            /// Staffs Person ID is even(up to 20).
+        private static void AddPayments(ApplicationDbContext context)
+        {
+            /// To be added after scaffolding.
+            /// Look for any payment cards.
+            /// if (context.Payment.Any())
+            /// {
+            ///     return; // Database has been seeded.
+            /// }
+
+            /// Customers' PersonID is odd (up to 19).
+            /// Staff members' PersonID is even (up to 20).
             var payments = new Payment[]
             {
                 new Payment
                 {
-                    PersonID = 1, // Make sure this ID matches an existing person ID above
+                    PersonID = 1,
                     PaymentCardNo = "9999999999999999", // 16 digits
                     CardExpiryMonth = 11, // 2 digits
                     CardExpiryYear = 2025, // 4 digits
@@ -519,7 +559,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 2, // Make sure this ID matches an existing person ID above
+                    PersonID = 2,
                     PaymentCardNo = "8888888888888888", // 16 digits
                     CardExpiryMonth = 12, // 2 digits
                     CardExpiryYear = 2025, // 4 digits
@@ -528,7 +568,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 3, // Make sure this ID matches an existing person ID above
+                    PersonID = 3,
                     PaymentCardNo = "7777777777777777", // 16 digits
                     CardExpiryMonth = 01, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -537,7 +577,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 4, // Make sure this ID matches an existing person ID above
+                    PersonID = 4,
                     PaymentCardNo = "6666666666666666", // 16 digits
                     CardExpiryMonth = 02, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -546,7 +586,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 5, // Make sure this ID matches an existing person ID above
+                    PersonID = 5,
                     PaymentCardNo = "5555555555555555", // 16 digits
                     CardExpiryMonth = 03, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -555,7 +595,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 6, // Make sure this ID matches an existing person ID above
+                    PersonID = 6,
                     PaymentCardNo = "4444444444444444", // 16 digits
                     CardExpiryMonth = 04, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -564,7 +604,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 7, // Make sure this ID matches an existing person ID above
+                    PersonID = 7,
                     PaymentCardNo = "3333333333333333", // 16 digits
                     CardExpiryMonth = 05, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -573,7 +613,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 8, // Make sure this ID matches an existing person ID above
+                    PersonID = 8,
                     PaymentCardNo = "2222222222222222", // 16 digits
                     CardExpiryMonth = 06, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -582,7 +622,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 9, // Make sure this ID matches an existing person ID above
+                    PersonID = 9,
                     PaymentCardNo = "1111111111111111", // 16 digits
                     CardExpiryMonth = 07, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -591,7 +631,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 10, // Make sure this ID matches an existing person ID above
+                    PersonID = 10,
                     PaymentCardNo = "1010101010101010", // 16 digits
                     CardExpiryMonth = 08, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -600,7 +640,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 11, // Make sure this ID matches an existing person ID above
+                    PersonID = 11,
                     PaymentCardNo = "0101010101010101", // 16 digits
                     CardExpiryMonth = 09, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -609,7 +649,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 12, // Make sure this ID matches an existing person ID above
+                    PersonID = 12,
                     PaymentCardNo = "1212121212121212", // 16 digits
                     CardExpiryMonth = 10, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -618,7 +658,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 13, // Make sure this ID matches an existing person ID above
+                    PersonID = 13,
                     PaymentCardNo = "1313131313131313", // 16 digits
                     CardExpiryMonth = 11, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -627,7 +667,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 14, // Make sure this ID matches an existing person ID above
+                    PersonID = 14,
                     PaymentCardNo = "1414141414141414", // 16 digits
                     CardExpiryMonth = 12, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -636,7 +676,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 15, // Make sure this ID matches an existing person ID above
+                    PersonID = 15,
                     PaymentCardNo = "1515151515151515", // 16 digits
                     CardExpiryMonth = 01, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -645,7 +685,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 16, // Make sure this ID matches an existing person ID above
+                    PersonID = 16,
                     PaymentCardNo = "1616161616161616", // 16 digits
                     CardExpiryMonth = 02, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -654,7 +694,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 17, // Make sure this ID matches an existing person ID above
+                    PersonID = 17,
                     PaymentCardNo = "1717171717171717", // 16 digits
                     CardExpiryMonth = 03, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -663,7 +703,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 18, // Make sure this ID matches an existing person ID above
+                    PersonID = 18,
                     PaymentCardNo = "1818181818181818", // 16 digits
                     CardExpiryMonth = 04, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -672,7 +712,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 19, // Make sure this ID matches an existing person ID above
+                    PersonID = 19,
                     PaymentCardNo = "1919191919191919", // 16 digits
                     CardExpiryMonth = 05, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -681,7 +721,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 20, // Make sure this ID matches an existing person ID above
+                    PersonID = 20,
                     PaymentCardNo = "2020202020202020", // 16 digits
                     CardExpiryMonth = 06, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -692,27 +732,33 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             /// TODO: Only add this in after scaffolding the database.
             /// context.Payment.AddRange(payments);
             /// context.SaveChanges();
+        }
 
+        private static void AddOrders(ApplicationDbContext context)
+        {
+            /// To be added after scaffolding.
+            /// Look for any orders.
+            /// if (context.Order.Any())
+            /// {
+            ///     return; // Database has been seeded.
+            /// }
 
-            /// TODO: Complete seeding for the second half (Dan),
-            /// at least 10 in each.
-
-            /// Customers PersonID is odds(up to 19).
-            /// Staffs Person ID is even(up to 20).
+            /// Customers' PersonID is odd (up to 19).
+            /// Staff members; PersonID is even (up to 20).
             var orders = new Order[]
             {
                 new Order
                 {
                     OrderID = 1,
-                    PersonID = 1, // Make sure this ID matches an existing person ID above
+                    PersonID = 1, 
                     DateCreated = DateTime.Parse("2021-05-13"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 2, // Make sure this ID matches an existing person ID above
+                    OrderID = 2,
+                    PersonID = 2, 
                     DateCreated = DateTime.Parse("2021-05-05"),
                     IsPaid = false
                 },
@@ -720,16 +766,16 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 3, // Make sure this ID matches an existing person ID above
+                    OrderID = 3,
+                    PersonID = 3, 
                     DateCreated = DateTime.Parse("2021-05-01"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 4, // Make sure this ID matches an existing person ID above
+                    OrderID = 4,
+                    PersonID = 4, 
                     DateCreated = DateTime.Parse("2021-05-06"),
                     IsPaid = false
                 },
@@ -737,49 +783,48 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 5, // Make sure this ID matches an existing person ID above
+                    OrderID = 5,
+                    PersonID = 5, 
                     DateCreated = DateTime.Parse("2021-05-02"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 6, // Make sure this ID matches an existing person ID above
+                    OrderID = 6,
+                    PersonID = 6, 
                     DateCreated = DateTime.Parse("2021-05-07"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 7, // Make sure this ID matches an existing person ID above
+                    OrderID = 7,
+                    PersonID = 7, 
                     DateCreated = DateTime.Parse("2021-05-03"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 8, // Make sure this ID matches an existing person ID above
+                    OrderID = 8,
+                    PersonID = 8, 
                     DateCreated = DateTime.Parse("2021-05-08"),
                     IsPaid = false
                 },
 
-
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 9, // Make sure this ID matches an existing person ID above
+                    OrderID = 9,
+                    PersonID = 9, 
                     DateCreated = DateTime.Parse("2021-05-04"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 10, // Make sure this ID matches an existing person ID above
+                    OrderID = 10,
+                    PersonID = 10, 
                     DateCreated = DateTime.Parse("2021-05-09"),
                     IsPaid = false
                 },
@@ -788,14 +833,24 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             /// TODO: Only add this in after scaffolding the database.
             /// context.Order.AddRange(orders);
             /// context.SaveChanges();
+        }
+
+        private static void AddOrderItems(ApplicationDbContext context)
+        {
+            /// To be added after scaffolding.
+            /// Look for any order items.
+            /// if (context.OrderItem.Any())
+            /// {
+            ///     return; // Database has been seeded.
+            /// }
 
             var orderItems = new OrderItem[]
             {
                 new OrderItem
                 {
                     OrderItemID = 1,
-                    OrderID = 1, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 1, // Make sure this ID matches an existing video game ID below
+                    OrderID = 1, 
+                    VideoGameID = 1, 
                     SalePrice = 31,
                     ItemQuantity = 1
                 },
@@ -803,8 +858,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new OrderItem
                 {
                     OrderItemID = 2,
-                    OrderID = 2, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 2, // Make sure this ID matches an existing video game ID below
+                    OrderID = 2, 
+                    VideoGameID = 2, 
                     SalePrice = 100,
                     ItemQuantity = 5
                 },
@@ -812,8 +867,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new OrderItem
                 {
                     OrderItemID = 3,
-                    OrderID = 3, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 3, // Make sure this ID matches an existing video game ID below
+                    OrderID = 3, 
+                    VideoGameID = 3, 
                     SalePrice = 31,
                     ItemQuantity = 1
                 },
@@ -821,8 +876,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new OrderItem
                 {
                     OrderItemID = 4,
-                    OrderID = 4, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 4, // Make sure this ID matches an existing video game ID below
+                    OrderID = 4, 
+                    VideoGameID = 4, 
                     SalePrice = 31,
                     ItemQuantity = 1
                 },
@@ -830,8 +885,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new OrderItem
                 {
                     OrderItemID = 5,
-                    OrderID = 5, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 5, // Make sure this ID matches an existing video game ID below
+                    OrderID = 5, 
+                    VideoGameID = 5, 
                     SalePrice = 31,
                     ItemQuantity = 1
                 },
@@ -839,8 +894,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new OrderItem
                 {
                     OrderItemID = 6,
-                    OrderID = 6, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 6, // Make sure this ID matches an existing video game ID below
+                    OrderID = 6, 
+                    VideoGameID = 6,
                     SalePrice = 31,
                     ItemQuantity = 1
                 },
@@ -848,8 +903,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new OrderItem
                 {
                     OrderItemID = 7,
-                    OrderID = 7, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 7, // Make sure this ID matches an existing video game ID below
+                    OrderID = 7,
+                    VideoGameID = 7,
                     SalePrice = 31,
                     ItemQuantity = 1
                 },
@@ -857,8 +912,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new OrderItem
                 {
                     OrderItemID = 8,
-                    OrderID = 8, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 8, // Make sure this ID matches an existing video game ID below
+                    OrderID = 8,
+                    VideoGameID = 8,
                     SalePrice = 31,
                     ItemQuantity = 1
                 },
@@ -866,8 +921,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new OrderItem
                 {
                     OrderItemID = 9,
-                    OrderID = 9, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 9, // Make sure this ID matches an existing video game ID below
+                    OrderID = 9,
+                    VideoGameID = 9,
                     SalePrice = 31,
                     ItemQuantity = 1
                 },
@@ -875,8 +930,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new OrderItem
                 {
                     OrderItemID = 10,
-                    OrderID = 10, // Make sure this ID matches an existing order ID above
-                    VideoGameID = 10, // Make sure this ID matches an existing video game ID below
+                    OrderID = 10,
+                    VideoGameID = 10,
                     SalePrice = 31,
                     ItemQuantity = 1
                 },
@@ -885,6 +940,16 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             /// TODO: Only add this in after scaffolding the database.
             /// context.OrderItems.AddRange(orderItems);
             /// context.SaveChanges();
+        }
+
+        private static void AddPlatforms(ApplicationDbContext context)
+        {
+            /// To be added after scaffolding.
+            /// Look for any platforms.
+            /// if (context.Platform.Any())
+            /// {
+            ///     return; // Database has been seeded.
+            /// }
 
             var platforms = new Platform[]
             {
@@ -895,7 +960,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Platform
                 {
-                    PlatformID = "Xbox X"
+                    PlatformID = "Xbox Series X/S"
                 },
 
                 new Platform
@@ -920,18 +985,28 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Platform
                 {
-                    PlatformID = "Stradia"
+                    PlatformID = "Stadia"
                 },
 
                 new Platform
                 {
-                    PlatformID = "Octolus Rift"
+                    PlatformID = "Oculus Rift"
                 },
             };
 
             /// TODO: Only add this in after scaffolding the database.
             /// context.Platform.AddRange(platforms);
             /// context.SaveChanges();
+        }
+
+        private static void AddVideoGames(ApplicationDbContext context)
+        {
+            /// To be added after scaffolding.
+            /// Look for any video games.
+            /// if (context.VideoGame.Any())
+            /// {
+            ///     return; // Database has been seeded.
+            /// }
 
             var videoGames = new VideoGame[]
             {
@@ -957,7 +1032,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 2,
                     Title = "Destiny 2",
-                    Description = "Destiny 2 is a free-to-play online-only multiplayer" 
+                    Description = "Destiny 2 is a free-to-play online-only multiplayer"
                     + "first-person shooter video game",
                     Image = "Destiny2CoverArt.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -975,7 +1050,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 3,
                     Title = "Forza 5",
-                    Description = "Set in an open world environment based in a" 
+                    Description = "Set in an open world environment based in a"
                     + "fictional representation of Mexico.",
                     Image = "Forza5CoverArt.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -993,7 +1068,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 3,
                     Title = "Baldur's Gate III",
-                    Description = "Return to the legendary city of Baldur’s Gate® in a tale of fellowship and betrayal," 
+                    Description = "Return to the legendary city of Baldur’s Gate® in a tale of fellowship and betrayal,"
                     + "sacrifice and survival and the lure of absolute power.",
                     Image = "BaldursGateIIICoverArt.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -1011,7 +1086,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 4,
                     Title = "God of War",
-                    Description = "Many years after Kratos defeated the Olympian gods," 
+                    Description = "Many years after Kratos defeated the Olympian gods,"
                     + "he now lives with his son Atreus in ancient Scandinavia in the realm of Midgard.",
                     Image = "GodOfWarCoverArt.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -1029,7 +1104,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 5,
                     Title = "The Master Chief Collection",
-                    Description = "The Master Chief Collection originally consisted of Halo: Combat Evolved Anniversary, Halo 2 Anniversary, Halo 3, and Halo 4" 
+                    Description = "The Master Chief Collection originally consisted of Halo: Combat Evolved Anniversary, Halo 2 Anniversary, Halo 3, and Halo 4"
                     + "complete with their full catalog of extras, including all multiplayer maps and gameplay modes.",
                     Image = "TheMasterChiefCollectionCoverArt.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -1047,7 +1122,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 6,
                     Title = "X-COM",
-                    Description = "In the spring of 2015, as a global alien invasion begins. A group of countries called the Council of Nations has banded together to create XCOM," 
+                    Description = "In the spring of 2015, as a global alien invasion begins. A group of countries called the Council of Nations has banded together to create XCOM,"
                     + "the most elite military and scientific organization in human history, tasked with defending them from the alien attack",
                     Image = "X-COM.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -1065,8 +1140,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 7,
                     Title = "FIFA 22",
-                    Description = "Play the most immersive, realistic and authentic football sim – the all new FIFA 22." 
-                    +"Whether you're just playing a quick match with friends or challenging yourself in the career mode with your favourite team," 
+                    Description = "Play the most immersive, realistic and authentic football sim – the all new FIFA 22."
+                    +"Whether you're just playing a quick match with friends or challenging yourself in the career mode with your favourite team,"
                     + "you'll love the updated gameplay, physics and reinvented AI.",
                     Image = "FIFA22.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -1084,8 +1159,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 8,
                     Title = "Shadow of the Tomb Raider",
-                    Description = "players take on the role of Lara Croft as she explores environments across the continents of Central and South America." 
-                    + "In addition to standalone areas, the game has a large hub in the Hidden City of Paititi." 
+                    Description = "players take on the role of Lara Croft as she explores environments across the continents of Central and South America."
+                    + "In addition to standalone areas, the game has a large hub in the Hidden City of Paititi."
                     + "A new barter system allows players to trade and sell various resources gathered from the areas surrounding Paititi.",
                     Image = "ShadowoftheTombRaider.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -1120,7 +1195,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 9,
                     Title = "Rise of the Tomb Raider",
-                    Description = "follows Lara Croft as she ventures into Siberia in search of the legendary city of Kitezh while battling the paramilitary organization Trinity," 
+                    Description = "follows Lara Croft as she ventures into Siberia in search of the legendary city of Kitezh while battling the paramilitary organization Trinity,"
                     + "which intends to uncover the city's promise of immortality.",
                     Image = "RiseoftheTOMBrAIDER.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
