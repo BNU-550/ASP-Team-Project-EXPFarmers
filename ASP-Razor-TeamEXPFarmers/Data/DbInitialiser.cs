@@ -802,7 +802,86 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ItemQuantity = 1
                 },
 
-                // Example above, add the rest below.
+                new OrderItem
+                {
+                    OrderItemID = 2,
+                    OrderID = 2, // Make sure this ID matches an existing order ID above
+                    VideoGameID = 2, // Make sure this ID matches an existing video game ID below
+                    SalePrice = 100,
+                    ItemQuantity = 5
+                },
+
+                new OrderItem
+                {
+                    OrderItemID = 3,
+                    OrderID = 3, // Make sure this ID matches an existing order ID above
+                    VideoGameID = 3, // Make sure this ID matches an existing video game ID below
+                    SalePrice = 31,
+                    ItemQuantity = 1
+                },
+
+                new OrderItem
+                {
+                    OrderItemID = 4,
+                    OrderID = 4, // Make sure this ID matches an existing order ID above
+                    VideoGameID = 4, // Make sure this ID matches an existing video game ID below
+                    SalePrice = 31,
+                    ItemQuantity = 1
+                },
+
+                new OrderItem
+                {
+                    OrderItemID = 5,
+                    OrderID = 5, // Make sure this ID matches an existing order ID above
+                    VideoGameID = 5, // Make sure this ID matches an existing video game ID below
+                    SalePrice = 31,
+                    ItemQuantity = 1
+                },
+
+                new OrderItem
+                {
+                    OrderItemID = 6,
+                    OrderID = 6, // Make sure this ID matches an existing order ID above
+                    VideoGameID = 6, // Make sure this ID matches an existing video game ID below
+                    SalePrice = 31,
+                    ItemQuantity = 1
+                },
+
+                new OrderItem
+                {
+                    OrderItemID = 7,
+                    OrderID = 7, // Make sure this ID matches an existing order ID above
+                    VideoGameID = 7, // Make sure this ID matches an existing video game ID below
+                    SalePrice = 31,
+                    ItemQuantity = 1
+                },
+
+                new OrderItem
+                {
+                    OrderItemID = 8,
+                    OrderID = 8, // Make sure this ID matches an existing order ID above
+                    VideoGameID = 8, // Make sure this ID matches an existing video game ID below
+                    SalePrice = 31,
+                    ItemQuantity = 1
+                },
+
+                new OrderItem
+                {
+                    OrderItemID = 9,
+                    OrderID = 9, // Make sure this ID matches an existing order ID above
+                    VideoGameID = 9, // Make sure this ID matches an existing video game ID below
+                    SalePrice = 31,
+                    ItemQuantity = 1
+                },
+
+                new OrderItem
+                {
+                    OrderItemID = 10,
+                    OrderID = 10, // Make sure this ID matches an existing order ID above
+                    VideoGameID = 10, // Make sure this ID matches an existing video game ID below
+                    SalePrice = 31,
+                    ItemQuantity = 1
+                },
             };
 
             /// TODO: Only add this in after scaffolding the database.
