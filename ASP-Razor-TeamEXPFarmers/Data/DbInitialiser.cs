@@ -895,7 +895,40 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     PlatformID = "PlayStation 5"
                 },
 
-                // Example above, add the rest below.
+                new Platform
+                {
+                    PlatformID = "Xbox X"
+                },
+
+                new Platform
+                {
+                    PlatformID = "Nintendo Switch"
+                },
+
+                new Platform
+                {
+                    PlatformID = "PC"
+                },
+
+                new Platform
+                {
+                    PlatformID = "PlayStation 4"
+                },
+
+                new Platform
+                {
+                    PlatformID = "Xbox One"
+                },
+
+                new Platform
+                {
+                    PlatformID = "Stradia"
+                },
+
+                new Platform
+                {
+                    PlatformID = "Octolus Rift"
+                },
             };
 
             /// TODO: Only add this in after scaffolding the database.
