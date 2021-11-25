@@ -957,8 +957,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 2,
                     Title = "Destiny 2",
-                    Description = "Destiny 2 is a free-to-play online-only multiplayer" +
-                                  "first-person shooter video game",
+                    Description = "Destiny 2 is a free-to-play online-only multiplayer" 
+                    + "first-person shooter video game",
                     Image = "Destiny2CoverArt.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action,
@@ -974,17 +974,17 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new VideoGame
                 {
                     VideoGameID = 3,
-                    Title = "Destiny 2",
-                    Description = "Destiny 2 is a free-to-play online-only multiplayer" +
-                                  "first-person shooter video game",
+                    Title = "Forza 5",
+                    Description = "set in an open world environment based in a" 
+                    + "fictional representation of Mexico.",
                     Image = "Destiny2CoverArt.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.MMO,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
-                    MatureContentLevel = MatureContentLevel.Moderate,
-                    MatureContentDescription = "Contains moderate violence.",
-                    ReleaseDate = DateTime.Parse("2017-09-06"),
+                    MatureContentLevel = MatureContentLevel.None,
+                    MatureContentDescription = "Contains No Violence.",
+                    ReleaseDate = DateTime.Parse("2021-11-09"),
                     Price = 25,
                     InStockQuantity = 10
                 },

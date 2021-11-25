@@ -7,7 +7,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
     /// 
 	/// Created by Jason Huggins
 	/// Modified by Jason Huggins (11/11/2021)
-    /// Modified by Tyronne Bradburn(25/11/2021) Added MMO.
+    /// Modified by Tyronne Bradburn(25/11/2021) Added MMO/RACING.
     /// </summary>
     public enum Genre
     {
@@ -24,6 +24,8 @@ namespace ASP_Razor_TeamEXPFarmers.Models
         [Display(Name = "Strategy")]
         Strategy,
         [Display(Name = "MMO")]
-        MMO
+        MMO,
+        [Display(Name = "Racing")]
+        RACING
     }
 }
