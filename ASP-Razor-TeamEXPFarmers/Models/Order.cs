@@ -12,7 +12,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// on the storefront.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (22/11/2021)
+	/// Modified by Jason Huggins (25/11/2021)
 	/// </summary>
 	public class Order
 	{
@@ -46,9 +46,5 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		// Navigation properties
 		public virtual ICollection<OrderItem> OrderItems { get; set; }
 		public virtual Person Person { get; set; }	
-
-		/// TODO: For multiple payment methods, add as evaluation point
-		/// but don't add this line in.
-		/// private Payment payment;
 	}
 }

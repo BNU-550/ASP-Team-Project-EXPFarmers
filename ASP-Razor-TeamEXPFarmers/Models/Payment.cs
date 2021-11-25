@@ -10,7 +10,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// customer will be able to edit or delete their payment method.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (22/11/2021)
+	/// Modified by Jason Huggins (25/11/2021)
 	/// </summary>
 	public class Payment
 	{
@@ -23,6 +23,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// The payment card number.
 		/// </summary>
 		[Display(Name = "Card No."), StringLength(16), Required]
+		[DataType(DataType.CreditCard)]
 		public string PaymentCardNo { get; set; }
 
 		/// <summary>
