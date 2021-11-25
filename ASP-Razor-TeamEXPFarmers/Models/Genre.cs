@@ -26,6 +26,6 @@ namespace ASP_Razor_TeamEXPFarmers.Models
         [Display(Name = "MMO")]
         MMO,
         [Display(Name = "Racing")]
-        RACING
+        Racing
     }
 }

@@ -10,7 +10,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// 
 	/// Created by Jason Huggins
 	/// Modified by: Jason Huggins (23/11/2021) - fixed formatting.
-    /// Modified by: Tyronne Bradburn (23/11/2021) - Completed Part One. Updated comments. 
+    /// Modified by: Tyronne Bradburn (25/11/2021) - Completed Part One. Completed Part Two. Updated comments. 
     /// </summary>
     public static class DbInitialiser
     {
@@ -975,16 +975,178 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 3,
                     Title = "Forza 5",
-                    Description = "set in an open world environment based in a" 
+                    Description = "Set in an open world environment based in a" 
                     + "fictional representation of Mexico.",
-                    Image = "Destiny2CoverArt.jpg",
+                    Image = "Forza5CoverArt.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
-                    Genre = Genre.MMO,
+                    Genre = Genre.Racing,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
                     MatureContentLevel = MatureContentLevel.None,
                     MatureContentDescription = "Contains No Violence.",
                     ReleaseDate = DateTime.Parse("2021-11-09"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                new VideoGame
+                {
+                    VideoGameID = 3,
+                    Title = "Baldur's Gate III",
+                    Description = "Return to the legendary city of Baldur’s Gate® in a tale of fellowship and betrayal," 
+                    + "sacrifice and survival and the lure of absolute power.",
+                    Image = "BaldursGateIIICoverArt.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Role_Playing,
+                    PEGI = PEGI.PEGI_16,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.Mature,
+                    MatureContentDescription = "Contains Violence.",
+                    ReleaseDate = DateTime.Parse("2020-10-06"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                 new VideoGame
+                {
+                    VideoGameID = 4,
+                    Title = "God of War",
+                    Description = "Many years after Kratos defeated the Olympian gods," 
+                    + "he now lives with his son Atreus in ancient Scandinavia in the realm of Midgard.",
+                    Image = "GodOfWarCoverArt.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Action,
+                    PEGI = PEGI.PEGI_16,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.Mature,
+                    MatureContentDescription = "Contains high levels of Violence.",
+                    ReleaseDate = DateTime.Parse("2018-04-20"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                new VideoGame
+                {
+                    VideoGameID = 5,
+                    Title = "The Master Chief Collection",
+                    Description = "The Master Chief Collection originally consisted of Halo: Combat Evolved Anniversary, Halo 2 Anniversary, Halo 3, and Halo 4" 
+                    + "complete with their full catalog of extras, including all multiplayer maps and gameplay modes.",
+                    Image = "TheMasterChiefCollectionCoverArt.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Action,
+                    PEGI = PEGI.PEGI_16,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.Mature,
+                    MatureContentDescription = "Contains moderate Violence.",
+                    ReleaseDate = DateTime.Parse("2014-11-11"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                new VideoGame
+                {
+                    VideoGameID = 6,
+                    Title = "X-COM",
+                    Description = "In the spring of 2015, as a global alien invasion begins. A group of countries called the Council of Nations has banded together to create XCOM," 
+                    + "the most elite military and scientific organization in human history, tasked with defending them from the alien attack",
+                    Image = "X-COM.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Strategy,
+                    PEGI = PEGI.PEGI_16,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.Mature,
+                    MatureContentDescription = "Contains Moderate Violence.",
+                    ReleaseDate = DateTime.Parse("2012-10-09"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                new VideoGame
+                {
+                    VideoGameID = 7,
+                    Title = "FIFA 22",
+                    Description = "Play the most immersive, realistic and authentic football sim – the all new FIFA 22." 
+                    +"Whether you're just playing a quick match with friends or challenging yourself in the career mode with your favourite team," 
+                    + "you'll love the updated gameplay, physics and reinvented AI.",
+                    Image = "FIFA22.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Simulation,
+                    PEGI = PEGI.PEGI_3,
+                    DifficultyLevel = DifficultyLevel.Easy,
+                    MatureContentLevel = MatureContentLevel.None,
+                    MatureContentDescription = "Contains no Violence.",
+                    ReleaseDate = DateTime.Parse("2021-10-01"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                new VideoGame
+                {
+                    VideoGameID = 8,
+                    Title = "Shadow of the Tomb Raider",
+                    Description = "players take on the role of Lara Croft as she explores environments across the continents of Central and South America." 
+                    + "In addition to standalone areas, the game has a large hub in the Hidden City of Paititi." 
+                    + "A new barter system allows players to trade and sell various resources gathered from the areas surrounding Paititi.",
+                    Image = "ShadowoftheTombRaider.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Action,
+                    PEGI = PEGI.PEGI_16,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.Moderate,
+                    MatureContentDescription = "Contains Moderate Violence.",
+                    ReleaseDate = DateTime.Parse("2018-09-14"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                new VideoGame
+                {
+                    VideoGameID = 8,
+                    Title = "F1 2021",
+                    Description = "F1 2021 is the official video game of the 2021 Formula One and Formula 2 Championships developed by Codemasters and published by EA Sports.",
+                    Image = "F12021.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Racing,
+                    PEGI = PEGI.PEGI_3,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.None,
+                    MatureContentDescription = "Contains no Violence.",
+                    ReleaseDate = DateTime.Parse("2021-07-16"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                new VideoGame
+                {
+                    VideoGameID = 9,
+                    Title = "Rise of the Tomb Raider",
+                    Description = "follows Lara Croft as she ventures into Siberia in search of the legendary city of Kitezh while battling the paramilitary organization Trinity," 
+                    + "which intends to uncover the city's promise of immortality.",
+                    Image = "RiseoftheTOMBrAIDER.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Action_Adventure,
+                    PEGI = PEGI.PEGI_16,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.Moderate,
+                    MatureContentDescription = "Contains Moderate Violence.",
+                    ReleaseDate = DateTime.Parse("2015-11-10"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                new VideoGame
+                {
+                    VideoGameID = 10,
+                    Title = "Tomb Raider",
+                    Description = "The game is set on Yamatai, a fictional lost island in the Dragon's Triangle off the coast of Japan.",
+                    Image = "TombRaider.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Action_Adventure,
+                    PEGI = PEGI.PEGI_16,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.Moderate,
+                    MatureContentDescription = "Contains Moderate Violence.",
+                    ReleaseDate = DateTime.Parse("2015-03-05"),
                     Price = 25,
                     InStockQuantity = 10
                 },
