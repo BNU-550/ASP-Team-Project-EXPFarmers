@@ -8,8 +8,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// Initialises the database by seeding data, having at least 10 records
     /// in each table and demonstrating the relationships from the ERD.
     /// 
-	/// Created by Jason Huggins
-	/// Modified by: 
+    /// Created by Jason Huggins
+    /// Modified by:
     /// - Jason Huggins (25/11/2021) - Refactored class by splitting object instantiation
     /// into separate methods categorised by entity.
     /// - Tyronne Bradburn (25/11/2021) - Completed seeding process. Updated comments. 
@@ -447,7 +447,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Postcode = "NG12 8PZ"
                 },
 
-
                 new Address
                 {
                     AddressID = 12,
@@ -763,7 +762,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsPaid = false
                 },
 
-
                 new Order
                 {
                     OrderID = 3,
@@ -779,7 +777,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateCreated = DateTime.Parse("2021-05-06"),
                     IsPaid = false
                 },
-
 
                 new Order
                 {
