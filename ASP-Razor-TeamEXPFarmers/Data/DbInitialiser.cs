@@ -127,7 +127,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1985-05-31"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
 
                 new Person
                 {
@@ -417,7 +417,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Kingsway North",
                     City = "Holme Pierrepont",
                     Postcode = "NG12 8PZ"
-                }
+                },
 
 
                 new Address
@@ -711,7 +711,14 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsPaid = false
                 },
 
-                // Example above, add the rest below.
+                new Order
+                {
+                    OrderID = 1,
+                    PersonID = 3, // Make sure this ID matches an existing person ID above
+                    DateCreated = DateTime.Parse("2021-05-01"),
+                    IsPaid = false
+                },
+
             };
 
             /// TODO: Only add this in after scaffolding the database.
