@@ -55,7 +55,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1976-05-03"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
 
                 new Person
                 {
@@ -67,7 +67,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1980-10-05"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
 
                 new Person
                 {
@@ -79,7 +79,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1994-01-12"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
 
                 new Person
                 {
@@ -91,7 +91,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1965-12-25"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
 
                 new Person
                 {
@@ -103,7 +103,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
 
                 new Person
                 {
@@ -115,7 +115,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
 
                 new Person
                 {
@@ -127,8 +127,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1985-05-31"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
-
+                },
+                
                 new Person
                 {
                     PersonID = 15,
@@ -139,7 +139,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1999-03-25"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
 
                 new Person
                 {
@@ -151,7 +151,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1991-07-10"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
 
                 new Person
                 {
@@ -185,7 +185,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Manager",
                     Salary = 30250
-                }
+                },
 
                 new Staff
                 {
@@ -199,7 +199,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Manager",
                     Salary = 30250
-                }
+                },
 
                 new Staff
                 {
@@ -213,7 +213,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Sales Rep",
                     Salary = 25500
-                }
+                },
 
                 new Staff
                 {
@@ -227,7 +227,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Sales Rep",
                     Salary = 25500
-                }
+                },
 
                 new Staff
                 {
@@ -241,7 +241,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Sales Rep",
                     Salary = 25500
-                }
+                },
 
                 new Staff
                 {
@@ -255,7 +255,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Sales Rep",
                     Salary = 25500
-                }
+                },
 
                 new Staff
                 {
@@ -269,7 +269,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Sales Rep",
                     Salary = 25500
-                }
+                },
 
                 new Staff
                 {
@@ -283,7 +283,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Sales Rep",
                     Salary = 25500
-                }
+                },
 
                 new Staff
                 {
@@ -297,7 +297,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Sales Rep",
                     Salary = 25500
-                }
+                },
 
                 new Staff
                 {
@@ -327,7 +327,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Raye Lane",
                     City = "Henley-on-Thames",
                     Postcode = "RG98 3GW"
-                }
+                },
 
                 new Address
                 {
@@ -336,7 +336,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Nottingham Road",
                     City = "Abedeen",
                     Postcode = "AV2 2TJ"
-                }
+                },
 
                 new Address
                 {
@@ -345,7 +345,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Holburn Road",
                     City = "Hele Bridge",
                     Postcode = "EX20 3QX"
-                }
+                },
 
                 new Address
                 {
@@ -354,7 +354,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Copthorne Way",
                     City = "Cameron",
                     Postcode = "G83 4TN"
-                }
+                },
 
                 new Address
                 {
@@ -363,7 +363,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Guild Street",
                     City = "London",
                     Postcode = "NW1 1BE"
-                }
+                },
 
                 new Address
                 {
@@ -372,7 +372,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "South Street",
                     City = "London",
                     Postcode = "SE14 8JW"
-                }
+                },
 
                 new Address
                 {
@@ -381,7 +381,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Shannon Way",
                     City = "Chiddingfold",
                     Postcode = "GU8 0JS"
-                }
+                },
 
                 new Address
                 {
@@ -390,7 +390,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Lairg Road",
                     City = "Newbold",
                     Postcode = "S42 9PU"
-                }
+                },
 
                 new Address
                 {
@@ -399,7 +399,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Duckpit lane",
                     City = "Upton",
                     Postcode = "EX14 1AF"
-                }
+                },
 
                 new Address
                 {
@@ -408,7 +408,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Wilthers Close",
                     City = "Allesley",
                     Postcode = "CV5 3LW"
-                }
+                },
 
                 new Address
                 {
@@ -417,7 +417,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Kingsway North",
                     City = "Holme Pierrepont",
                     Postcode = "NG12 8PZ"
-                }
+                },
 
 
                 new Address
@@ -427,7 +427,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Thornton Street",
                     City = "Hundleby",
                     Postcode = "PE23 6SJ"
-                }
+                },
 
                 new Address
                 {
@@ -436,7 +436,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Ross Road",
                     City = "Martock",
                     Postcode = "TA12 2QE"
-                }
+                },
 
                 new Address
                 {
@@ -445,7 +445,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Winchester Road",
                     City = "Merthyr Cynog",
                     Postcode = "LD3 2DR"
-                }
+                },
 
                 new Address
                 {
@@ -454,7 +454,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Witney Way",
                     City = "Knockentiber",
                     Postcode = "KA2 0PN"
-                }
+                },
 
                 new Address
                 {
@@ -463,7 +463,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Goldern Knowes Road",
                     City = "Foxley",
                     Postcode = "SN16 7RD"
-                }
+                },
 
                 new Address
                 {
@@ -472,7 +472,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Grey Street",
                     City = "Kentmere",
                     Postcode = "LA8 9PG"
-                }
+                },
 
                 new Address
                 {
@@ -481,7 +481,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Whitby Road",
                     City = "Derbyhaven",
                     Postcode = "IM9 6YF"
-                }
+                },
 
                 new Address
                 {
@@ -490,7 +490,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Fulford Road",
                     City = "Pentlepoir",
                     Postcode = "SA69 5FN"
-                }
+                },
 
                 new Address
                 {
@@ -517,7 +517,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 11, // 2 digits
                     CardExpiryYear = 2025, // 4 digits
                     CardCSV = 999 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -526,7 +526,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 12, // 2 digits
                     CardExpiryYear = 2025, // 4 digits
                     CardCSV = 888 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -535,7 +535,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 01, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 777 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -544,7 +544,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 02, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 666 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -553,7 +553,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 03, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 555 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -562,7 +562,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 04, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 444 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -571,7 +571,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 05, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 333 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -580,7 +580,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 06, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 222 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -589,7 +589,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 07, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 111 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -598,7 +598,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 08, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 101 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -607,7 +607,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 09, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 010 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -616,7 +616,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 10, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 121 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -625,7 +625,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 11, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 131 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -634,7 +634,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 12, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 141 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -643,7 +643,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 01, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
                     CardCSV = 151 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -652,7 +652,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 02, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
                     CardCSV = 161 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -661,7 +661,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 03, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
                     CardCSV = 171 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -670,7 +670,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 04, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
                     CardCSV = 181 // 3 digits
-                }
+                },
 
                 new Payment
                 {
@@ -679,7 +679,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 05, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
                     CardCSV = 191 // 3 digits
-                }
+                },
 
                 new Payment
                 {
