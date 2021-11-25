@@ -714,11 +714,77 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Order
                 {
                     OrderID = 1,
+                    PersonID = 2, // Make sure this ID matches an existing person ID above
+                    DateCreated = DateTime.Parse("2021-05-05"),
+                    IsPaid = false
+                },
+
+
+                new Order
+                {
+                    OrderID = 1,
                     PersonID = 3, // Make sure this ID matches an existing person ID above
                     DateCreated = DateTime.Parse("2021-05-01"),
                     IsPaid = false
                 },
 
+                new Order
+                {
+                    OrderID = 1,
+                    PersonID = 4, // Make sure this ID matches an existing person ID above
+                    DateCreated = DateTime.Parse("2021-05-06"),
+                    IsPaid = false
+                },
+
+
+                new Order
+                {
+                    OrderID = 1,
+                    PersonID = 5, // Make sure this ID matches an existing person ID above
+                    DateCreated = DateTime.Parse("2021-05-02"),
+                    IsPaid = false
+                },
+
+                new Order
+                {
+                    OrderID = 1,
+                    PersonID = 6, // Make sure this ID matches an existing person ID above
+                    DateCreated = DateTime.Parse("2021-05-07"),
+                    IsPaid = false
+                },
+
+                new Order
+                {
+                    OrderID = 1,
+                    PersonID = 7, // Make sure this ID matches an existing person ID above
+                    DateCreated = DateTime.Parse("2021-05-03"),
+                    IsPaid = false
+                },
+
+                new Order
+                {
+                    OrderID = 1,
+                    PersonID = 8, // Make sure this ID matches an existing person ID above
+                    DateCreated = DateTime.Parse("2021-05-08"),
+                    IsPaid = false
+                },
+
+
+                new Order
+                {
+                    OrderID = 1,
+                    PersonID = 9, // Make sure this ID matches an existing person ID above
+                    DateCreated = DateTime.Parse("2021-05-04"),
+                    IsPaid = false
+                },
+
+                new Order
+                {
+                    OrderID = 1,
+                    PersonID = 10, // Make sure this ID matches an existing person ID above
+                    DateCreated = DateTime.Parse("2021-05-09"),
+                    IsPaid = false
+                },
             };
 
             /// TODO: Only add this in after scaffolding the database.
