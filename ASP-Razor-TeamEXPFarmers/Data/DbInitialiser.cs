@@ -9,10 +9,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// in each table and demonstrating the relationships from the ERD.
     /// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (22/11/2021).
-    /// Modified by Tyronne Bradburn (22/11/2021). Added 9 new Person. Added 9 new +
-    /// Staff memebers. Updated comments. 
-    /// Modified by Tyronne Bradburn (23/11/2021). Added Adresses. Added Payment Cards.
+	/// Modified by:
+    /// Jason Huggins (23/11/2021) - fixed formatting.
+    /// Tyronne Bradburn (23/11/2021) - Added 9 new Person. Added 9 new
+    /// Staff members. Updated comments. Added Addresses. Added Payment Cards.
     /// </summary>
     public static class DbInitialiser
     {
@@ -127,8 +127,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1985-05-31"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                },
-                
+                }
+
                 new Person
                 {
                     PersonID = 15,
@@ -163,7 +163,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     DateOfBirth = DateTime.Parse("1993-04-10"), // YYYY-MM-DD,
                     IsCustomer = true,
                     IsStaff = false
-                }
+                },
             };
 
             /// TODO: Only add this in after scaffolding the database.
@@ -311,8 +311,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     IsStaff = true,
                     JobPosition = "Sales Rep",
                     Salary = 25500
-                }
-            };
+                },
+                };
 
             /// TODO: Only add this in after scaffolding the database.
             /// context.Staff.AddRange(staff);
@@ -417,7 +417,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Kingsway North",
                     City = "Holme Pierrepont",
                     Postcode = "NG12 8PZ"
-                },
+                }
 
 
                 new Address
@@ -499,7 +499,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Street = "Clasper Way",
                     City = "Hever",
                     Postcode = "TN8 2WL"
-                }
+                },
             };
 
             /// TODO: Only add this in after scaffolding the database.
@@ -688,7 +688,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     CardExpiryMonth = 06, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
                     CardCSV = 202 // 3 digits
-                }
+                },
             };
 
             /// TODO: Only add this in after scaffolding the database.
@@ -709,7 +709,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     PersonID = 1, // Make sure this ID matches an existing person ID above
                     DateCreated = DateTime.Parse("2021-05-13"),
                     IsPaid = false
-                }
+                },
 
                 // Example above, add the rest below.
             };
@@ -727,7 +727,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     VideoGameID = 1, // Make sure this ID matches an existing video game ID below
                     SalePrice = 31,
                     ItemQuantity = 1
-                }
+                },
 
                 // Example above, add the rest below.
             };
@@ -741,7 +741,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Platform
                 {
                     PlatformID = "PlayStation 5"
-                }
+                },
 
                 // Example above, add the rest below.
             };
@@ -768,7 +768,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     ReleaseDate = DateTime.Parse("2018-09-07"),
                     Price = 25,
                     InStockQuantity = 10
-                }
+                },
 
                 // Example above, add the rest below.
             };
