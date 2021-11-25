@@ -9,10 +9,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// in each table and demonstrating the relationships from the ERD.
     /// 
 	/// Created by Jason Huggins
-	/// Modified by:
-    /// Jason Huggins (23/11/2021) - fixed formatting.
-    /// Tyronne Bradburn (23/11/2021) - Added 9 new Person. Added 9 new
-    /// Staff members. Updated comments. Added Addresses. Added Payment Cards.
+	/// Modified by: Jason Huggins (23/11/2021) - fixed formatting.
+    /// Modified by: Tyronne Bradburn (23/11/2021) - Completed Part One. Updated comments. 
     /// </summary>
     public static class DbInitialiser
     {
@@ -942,7 +940,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     VideoGameID = 1,
                     Title = "Marvel's Spider-Man",
                     Description = "Swing your way through New York City as everyone's "
-                    + "favourite superhero Spider-Man!",
+                                    + "favourite superhero Spider-Man!",
                     Image = "spidermancoverart.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action,
@@ -955,7 +953,41 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     InStockQuantity = 10
                 },
 
-                // Example above, add the rest below.
+                new VideoGame
+                {
+                    VideoGameID = 2,
+                    Title = "Destiny 2",
+                    Description = "Destiny 2 is a free-to-play online-only multiplayer" +
+                                  "first-person shooter video game",
+                    Image = "Destiny2CoverArt.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.Action,
+                    PEGI = PEGI.PEGI_16,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.Moderate,
+                    MatureContentDescription = "Contains moderate violence.",
+                    ReleaseDate = DateTime.Parse("2017-09-06"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
+
+                new VideoGame
+                {
+                    VideoGameID = 3,
+                    Title = "Destiny 2",
+                    Description = "Destiny 2 is a free-to-play online-only multiplayer" +
+                                  "first-person shooter video game",
+                    Image = "Destiny2CoverArt.jpg",
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    Genre = Genre.MMO,
+                    PEGI = PEGI.PEGI_16,
+                    DifficultyLevel = DifficultyLevel.Moderate,
+                    MatureContentLevel = MatureContentLevel.Moderate,
+                    MatureContentDescription = "Contains moderate violence.",
+                    ReleaseDate = DateTime.Parse("2017-09-06"),
+                    Price = 25,
+                    InStockQuantity = 10
+                },
             };
 
             /// TODO: Only add this in after scaffolding the database.
