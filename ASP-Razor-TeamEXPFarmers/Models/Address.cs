@@ -10,7 +10,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// be linked with numerous people in the database. 
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (20/11/2021)
+	/// Modified by Jason Huggins (25/11/2021)
 	/// </summary>
 	public class Address
     {
@@ -48,6 +48,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// The address' postcode.
 		/// </summary>
 		[StringLength(15), Required]
+		[DataType(DataType.PostalCode)]
 		public string Postcode { get; set; }
 	}
 }

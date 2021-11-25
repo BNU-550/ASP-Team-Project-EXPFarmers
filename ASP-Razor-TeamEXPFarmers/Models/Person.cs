@@ -11,7 +11,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// staff member.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (22/11/2021)
+	/// Modified by Jason Huggins (25/11/2021)
 	/// </summary>
 	public class Person
 	{
@@ -41,12 +41,14 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// The person's email address.
 		/// </summary>
 		[Display(Name = "Email Address"), StringLength(128), Required]
+		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; }
 
 		/// <summary>
 		/// The person's contact number.
 		/// </summary>
 		[Display(Name = "Contact No."), StringLength(30), Required]
+		[DataType(DataType.PhoneNumber)]
 		public string ContactNumber { get; set; }
 
 		/// <summary>
@@ -66,6 +68,17 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// </summary>
 		[Display(Name = "Staff?"), Required]
 		public bool IsStaff { get; set; }
+
+		/// <summary>
+		/// Calculated property.
+		/// The person's full name, concatenating FirstName and
+		/// LastName.
+		/// </summary>
+		[Display(Name = "Full Name")]
+		public string FullName
+		{
+			get { return FirstName + " " + LastName; }
+		}
 
 		// Navigation properties
 		public virtual Address Address { get; set; }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
 {
@@ -14,7 +15,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// each video game are in stock.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (22/11/2021)
+	/// Modified by Jason Huggins (25/11/2021)
 	/// </summary>
 	public class VideoGame
 	{
@@ -86,7 +87,8 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// <summary>
 		/// The video game's price.
 		/// </summary>
-		[Required]
+		[Range(0, 100), DataType(DataType.Currency), Required]
+		[Column(TypeName = "Money")]
 		public decimal Price { get; set; }
 
 		/// <summary>
