@@ -12,7 +12,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 	/// Modified by Jason Huggins (22/11/2021).
     /// Modified by Tyronne Bradburn (22/11/2021). Added 9 new Person. Added 9 new +
     /// Staff memebers. Updated comments. 
-    /// Modified by Tyronne Bradburn (23/11/2021). Added Adresses. Added Payment Cards
+    /// Modified by Tyronne Bradburn (23/11/2021). Added Adresses. Added Payment Cards.
     /// </summary>
     public static class DbInitialiser
     {
@@ -759,7 +759,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Description = "Swing your way through New York City as everyone's "
                     + "favourite superhero Spider-Man!",
                     Image = "spidermancoverart.jpg",
-                    // Platform = "Playstation 5" Not sure if this needs to be here.(Tyronne)
+                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
