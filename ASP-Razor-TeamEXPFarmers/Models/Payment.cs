@@ -14,10 +14,8 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// </summary>
 	public class Payment
 	{
-		// Primary key
-		// TODO: Might fail
 		[Key]
-		public int PersonID { get; set; }
+		public int PaymentID { get; set; }
 
 		/// <summary>
 		/// The payment card number.
@@ -55,8 +53,5 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// </summary>
 		[Display(Name = "Card CSV No."), MaxLength(3), Required]
 		public int CardCSV { get; set; }
-
-		// Navigation property
-		public virtual Person Person { get; set; }
 	}
 }

@@ -14,12 +14,9 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// </summary>
 	public class Address
     {
-		/// <summary>
-		/// The ID of the address.
-		/// </summary>
+
 		[Key]
 		public int AddressID { get; set; }
-
 		/// <summary>
 		/// The house number.
 		/// </summary>

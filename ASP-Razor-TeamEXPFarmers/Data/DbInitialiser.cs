@@ -23,13 +23,13 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         public static void Initialise(ApplicationDbContext context)
         {
             AddAddresses(context);
-            AddPayments(context);
-            AddCustomers(context);
-            AddStaff(context);
-            AddOrders(context);
-            AddOrderItems(context);
-            AddPlatforms(context);
-            AddVideoGames(context);
+           // AddPayments(context);
+           // AddCustomers(context);
+           // AddStaff(context);
+           // AddOrders(context);
+           // AddOrderItems(context);
+           // AddPlatforms(context);
+           // AddVideoGames(context);
         }
 
         private static void AddCustomers(ApplicationDbContext context)
@@ -62,6 +62,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     //PersonID = 3,
+                    AddressID = 2,
+                    PaymentID = 2,
                     FirstName = "Daniel",
                     LastName = "Smith",
                     Email = "danielsmith@mail.com",
@@ -74,7 +76,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     //PersonID = 5,
-                    FirstName = "Tom",
+                    AddressID = 3,
+                    PaymentID = 3,                    FirstName = "Tom",
                     LastName = "Jones",
                     Email = "tomjones@mail.com",
                     ContactNumber = "01729863547",
@@ -86,6 +89,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     //PersonID = 7,
+                    AddressID = 4,
+                    PaymentID = 4,
                     FirstName = "Lisa",
                     LastName = "McDonald",
                     Email = "lisamcdonald@mail.com",
@@ -98,6 +103,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     //PersonID = 9,
+                    AddressID = 5,
+                    PaymentID = 5,
                     FirstName = "Monica",
                     LastName = "Johnson",
                     Email = "monicajohnson@mail.com",
@@ -110,6 +117,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     //PersonID = 11,
+                    AddressID = 6,
+                    PaymentID = 6,
                     FirstName = "Monica",
                     LastName = "Johnson",
                     Email = "monicajohnson@mail.com",
@@ -122,6 +131,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     //PersonID = 13,
+                    AddressID = 7,
+                    PaymentID = 7,
                     FirstName = "Mason",
                     LastName = "Tickner",
                     Email = "masontickner@mail.com",
@@ -134,6 +145,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     //PersonID = 15,
+                    AddressID = 8,
+                    PaymentID = 8,
                     FirstName = "Thomas",
                     LastName = "White",
                     Email = "thomaswhite@mail.com",
@@ -146,6 +159,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     //PersonID = 17,
+                    AddressID = 9,
+                    PaymentID = 9,
                     FirstName = "Bailey",
                     LastName = "Norton",
                     Email = "baileynorton@mail.com",
@@ -158,6 +173,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     //PersonID = 19,
+                    AddressID = 10,
+                    PaymentID = 10,
                     FirstName = "Vanessa",
                     LastName = "Clayton",
                     Email = "vanessaclayton@mail.com",
@@ -344,7 +361,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             {
                 new Address
                 {
-                    //AddressID = 1,
                     HouseNo = "26",
                     Street = "Raye Lane",
                     City = "Henley-on-Thames",
@@ -353,7 +369,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 2,
                     HouseNo = "124",
                     Street = "Nottingham Road",
                     City = "Abedeen",
