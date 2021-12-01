@@ -22,14 +22,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         /// </summary>
         public static void Initialise(ApplicationDbContext context)
         {
-            /// Instantiating lists using ICollection. Commenting out as
-            /// I'm not sure if they're needed here.
-            /// 
-            /// ICollection<OrderItem> orderItemList = new List<OrderItem>();
-            /// ICollection<Order> orderList = new List<Order>();
-            /// ICollection<VideoGame> videoGameList = new List<VideoGame>();
-            /// ICollection<Platform> platformList = new List<Platform>();
-
             AddCustomers(context);
             AddStaff(context);
             AddAddresses(context);
@@ -56,6 +48,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 new Person
                 {
                     PersonID = 1,
+                    AddressID = 1,
+                    PaymentID = 1,
                     FirstName = "Mark",
                     LastName = "Wayne",
                     Email = "markwayne10@mail.com",

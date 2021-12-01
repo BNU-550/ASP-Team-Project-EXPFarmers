@@ -18,7 +18,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// <summary>
 		/// The platform ID which is its name (e.g. PlayStation 4, Xbox One, Nintendo Switch).
 		/// </summary>
-		[Key]
+		[Key, StringLength(20)]
 		public string PlatformID { get; set; }
 
 		/// <summary>
