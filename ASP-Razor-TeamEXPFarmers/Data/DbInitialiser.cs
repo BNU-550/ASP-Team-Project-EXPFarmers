@@ -11,8 +11,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// 
     /// Created by Jason Huggins
     /// Modified by:
-    /// - Jason Huggins (25/11/2021) - Refactored class by splitting object instantiation
-    /// into separate methods categorised by entity.
+    /// - Jason Huggins (01/12/2021) - Scaffolded database, data not showing up yet.
     /// - Tyronne Bradburn (25/11/2021) - Completed seeding process. Updated comments. 
     /// </summary>
     public static class DbInitialiser
