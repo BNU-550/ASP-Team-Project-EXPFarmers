@@ -345,7 +345,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             {
                 new Address
                 {
-                    AddressID = 1,
+                    //AddressID = 1,
                     HouseNo = "26",
                     Street = "Raye Lane",
                     City = "Henley-on-Thames",
@@ -354,7 +354,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 2,
+                    //AddressID = 2,
                     HouseNo = "124",
                     Street = "Nottingham Road",
                     City = "Abedeen",
@@ -363,7 +363,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 3,
+                    //AddressID = 3,
                     HouseNo = "60",
                     Street = "Holburn Road",
                     City = "Hele Bridge",
@@ -372,7 +372,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 4,
+                    //AddressID = 4,
                     HouseNo = "65",
                     Street = "Copthorne Way",
                     City = "Cameron",
@@ -381,7 +381,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 5,
+                    //AddressID = 5,
                     HouseNo = "65",
                     Street = "Guild Street",
                     City = "London",
@@ -390,7 +390,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 6,
+                    //AddressID = 6,
                     HouseNo = "64",
                     Street = "South Street",
                     City = "London",
@@ -399,7 +399,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 7,
+                    //AddressID = 7,
                     HouseNo = "34",
                     Street = "Shannon Way",
                     City = "Chiddingfold",
@@ -408,7 +408,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 8,
+                    //AddressID = 8,
                     HouseNo = "83",
                     Street = "Lairg Road",
                     City = "Newbold",
@@ -417,7 +417,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 9,
+                    //AddressID = 9,
                     HouseNo = "44",
                     Street = "Duckpit lane",
                     City = "Upton",
@@ -426,7 +426,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 10,
+                    //AddressID = 10,
                     HouseNo = "33",
                     Street = "Wilthers Close",
                     City = "Allesley",
@@ -435,7 +435,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 11,
+                    //AddressID = 11,
                     HouseNo = "66",
                     Street = "Kingsway North",
                     City = "Holme Pierrepont",
@@ -444,7 +444,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 12,
+                    //AddressID = 12,
                     HouseNo = "98",
                     Street = "Thornton Street",
                     City = "Hundleby",
@@ -453,7 +453,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 13,
+                    //AddressID = 13,
                     HouseNo = "70",
                     Street = "Ross Road",
                     City = "Martock",
@@ -462,7 +462,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 14,
+                    //AddressID = 14,
                     HouseNo = "117",
                     Street = "Winchester Road",
                     City = "Merthyr Cynog",
@@ -471,7 +471,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 15,
+                    //AddressID = 15,
                     HouseNo = "133",
                     Street = "Witney Way",
                     City = "Knockentiber",
@@ -480,7 +480,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 16,
+                    //AddressID = 16,
                     HouseNo = "126",
                     Street = "Goldern Knowes Road",
                     City = "Foxley",
@@ -489,7 +489,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 17,
+                    //AddressID = 17,
                     HouseNo = "48",
                     Street = "Grey Street",
                     City = "Kentmere",
@@ -498,7 +498,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 18,
+                    //AddressID = 18,
                     HouseNo = "39",
                     Street = "Whitby Road",
                     City = "Derbyhaven",
@@ -507,7 +507,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 19,
+                    //AddressID = 19,
                     HouseNo = "54",
                     Street = "Fulford Road",
                     City = "Pentlepoir",
@@ -516,7 +516,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    AddressID = 20,
+                    //AddressID = 20,
                     HouseNo = "66",
                     Street = "Clasper Way",
                     City = "Hever",
@@ -544,7 +544,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             {
                 new Payment
                 {
-                    PersonID = 1,
                     PaymentCardNo = "9999999999999999", // 16 digits
                     CardExpiryMonth = 11, // 2 digits
                     CardExpiryYear = 2025, // 4 digits
@@ -553,7 +552,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 2,
                     PaymentCardNo = "8888888888888888", // 16 digits
                     CardExpiryMonth = 12, // 2 digits
                     CardExpiryYear = 2025, // 4 digits
@@ -562,7 +560,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 3,
                     PaymentCardNo = "7777777777777777", // 16 digits
                     CardExpiryMonth = 01, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -571,7 +568,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 4,
                     PaymentCardNo = "6666666666666666", // 16 digits
                     CardExpiryMonth = 02, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -580,7 +576,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 5,
                     PaymentCardNo = "5555555555555555", // 16 digits
                     CardExpiryMonth = 03, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -589,7 +584,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 6,
                     PaymentCardNo = "4444444444444444", // 16 digits
                     CardExpiryMonth = 04, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -598,7 +592,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 7,
                     PaymentCardNo = "3333333333333333", // 16 digits
                     CardExpiryMonth = 05, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -607,7 +600,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 8,
                     PaymentCardNo = "2222222222222222", // 16 digits
                     CardExpiryMonth = 06, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -616,7 +608,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 9,
                     PaymentCardNo = "1111111111111111", // 16 digits
                     CardExpiryMonth = 07, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -625,7 +616,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 10,
                     PaymentCardNo = "1010101010101010", // 16 digits
                     CardExpiryMonth = 08, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -634,7 +624,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 11,
                     PaymentCardNo = "0101010101010101", // 16 digits
                     CardExpiryMonth = 09, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -643,7 +632,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 12,
                     PaymentCardNo = "1212121212121212", // 16 digits
                     CardExpiryMonth = 10, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -652,7 +640,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 13,
                     PaymentCardNo = "1313131313131313", // 16 digits
                     CardExpiryMonth = 11, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -661,7 +648,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 14,
                     PaymentCardNo = "1414141414141414", // 16 digits
                     CardExpiryMonth = 12, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
@@ -670,7 +656,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 15,
                     PaymentCardNo = "1515151515151515", // 16 digits
                     CardExpiryMonth = 01, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -679,7 +664,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 16,
                     PaymentCardNo = "1616161616161616", // 16 digits
                     CardExpiryMonth = 02, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -688,7 +672,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 17,
                     PaymentCardNo = "1717171717171717", // 16 digits
                     CardExpiryMonth = 03, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -697,7 +680,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 18,
                     PaymentCardNo = "1818181818181818", // 16 digits
                     CardExpiryMonth = 04, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -706,7 +688,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 19,
                     PaymentCardNo = "1919191919191919", // 16 digits
                     CardExpiryMonth = 05, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
@@ -715,7 +696,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PersonID = 20,
                     PaymentCardNo = "2020202020202020", // 16 digits
                     CardExpiryMonth = 06, // 2 digits
                     CardExpiryYear = 2027, // 4 digits
