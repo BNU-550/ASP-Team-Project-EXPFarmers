@@ -29,8 +29,9 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
            // AddOrders(context);
            // AddOrderItems(context);
+
             AddPlatforms(context);
-           // AddVideoGames(context);
+            AddVideoGames(context);
         }
 
         private static void AddCustomers(ApplicationDbContext context)
@@ -998,8 +999,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Platform.AddRange(platforms);
-            /// context.SaveChanges();
+            context.Platforms.AddRange(platforms);
+            context.SaveChanges();
         }
 
         private static void AddVideoGames(ApplicationDbContext context)
