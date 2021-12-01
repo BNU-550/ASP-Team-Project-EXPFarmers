@@ -27,8 +27,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             AddCustomers(context);
             AddStaff(context);
 
-           // AddOrders(context);
-           // AddOrderItems(context);
+            AddOrders(context);
+            AddOrderItems(context);
 
             AddPlatforms(context);
             AddVideoGames(context);
@@ -755,63 +755,55 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             {
                 new Order
                 {
-                    OrderID = 1,
-                    PersonID = 1, 
+                    PersonID = 2, 
                     DateCreated = DateTime.Parse("2021-05-13"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 2,
-                    PersonID = 2, 
+                    PersonID = 3, 
                     DateCreated = DateTime.Parse("2021-05-05"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 3,
-                    PersonID = 3, 
+                    PersonID = 4, 
                     DateCreated = DateTime.Parse("2021-05-01"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 4,
-                    PersonID = 4, 
+                    PersonID = 5, 
                     DateCreated = DateTime.Parse("2021-05-06"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 5,
-                    PersonID = 5, 
+                    PersonID = 6, 
                     DateCreated = DateTime.Parse("2021-05-02"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 6,
-                    PersonID = 6, 
+                    PersonID = 7, 
                     DateCreated = DateTime.Parse("2021-05-07"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 7,
-                    PersonID = 7, 
+                    PersonID = 8, 
                     DateCreated = DateTime.Parse("2021-05-03"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 8,
                     PersonID = 8, 
                     DateCreated = DateTime.Parse("2021-05-08"),
                     IsPaid = false
@@ -819,15 +811,13 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Order
                 {
-                    OrderID = 9,
-                    PersonID = 9, 
+                    PersonID = 10, 
                     DateCreated = DateTime.Parse("2021-05-04"),
                     IsPaid = false
                 },
 
                 new Order
                 {
-                    OrderID = 10,
                     PersonID = 10, 
                     DateCreated = DateTime.Parse("2021-05-09"),
                     IsPaid = false
@@ -835,25 +825,24 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Order.AddRange(orders);
-            /// context.SaveChanges();
+            context.Orders.AddRange(orders);
+            context.SaveChanges();
         }
 
         private static void AddOrderItems(ApplicationDbContext context)
         {
             /// To be added after scaffolding.
             /// Look for any order items.
-            /// if (context.OrderItem.Any())
-            /// {
-            ///     return; // Database has been seeded.
-            /// }
+            if (context.OrderItems.Any())
+            {
+                return; // Database has been seeded.
+            }
 
             var orderItems = new OrderItem[]
             {
                 new OrderItem
                 {
-                    OrderItemID = 1,
-                    OrderID = 1, 
+                    OrderID = 3, 
                     VideoGameID = 1, 
                     SalePrice = 31,
                     ItemQuantity = 1
@@ -861,8 +850,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new OrderItem
                 {
-                    OrderItemID = 2,
-                    OrderID = 2, 
+                    OrderID = 3, 
                     VideoGameID = 2, 
                     SalePrice = 100,
                     ItemQuantity = 5
@@ -870,8 +858,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new OrderItem
                 {
-                    OrderItemID = 3,
-                    OrderID = 3, 
+                    //OrderItemID = 3,
+                    OrderID = 4, 
                     VideoGameID = 3, 
                     SalePrice = 31,
                     ItemQuantity = 1
@@ -879,7 +867,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new OrderItem
                 {
-                    OrderItemID = 4,
+                    //OrderItemID = 4,
                     OrderID = 4, 
                     VideoGameID = 4, 
                     SalePrice = 31,
@@ -888,7 +876,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new OrderItem
                 {
-                    OrderItemID = 5,
+                    //OrderItemID = 5,
                     OrderID = 5, 
                     VideoGameID = 5, 
                     SalePrice = 31,
@@ -897,7 +885,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new OrderItem
                 {
-                    OrderItemID = 6,
+                    //OrderItemID = 6,
                     OrderID = 6, 
                     VideoGameID = 6,
                     SalePrice = 31,
@@ -906,7 +894,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new OrderItem
                 {
-                    OrderItemID = 7,
+                    //OrderItemID = 7,
                     OrderID = 7,
                     VideoGameID = 7,
                     SalePrice = 31,
@@ -915,7 +903,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new OrderItem
                 {
-                    OrderItemID = 8,
+                    //OrderItemID = 8,
                     OrderID = 8,
                     VideoGameID = 8,
                     SalePrice = 31,
@@ -924,7 +912,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new OrderItem
                 {
-                    OrderItemID = 9,
+                    //OrderItemID = 9,
                     OrderID = 9,
                     VideoGameID = 9,
                     SalePrice = 31,
@@ -933,7 +921,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new OrderItem
                 {
-                    OrderItemID = 10,
+                    //OrderItemID = 10,
                     OrderID = 10,
                     VideoGameID = 10,
                     SalePrice = 31,
@@ -942,8 +930,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.OrderItems.AddRange(orderItems);
-            /// context.SaveChanges();
+            context.OrderItems.AddRange(orderItems);
+            context.SaveChanges();
         }
 
         private static void AddPlatforms(ApplicationDbContext context)
@@ -1007,21 +995,20 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         {
             /// To be added after scaffolding.
             /// Look for any video games.
-            /// if (context.VideoGame.Any())
-            /// {
-            ///     return; // Database has been seeded.
-            /// }
+            if (context.VideoGames.Any())
+            {
+                return; // Database has been seeded.
+            }
 
             var videoGames = new VideoGame[]
             {
                 new VideoGame
                 {
-                    VideoGameID = 1,
+                    // VideoGameID = 1
                     Title = "Marvel's Spider-Man",
                     Description = "Swing your way through New York City as everyone's "
                                     + "favourite superhero Spider-Man!",
                     Image = "spidermancoverart.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1034,12 +1021,11 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 2,
+                    //VideoGameID = 2,
                     Title = "Destiny 2",
                     Description = "Destiny 2 is a free-to-play online-only multiplayer"
                     + "first-person shooter video game",
                     Image = "Destiny2CoverArt.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1052,12 +1038,11 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 3,
+                    //VideoGameID = 3,
                     Title = "Forza 5",
                     Description = "Set in an open world environment based in a"
                     + "fictional representation of Mexico.",
                     Image = "Forza5CoverArt.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Racing,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1070,7 +1055,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 3,
+                    //VideoGameID = 4,
                     Title = "Baldur's Gate III",
                     Description = "Return to the legendary city of Baldur’s Gate® in a tale of fellowship and betrayal,"
                     + "sacrifice and survival and the lure of absolute power.",
@@ -1088,7 +1073,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                  new VideoGame
                 {
-                    VideoGameID = 4,
+                    //VideoGameID = 5,
                     Title = "God of War",
                     Description = "Many years after Kratos defeated the Olympian gods,"
                     + "he now lives with his son Atreus in ancient Scandinavia in the realm of Midgard.",
@@ -1106,13 +1091,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 5,
+                    //VideoGameID = 6,
                     Title = "The Master Chief Collection",
                     Description = "The Master Chief Collection originally consisted of Halo: Combat Evolved Anniversary," 
                     + "Halo 2 Anniversary, Halo 3, and Halo 4"
                     + "complete with their full catalog of extras, including all multiplayer maps and gameplay modes.",
                     Image = "TheMasterChiefCollectionCoverArt.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1125,13 +1109,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 6,
+                    //VideoGameID = 7,
                     Title = "X-COM",
                     Description = "In the spring of 2015, as a global alien invasion begins." 
                     + "A group of countries called the Council of Nations has banded together to create XCOM,"
                     + "the most elite military and scientific organization in human history, tasked with defending them from the alien attack",
                     Image = "X-COM.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Strategy,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1144,13 +1127,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 7,
+                    //VideoGameID = 8,
                     Title = "FIFA 22",
                     Description = "Play the most immersive, realistic and authentic football sim – the all new FIFA 22."
                     +"Whether you're just playing a quick match with friends or challenging yourself in the career mode with your favourite team,"
                     + "you'll love the updated gameplay, physics and reinvented AI.",
                     Image = "FIFA22.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Simulation,
                     PEGI = PEGI.PEGI_3,
                     DifficultyLevel = DifficultyLevel.Easy,
@@ -1163,13 +1145,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 8,
+                    //VideoGameID = 9,
                     Title = "Shadow of the Tomb Raider",
                     Description = "players take on the role of Lara Croft as she explores environments across the continents of Central and South America."
                     + "In addition to standalone areas, the game has a large hub in the Hidden City of Paititi."
                     + "A new barter system allows players to trade and sell various resources gathered from the areas surrounding Paititi.",
                     Image = "ShadowoftheTombRaider.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1182,12 +1163,11 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 8,
+                    //VideoGameID = 10,
                     Title = "F1 2021",
                     Description = "F1 2021 is the official video game of the 2021 Formula One and" 
                     + "Formula 2 Championships developed by Codemasters and published by EA Sports.",
                     Image = "F12021.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Racing,
                     PEGI = PEGI.PEGI_3,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1200,13 +1180,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 9,
+                    //VideoGameID = 11,
                     Title = "Rise of the Tomb Raider",
                     Description = "follows Lara Croft as she ventures into Siberia in search of the legendary city of Kitezh" 
                     + "while battling the paramilitary organization Trinity,"
                     + "which intends to uncover the city's promise of immortality.",
                     Image = "RiseoftheTOMBrAIDER.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action_Adventure,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1219,11 +1198,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new VideoGame
                 {
-                    VideoGameID = 10,
+                    //VideoGameID = 12,
                     Title = "Tomb Raider",
                     Description = "The game is set on Yamatai, a fictional lost island in the Dragon's Triangle off the coast of Japan.",
                     Image = "TombRaider.jpg",
-                    // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action_Adventure,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1236,8 +1214,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.VideoGames.AddRange(videoGames);
-            /// context.SaveChanges();
+            context.VideoGames.AddRange(videoGames);
+            context.SaveChanges();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
 {
@@ -28,6 +29,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// The price the order item is sold for.
 		/// </summary>
 		[Display(Name = "Sale Price"), Required]
+		[Column(TypeName = "Money")]
 		public decimal SalePrice { get; set; }
 
 		/// <summary>
