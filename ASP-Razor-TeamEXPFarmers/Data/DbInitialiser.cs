@@ -1101,7 +1101,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 5,
                     Title = "The Master Chief Collection",
-                    Description = "The Master Chief Collection originally consisted of Halo: Combat Evolved Anniversary, Halo 2 Anniversary, Halo 3, and Halo 4"
+                    Description = "The Master Chief Collection originally consisted of Halo: Combat Evolved Anniversary," 
+                    + "Halo 2 Anniversary, Halo 3, and Halo 4"
                     + "complete with their full catalog of extras, including all multiplayer maps and gameplay modes.",
                     Image = "TheMasterChiefCollectionCoverArt.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -1119,7 +1120,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 6,
                     Title = "X-COM",
-                    Description = "In the spring of 2015, as a global alien invasion begins. A group of countries called the Council of Nations has banded together to create XCOM,"
+                    Description = "In the spring of 2015, as a global alien invasion begins." 
+                    + "A group of countries called the Council of Nations has banded together to create XCOM,"
                     + "the most elite military and scientific organization in human history, tasked with defending them from the alien attack",
                     Image = "X-COM.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
@@ -1175,7 +1177,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 8,
                     Title = "F1 2021",
-                    Description = "F1 2021 is the official video game of the 2021 Formula One and Formula 2 Championships developed by Codemasters and published by EA Sports.",
+                    Description = "F1 2021 is the official video game of the 2021 Formula One and" 
+                    + "Formula 2 Championships developed by Codemasters and published by EA Sports.",
                     Image = "F12021.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Racing,
@@ -1192,7 +1195,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     VideoGameID = 9,
                     Title = "Rise of the Tomb Raider",
-                    Description = "follows Lara Croft as she ventures into Siberia in search of the legendary city of Kitezh while battling the paramilitary organization Trinity,"
+                    Description = "follows Lara Croft as she ventures into Siberia in search of the legendary city of Kitezh" 
+                    + "while battling the paramilitary organization Trinity,"
                     + "which intends to uncover the city's promise of immortality.",
                     Image = "RiseoftheTOMBrAIDER.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
