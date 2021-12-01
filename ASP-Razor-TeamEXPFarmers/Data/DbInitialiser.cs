@@ -23,12 +23,13 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         public static void Initialise(ApplicationDbContext context)
         {
             AddAddresses(context);
-           // AddPayments(context);
-           // AddCustomers(context);
-           // AddStaff(context);
+            AddPayments(context);
+            AddCustomers(context);
+            AddStaff(context);
+
            // AddOrders(context);
            // AddOrderItems(context);
-           // AddPlatforms(context);
+            AddPlatforms(context);
            // AddVideoGames(context);
         }
 
@@ -194,6 +195,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         {
             /// To be added after scaffolding.
             /// Look for any staff members.
+
             if (context.Staff.Any())
             {
                 return; // Database has been seeded.
@@ -204,7 +206,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             {
                 new Staff
                 {
-                    //PersonID = 2,
+                    //PersonID = 12,
+                    AddressID= 11,
+                    PaymentID = 11,
+
                     FirstName = "Tyler",
                     LastName = "Smith",
                     Email = "t.smith01@mail.com",
@@ -218,7 +223,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    //PersonID = 4,
+                    //PersonID = 13,
+                    AddressID= 12,
+                    PaymentID = 12,
+
                     FirstName = "Johnathon",
                     LastName = "Curtis",
                     Email = "j.curtis02@mail.com",
@@ -232,7 +240,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    //PersonID = 6,
+                    //PersonID = 14,
+                    AddressID= 13,
+                    PaymentID = 13,
+
                     FirstName = "Jake",
                     LastName = "Shaw",
                     Email = "j.shaw03@mail.com",
@@ -246,7 +257,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    //PersonID = 8,
+                    //PersonID = 15,
+                    AddressID= 14,
+                    PaymentID = 14,
+
                     FirstName = "Sid",
                     LastName = "Harding",
                     Email = "s.harding04@mail.com",
@@ -260,7 +274,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    //PersonID = 10,
+                    //PersonID = 16,
+                    AddressID= 15,
+                    PaymentID = 15,
+
                     FirstName = "Harlow",
                     LastName = "Holmes",
                     Email = "h.holmes05@mail.com",
@@ -274,7 +291,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    //PersonID = 12,
+                    //PersonID = 17,
+                    AddressID= 16,
+                    PaymentID = 16,
+
                     FirstName = "Sid",
                     LastName = "Harding",
                     Email = "s.harding@mail.com",
@@ -288,7 +308,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    //PersonID = 14,
+                    //PersonID = 18,
+                    AddressID= 17,
+                    PaymentID = 17,
+
                     FirstName = "Maddison",
                     LastName = "Rowley",
                     Email = "m.rowley@mail.com",
@@ -302,7 +325,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    //PersonID = 16,
+                    //PersonID = 19,
+                    AddressID= 18,
+                    PaymentID = 18,
+
                     FirstName = "Carrie-Ann",
                     LastName = "Partridge",
                     Email = "c.partridge@mail.com",
@@ -316,7 +342,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    //PersonID = 18,
+                    //PersonID = 20,
+                    AddressID= 19,
+                    PaymentID = 19,
+
                     FirstName = "Viktoria",
                     LastName = "Griffin",
                     Email = "v.griffin@mail.com",
@@ -330,12 +359,15 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    //PersonID = 20,
+                    //PersonID = 21,
+                    AddressID= 20,
+                    PaymentID = 20,
+
                     FirstName = "Joyce",
                     LastName = "Iles",
                     Email = "j.iles@mail.com",
                     ContactNumber = "01654896320",
-                    DateOfBirth = DateTime.Parse("1993-24-06"), // YYYY-MM-DD
+                    DateOfBirth = DateTime.Parse("1993-02-06"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
                     JobPosition = "Sales Rep",
@@ -352,10 +384,11 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         {
             /// To be added after scaffolding.
             /// Look for any addresses.
-            /// if (context.Address.Any())
-            /// {
-            ///     return; // Database has been seeded.
-            /// }
+            /// 
+            if (context.Address.Any())
+            {
+                 return; // Database has been seeded.
+            }
 
             var addresses = new Address[]
             {
@@ -377,7 +410,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 3,
                     HouseNo = "60",
                     Street = "Holburn Road",
                     City = "Hele Bridge",
@@ -386,7 +418,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 4,
                     HouseNo = "65",
                     Street = "Copthorne Way",
                     City = "Cameron",
@@ -395,7 +426,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 5,
                     HouseNo = "65",
                     Street = "Guild Street",
                     City = "London",
@@ -404,7 +434,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 6,
                     HouseNo = "64",
                     Street = "South Street",
                     City = "London",
@@ -413,7 +442,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 7,
                     HouseNo = "34",
                     Street = "Shannon Way",
                     City = "Chiddingfold",
@@ -422,7 +450,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 8,
                     HouseNo = "83",
                     Street = "Lairg Road",
                     City = "Newbold",
@@ -431,7 +458,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 9,
                     HouseNo = "44",
                     Street = "Duckpit lane",
                     City = "Upton",
@@ -440,7 +466,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 10,
                     HouseNo = "33",
                     Street = "Wilthers Close",
                     City = "Allesley",
@@ -449,7 +474,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 11,
                     HouseNo = "66",
                     Street = "Kingsway North",
                     City = "Holme Pierrepont",
@@ -458,7 +482,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 12,
                     HouseNo = "98",
                     Street = "Thornton Street",
                     City = "Hundleby",
@@ -467,7 +490,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 13,
                     HouseNo = "70",
                     Street = "Ross Road",
                     City = "Martock",
@@ -476,7 +498,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 14,
                     HouseNo = "117",
                     Street = "Winchester Road",
                     City = "Merthyr Cynog",
@@ -485,7 +506,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 15,
                     HouseNo = "133",
                     Street = "Witney Way",
                     City = "Knockentiber",
@@ -494,7 +514,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 16,
                     HouseNo = "126",
                     Street = "Goldern Knowes Road",
                     City = "Foxley",
@@ -503,7 +522,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 17,
                     HouseNo = "48",
                     Street = "Grey Street",
                     City = "Kentmere",
@@ -512,7 +530,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 18,
                     HouseNo = "39",
                     Street = "Whitby Road",
                     City = "Derbyhaven",
@@ -521,7 +538,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Address
                 {
-                    //AddressID = 19,
                     HouseNo = "54",
                     Street = "Fulford Road",
                     City = "Pentlepoir",
@@ -547,10 +563,11 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         {
             /// To be added after scaffolding.
             /// Look for any payment cards.
-            /// if (context.Payment.Any())
-            /// {
-            ///     return; // Database has been seeded.
-            /// }
+            /// 
+            if (context.Payment.Any())
+            {
+                return; // Database has been seeded.
+            }
 
             /// Customers' PersonID is odd (up to 19).
             /// Staff members' PersonID is even (up to 20).
@@ -932,10 +949,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         {
             /// To be added after scaffolding.
             /// Look for any platforms.
-            /// if (context.Platform.Any())
-            /// {
-            ///     return; // Database has been seeded.
-            /// }
+            if (context.Platforms.Any())
+            {
+                return; // Database has been seeded.
+            }
 
             var platforms = new Platform[]
             {

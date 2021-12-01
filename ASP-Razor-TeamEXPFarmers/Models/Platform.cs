@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ASP_Razor_TeamEXPFarmers.Models
 {
@@ -18,7 +19,8 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// <summary>
 		/// The platform ID which is its name (e.g. PlayStation 4, Xbox One, Nintendo Switch).
 		/// </summary>
-		[Key, StringLength(20)]
+		[Key, StringLength(20), ]
+		[DatabaseGenerated(DatabaseGeneratedOption.None)]
 		public string PlatformID { get; set; }
 
 		/// <summary>
