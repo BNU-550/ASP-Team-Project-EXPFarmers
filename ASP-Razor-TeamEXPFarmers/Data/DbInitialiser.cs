@@ -1,6 +1,7 @@
 ﻿using ASP_Razor_TeamEXPFarmers.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ASP_Razor_TeamEXPFarmers.Data
 {
@@ -22,10 +23,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         /// </summary>
         public static void Initialise(ApplicationDbContext context)
         {
-            AddCustomers(context);
-            AddStaff(context);
             AddAddresses(context);
             AddPayments(context);
+            AddCustomers(context);
+            AddStaff(context);
             AddOrders(context);
             AddOrderItems(context);
             AddPlatforms(context);
@@ -36,10 +37,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         {
             /// To be added after scaffolding.
             /// Look for any customers.
-            /// if (context.Person.Any())
-            /// {
-            ///     return; // Database has been seeded.
-            /// }
+            if (context.Customers.Any())
+            {
+                return; // Database has been seeded.
+            }
 
             // Add customers here, use "var staff" below for adding staff members.
             // Customers' PersonID number is odd (up to 19).
@@ -47,7 +48,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             {
                 new Person
                 {
-                    PersonID = 1,
+                    //PersonID = 1,
                     AddressID = 1,
                     PaymentID = 1,
                     FirstName = "Mark",
@@ -61,7 +62,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Person
                 {
-                    PersonID = 3,
+                    //PersonID = 3,
                     FirstName = "Daniel",
                     LastName = "Smith",
                     Email = "danielsmith@mail.com",
@@ -73,7 +74,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Person
                 {
-                    PersonID = 5,
+                    //PersonID = 5,
                     FirstName = "Tom",
                     LastName = "Jones",
                     Email = "tomjones@mail.com",
@@ -85,7 +86,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Person
                 {
-                    PersonID = 7,
+                    //PersonID = 7,
                     FirstName = "Lisa",
                     LastName = "McDonald",
                     Email = "lisamcdonald@mail.com",
@@ -97,7 +98,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Person
                 {
-                    PersonID = 9,
+                    //PersonID = 9,
                     FirstName = "Monica",
                     LastName = "Johnson",
                     Email = "monicajohnson@mail.com",
@@ -109,7 +110,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Person
                 {
-                    PersonID = 11,
+                    //PersonID = 11,
                     FirstName = "Monica",
                     LastName = "Johnson",
                     Email = "monicajohnson@mail.com",
@@ -121,7 +122,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Person
                 {
-                    PersonID = 13,
+                    //PersonID = 13,
                     FirstName = "Mason",
                     LastName = "Tickner",
                     Email = "masontickner@mail.com",
@@ -133,7 +134,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Person
                 {
-                    PersonID = 15,
+                    //PersonID = 15,
                     FirstName = "Thomas",
                     LastName = "White",
                     Email = "thomaswhite@mail.com",
@@ -145,7 +146,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Person
                 {
-                    PersonID = 17,
+                    //PersonID = 17,
                     FirstName = "Bailey",
                     LastName = "Norton",
                     Email = "baileynorton@mail.com",
@@ -157,7 +158,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Person
                 {
-                    PersonID = 19,
+                    //PersonID = 19,
                     FirstName = "Vanessa",
                     LastName = "Clayton",
                     Email = "vanessaclayton@mail.com",
@@ -169,25 +170,25 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Person.AddRange(people);
-            /// context.SaveChanges();
+            context.Customers.AddRange(customers);
+            context.SaveChanges();
         }
 
         private static void AddStaff(ApplicationDbContext context)
         {
             /// To be added after scaffolding.
             /// Look for any staff members.
-            /// if (context.Staff.Any())
-            /// {
-            ///     return; // Database has been seeded.
-            /// }
+            if (context.Staff.Any())
+            {
+                return; // Database has been seeded.
+            }
 
             /// Staff members' PersonID number is even (up to 20).
             var staff = new Staff[]
             {
                 new Staff
                 {
-                    PersonID = 2,
+                    //PersonID = 2,
                     FirstName = "Tyler",
                     LastName = "Smith",
                     Email = "t.smith01@mail.com",
@@ -201,7 +202,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 4,
+                    //PersonID = 4,
                     FirstName = "Johnathon",
                     LastName = "Curtis",
                     Email = "j.curtis02@mail.com",
@@ -215,7 +216,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 6,
+                    //PersonID = 6,
                     FirstName = "Jake",
                     LastName = "Shaw",
                     Email = "j.shaw03@mail.com",
@@ -229,7 +230,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 8,
+                    //PersonID = 8,
                     FirstName = "Sid",
                     LastName = "Harding",
                     Email = "s.harding04@mail.com",
@@ -243,7 +244,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 10,
+                    //PersonID = 10,
                     FirstName = "Harlow",
                     LastName = "Holmes",
                     Email = "h.holmes05@mail.com",
@@ -257,7 +258,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 12,
+                    //PersonID = 12,
                     FirstName = "Sid",
                     LastName = "Harding",
                     Email = "s.harding@mail.com",
@@ -271,7 +272,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 14,
+                    //PersonID = 14,
                     FirstName = "Maddison",
                     LastName = "Rowley",
                     Email = "m.rowley@mail.com",
@@ -285,7 +286,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 16,
+                    //PersonID = 16,
                     FirstName = "Carrie-Ann",
                     LastName = "Partridge",
                     Email = "c.partridge@mail.com",
@@ -299,7 +300,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 18,
+                    //PersonID = 18,
                     FirstName = "Viktoria",
                     LastName = "Griffin",
                     Email = "v.griffin@mail.com",
@@ -313,7 +314,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Staff
                 {
-                    PersonID = 20,
+                    //PersonID = 20,
                     FirstName = "Joyce",
                     LastName = "Iles",
                     Email = "j.iles@mail.com",
@@ -327,8 +328,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Staff.AddRange(staff);
-            /// context.SaveChanges();
+            context.Staff.AddRange(staff);
+            context.SaveChanges();
         }
 
         private static void AddAddresses(ApplicationDbContext context)
@@ -524,8 +525,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Address.AddRange(addresses);
-            /// context.SaveChanges();
+            context.Address.AddRange(addresses);
+            context.SaveChanges();
         }
 
         private static void AddPayments(ApplicationDbContext context)
@@ -723,8 +724,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             };
 
             /// TODO: Only add this in after scaffolding the database.
-            /// context.Payment.AddRange(payments);
-            /// context.SaveChanges();
+            context.Payment.AddRange(payments);
+            context.SaveChanges();
         }
 
         private static void AddOrders(ApplicationDbContext context)
