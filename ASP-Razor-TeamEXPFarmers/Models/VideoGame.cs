@@ -28,19 +28,19 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// <summary>
 		/// The video game's title.
 		/// </summary>
-		[StringLength(40), Required]
+		[StringLength(80), Required]
 		public string Title { get; set; }
 
 		/// <summary>
 		/// The video game's description.
 		/// </summary>
-		[StringLength(1000), Required]
+		[StringLength(1000)]
 		public string Description { get; set; }
 
 		/// <summary>
 		/// An image of the video game (string will be the image's filepath).
 		/// </summary>
-		[StringLength(255), Required]
+		[StringLength(255)]
 		public string Image { get; set; }
 
 		/// <summary>
@@ -73,15 +73,13 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		/// above mature content level by describing what kind of mature 
 		/// content is present in it. 
 		/// </summary>
-		[Display(Name = "Mature Content Description"), StringLength(300), 
-			Required]
+		[Display(Name = "Mature Content Description"), StringLength(300)]
 		public string MatureContentDescription { get; set; }
 
 		/// <summary>
 		/// The video game's release date.
 		/// </summary>
-		[Display(Name = "Release Date"), DataType(DataType.Date), 
-			Required]
+		[Display(Name = "Release Date"), DataType(DataType.Date), Required]
 		public DateTime ReleaseDate { get; set; }
 
 		/// <summary>
