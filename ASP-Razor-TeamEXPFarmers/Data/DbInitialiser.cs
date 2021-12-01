@@ -9,6 +9,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// Initialises the database by seeding data, having at least 10 records
     /// in each table and demonstrating the relationships from the ERD.
     /// 
+    /// NOTE: Leave the commented primary keys as is, they are just there for
+    /// illustrative purposes but the database will generate the primary key
+    /// values itself.
+    /// 
     /// Created by Jason Huggins
     /// Modified by:
     /// - Jason Huggins (01/12/2021) - Scaffolded database, data not showing up yet.
@@ -36,7 +40,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
         private static void AddCustomers(ApplicationDbContext context)
         {
-            /// To be added after scaffolding.
             /// Look for any customers.
             if (context.Customers.Any())
             {
@@ -79,7 +82,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     //PersonID = 5,
                     AddressID = 3,
-                    PaymentID = 3,                    FirstName = "Tom",
+                    PaymentID = 3,                    
+                    FirstName = "Tom",
                     LastName = "Jones",
                     Email = "tomjones@mail.com",
                     ContactNumber = "01729863547",
@@ -187,16 +191,13 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 },
             };
 
-            /// TODO: Only add this in after scaffolding the database.
             context.Customers.AddRange(customers);
             context.SaveChanges();
         }
 
         private static void AddStaff(ApplicationDbContext context)
         {
-            /// To be added after scaffolding.
             /// Look for any staff members.
-
             if (context.Staff.Any())
             {
                 return; // Database has been seeded.
@@ -376,14 +377,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 },
             };
 
-            /// TODO: Only add this in after scaffolding the database.
             context.Staff.AddRange(staff);
             context.SaveChanges();
         }
 
         private static void AddAddresses(ApplicationDbContext context)
         {
-            /// To be added after scaffolding.
             /// Look for any addresses.
             /// 
             if (context.Address.Any())
@@ -555,14 +554,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 },
             };
 
-            /// TODO: Only add this in after scaffolding the database.
             context.Address.AddRange(addresses);
             context.SaveChanges();
         }
 
         private static void AddPayments(ApplicationDbContext context)
         {
-            /// To be added after scaffolding.
             /// Look for any payment cards.
             /// 
             if (context.Payment.Any())
@@ -735,7 +732,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 },
             };
 
-            /// TODO: Only add this in after scaffolding the database.
             context.Payment.AddRange(payments);
             context.SaveChanges();
         }
@@ -824,14 +820,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 },
             };
 
-            /// TODO: Only add this in after scaffolding the database.
             context.Orders.AddRange(orders);
             context.SaveChanges();
         }
 
         private static void AddOrderItems(ApplicationDbContext context)
         {
-            /// To be added after scaffolding.
             /// Look for any order items.
             if (context.OrderItems.Any())
             {
@@ -929,14 +923,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 },
             };
 
-            /// TODO: Only add this in after scaffolding the database.
             context.OrderItems.AddRange(orderItems);
             context.SaveChanges();
         }
 
         private static void AddPlatforms(ApplicationDbContext context)
         {
-            /// To be added after scaffolding.
             /// Look for any platforms.
             if (context.Platforms.Any())
             {
@@ -986,14 +978,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 },
             };
 
-            /// TODO: Only add this in after scaffolding the database.
             context.Platforms.AddRange(platforms);
             context.SaveChanges();
         }
 
         private static void AddVideoGames(ApplicationDbContext context)
         {
-            /// To be added after scaffolding.
             /// Look for any video games.
             if (context.VideoGames.Any())
             {
@@ -1213,7 +1203,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 },
             };
 
-            /// TODO: Only add this in after scaffolding the database.
             context.VideoGames.AddRange(videoGames);
             context.SaveChanges();
         }
