@@ -22,7 +22,7 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Customers
         public IActionResult OnGet()
         {
         ViewData["AddressID"] = new SelectList(_context.Address, "AddressID", "City");
-        ViewData["PaymentID"] = new SelectList(_context.Payment, "PersonID", "PaymentCardNo");
+        ViewData["PaymentID"] = new SelectList(_context.Payment, "PaymentID", "PaymentCardNo");
             return Page();
         }
 

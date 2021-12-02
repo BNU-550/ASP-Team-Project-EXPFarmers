@@ -738,12 +738,11 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
         private static void AddOrders(ApplicationDbContext context)
         {
-            /// To be added after scaffolding.
             /// Look for any orders.
-            /// if (context.Order.Any())
-            /// {
-            ///     return; // Database has been seeded.
-            /// }
+            if (context.Orders.Any())
+            {
+                return; // Database has been seeded.
+            }
 
             /// Customers' PersonID is odd (up to 19).
             /// Staff members; PersonID is even (up to 20).
