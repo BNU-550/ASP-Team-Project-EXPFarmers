@@ -15,7 +15,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// 
     /// Created by Jason Huggins
     /// Modified by:
-    /// - Jason Huggins (01/12/2021) - Scaffolded database, data not showing up yet.
+    /// - Jason Huggins (02/12/2021) - Scaffolded database.
     /// - Tyronne Bradburn (25/11/2021) - Completed seeding process. Updated comments. 
     /// </summary>
     public static class DbInitialiser

@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ASP_Razor_TeamEXPFarmers.Data.Migrations
+namespace ASP_Razor_TeamEXPFarmers.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211201201132_AddGames")]
-    partial class AddGames
+    [Migration("20211202105853_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -80,7 +80,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data.Migrations
 
                     b.HasIndex("PersonID");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("ASP_Razor_TeamEXPFarmers.Models.OrderItem", b =>
@@ -109,7 +109,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("SalePrice")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("Money");
 
                     b.Property<int>("VideoGameID")
                         .HasColumnType("int");
@@ -120,7 +120,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data.Migrations
 
                     b.HasIndex("VideoGameID");
 
-                    b.ToTable("OrderItem");
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("ASP_Razor_TeamEXPFarmers.Models.Payment", b =>
