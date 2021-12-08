@@ -13,7 +13,11 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <input type="hidden" asp-for="Person.PersonID" />
+            <input type="hidden" asp-for="Person.AddressID" />
+            <input type="hidden" asp-for="Person.PaymentID" />
+
             <div class="form-group">
                 <label asp-for="Person.FirstName" class="control-label"></label>
                 <input asp-for="Person.FirstName" class="form-control" />
@@ -57,7 +61,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index" class="btn btn-success">Back to List</a>
 </div>
 
 @section Scripts {
