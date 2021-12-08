@@ -50,9 +50,9 @@
                 @Html.DisplayFor(modelItem => item.Postcode)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.AddressID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.AddressID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.AddressID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.AddressID" class="btn btn-success">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AddressID"class="btn btn-info">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AddressID" class="btn btn-danger">Delete</a>
             </td>
         </tr>
 }
