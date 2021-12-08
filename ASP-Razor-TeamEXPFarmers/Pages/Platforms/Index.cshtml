@@ -1,0 +1,30 @@
+﻿@page
+@model ASP_Razor_TeamEXPFarmers.Pages.Platforms.IndexModel
+
+@{
+    ViewData["Title"] = "Platform List";
+}
+
+<h1>Platform List</h1>
+
+<p>
+    <a asp-page="Create">Add New Platform</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Platform) {
+        <tr>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PlatformID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.PlatformID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PlatformID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
