@@ -15,7 +15,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 	/// each video game are in stock.
 	/// 
 	/// Created by Jason Huggins
-	/// Modified by Jason Huggins (25/11/2021)
+	/// Modified by Jason Huggins (15/12/2021)
 	/// </summary>
 	public class VideoGame
 	{
@@ -31,14 +31,14 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		[StringLength(80), Required]
 		public string Title { get; set; }
 
-		/// <summary>
-		/// The video game's description.
-		/// </summary>
-		[StringLength(1000)]
+        /// <summary>
+        /// The video game's description.
+        /// </summary>
+        [StringLength(1000)]
 		public string Description { get; set; }
 
 		/// <summary>
-		/// An image of the video game (string will be the image's filepath).
+		/// The main image of the video game (string will be the image's filepath).
 		/// </summary>
 		[StringLength(255)]
 		public string Image { get; set; }
@@ -96,6 +96,8 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		public int InStockQuantity { get; set; }
 
 		// Navigation properties
+		// TODO: Add Images error to evaluation with screenshot of migration error
+		//public virtual ICollection<GameImage> Images { get; set; }
 		public virtual ICollection<OrderItem> OrderItems { get; set; }
 		public virtual ICollection<Platform> Platforms { get; set; }
 	}
