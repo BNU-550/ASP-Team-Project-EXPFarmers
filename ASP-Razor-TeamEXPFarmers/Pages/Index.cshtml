@@ -9,6 +9,23 @@
     <h1>DigiGame Video Game Listing</h1>
 </header>
 
+@* 
+    CSS to shorten the descriptions in the cards. Users will need to open
+    the game open fully (viewing its details page) to see the full
+    description. 
+
+    Reference: https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
+*@
+<style>
+    p 
+    {
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+
 <section>        
     <div class="row">
         @foreach (var item in Model.VideoGame) 
@@ -21,7 +38,7 @@
                 <div class="col-lg-4">
                     <div class="card" style="width: 18rem;">
                       <img src="/images/@item.Image" class="card-img-top" 
-                        width=200 alt="Game cover">
+                        height=350 width=200 alt="Game cover">
                       <div class="card-body">
                         <h5 class="card-title">@item.Title</h5>
                         <p class="card-text">@item.Description</p>
