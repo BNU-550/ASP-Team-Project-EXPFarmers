@@ -100,7 +100,7 @@ namespace ASP_Razor_TeamEXPFarmers.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
-                    Image = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    CoverImage = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Genre = table.Column<int>(type: "int", nullable: false),
                     PEGI = table.Column<int>(type: "int", nullable: false),
                     DifficultyLevel = table.Column<int>(type: "int", nullable: false),
@@ -258,6 +258,27 @@ namespace ASP_Razor_TeamEXPFarmers.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "GameImages",
+                columns: table => new
+                {
+                    GameImageID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    VideoGameID = table.Column<int>(type: "int", nullable: false),
+                    URL = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Caption = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GameImages", x => x.GameImageID);
+                    table.ForeignKey(
+                        name: "FK_GameImages_VideoGames_VideoGameID",
+                        column: x => x.VideoGameID,
+                        principalTable: "VideoGames",
+                        principalColumn: "VideoGameID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "PlatformVideoGame",
                 columns: table => new
                 {
@@ -384,6 +405,11 @@ namespace ASP_Razor_TeamEXPFarmers.Migrations
                 column: "PaymentID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_GameImages_VideoGameID",
+                table: "GameImages",
+                column: "VideoGameID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_OrderItems_OrderID",
                 table: "OrderItems",
                 column: "OrderID");
@@ -420,6 +446,9 @@ namespace ASP_Razor_TeamEXPFarmers.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "GameImages");
 
             migrationBuilder.DropTable(
                 name: "OrderItems");

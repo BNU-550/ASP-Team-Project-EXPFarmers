@@ -23,6 +23,6 @@ namespace ASP_Razor_TeamEXPFarmers.Data
         public DbSet<OrderItem> OrderItems { get; set;}
         public DbSet<Platform> Platforms { get; set;}
         public DbSet<VideoGame> VideoGames { get; set;}
-        //public DbSet<GameImage> GameImages { get; set; }
+        public DbSet<GameImage> GameImages { get; set; }
     }
 }

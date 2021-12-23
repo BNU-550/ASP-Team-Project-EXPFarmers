@@ -15,7 +15,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
     /// 
     /// Created by Jason Huggins
     /// Modified by:
-    /// - Jason Huggins (02/12/2021) - Scaffolded database.
+    /// - Jason Huggins (23/12/2021) - Added more seeded data.
     /// - Tyronne Bradburn (25/11/2021) - Completed seeding process. Updated comments. 
     /// </summary>
     public static class DbInitialiser
@@ -31,11 +31,12 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             AddCustomers(context);
             AddStaff(context);
 
-            AddOrders(context);
-            AddOrderItems(context);
-
             AddPlatforms(context);
             AddVideoGames(context);
+            AddGameImages(context);
+
+            AddOrders(context);
+            AddOrderItems(context);
         }
 
         private static void AddCustomers(ApplicationDbContext context)
@@ -57,7 +58,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     PaymentID = 1,
                     FirstName = "Mark",
                     LastName = "Wayne",
-                    Email = "markwayne10@mail.com",
+                    Email = "customer2@mail.com",
                     ContactNumber = "01732927421",
                     DateOfBirth = DateTime.Parse("1976-05-03"), // YYYY-MM-DD
                     IsCustomer = true,
@@ -99,8 +100,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     PaymentID = 4,
                     FirstName = "Lisa",
                     LastName = "McDonald",
-                    Email = "lisamcdonald@mail.com",
-                    ContactNumber = "017734755569",
+                    Email = "customer3@mail.com",
+                    ContactNumber = "01734755569",
                     DateOfBirth = DateTime.Parse("1965-12-25"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
@@ -114,7 +115,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     FirstName = "Monica",
                     LastName = "Johnson",
                     Email = "monicajohnson@mail.com",
-                    ContactNumber = "01799420217",
+                    ContactNumber = "01779420217",
                     DateOfBirth = DateTime.Parse("2000-01-01"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
@@ -170,7 +171,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     FirstName = "Bailey",
                     LastName = "Norton",
                     Email = "baileynorton@mail.com",
-                    ContactNumber = "017",
+                    ContactNumber = "01734643563",
                     DateOfBirth = DateTime.Parse("1991-07-10"), // YYYY-MM-DD
                     IsCustomer = true,
                     IsStaff = false
@@ -183,7 +184,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     PaymentID = 10,
                     FirstName = "Vanessa",
                     LastName = "Clayton",
-                    Email = "vanessaclayton@mail.com",
+                    Email = "customer1@mail.com",
                     ContactNumber = "01715876320",
                     DateOfBirth = DateTime.Parse("1993-04-10"), // YYYY-MM-DD
                     IsCustomer = true,
@@ -214,7 +215,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                     FirstName = "Tyler",
                     LastName = "Smith",
-                    Email = "t.smith01@mail.com",
+                    Email = "staff1@mail.com",
                     ContactNumber = "01634892243",
                     DateOfBirth = DateTime.Parse("1980-06-23"), // YYYY-MM-DD
                     IsCustomer = false,
@@ -263,9 +264,9 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     AddressID= 14,
                     PaymentID = 14,
 
-                    FirstName = "Sid",
-                    LastName = "Harding",
-                    Email = "s.harding04@mail.com",
+                    FirstName = "Rick",
+                    LastName = "Sanders",
+                    Email = "staff2@mail.com",
                     ContactNumber = "016238465210",
                     DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD
                     IsCustomer = false,
@@ -283,7 +284,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     FirstName = "Harlow",
                     LastName = "Holmes",
                     Email = "h.holmes05@mail.com",
-                    ContactNumber = "016238465210",
+                    ContactNumber = "01628465210",
                     DateOfBirth = DateTime.Parse("1995-07-30"), // YYYY-MM-DD
                     IsCustomer = false,
                     IsStaff = true,
@@ -333,7 +334,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                     FirstName = "Carrie-Ann",
                     LastName = "Partridge",
-                    Email = "c.partridge@mail.com",
+                    Email = "staff3@mail.com",
                     ContactNumber = "01602587692",
                     DateOfBirth = DateTime.Parse("1983-08-10"), // YYYY-MM-DD
                     IsCustomer = false,
@@ -573,7 +574,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             {
                 new Payment
                 {
-                    PaymentCardNo = "9999999999999999", // 16 digits
+                    PaymentCardNo = "1234567890123456", // 16 digits
                     CardExpiryMonth = 11, // 2 digits
                     CardExpiryYear = 2025, // 4 digits
                     CardCSV = 999 // 3 digits
@@ -581,7 +582,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PaymentCardNo = "8888888888888888", // 16 digits
+                    PaymentCardNo = "9876543210123456", // 16 digits
                     CardExpiryMonth = 12, // 2 digits
                     CardExpiryYear = 2025, // 4 digits
                     CardCSV = 888 // 3 digits
@@ -589,7 +590,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PaymentCardNo = "7777777777777777", // 16 digits
+                    PaymentCardNo = "7410258963025874", // 16 digits
                     CardExpiryMonth = 01, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 777 // 3 digits
@@ -597,7 +598,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PaymentCardNo = "6666666666666666", // 16 digits
+                    PaymentCardNo = "3571598526547898", // 16 digits
                     CardExpiryMonth = 02, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 666 // 3 digits
@@ -605,7 +606,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PaymentCardNo = "5555555555555555", // 16 digits
+                    PaymentCardNo = "0025111133362225", // 16 digits
                     CardExpiryMonth = 03, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 555 // 3 digits
@@ -613,7 +614,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PaymentCardNo = "4444444444444444", // 16 digits
+                    PaymentCardNo = "7410002568741025", // 16 digits
                     CardExpiryMonth = 04, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 444 // 3 digits
@@ -621,7 +622,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PaymentCardNo = "3333333333333333", // 16 digits
+                    PaymentCardNo = "6584401544877158", // 16 digits
                     CardExpiryMonth = 05, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 333 // 3 digits
@@ -629,7 +630,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PaymentCardNo = "2222222222222222", // 16 digits
+                    PaymentCardNo = "8574697126484181", // 16 digits
                     CardExpiryMonth = 06, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 222 // 3 digits
@@ -637,7 +638,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
 
                 new Payment
                 {
-                    PaymentCardNo = "1111111111111111", // 16 digits
+                    PaymentCardNo = "8748514897454454", // 16 digits
                     CardExpiryMonth = 07, // 2 digits
                     CardExpiryYear = 2026, // 4 digits
                     CardCSV = 111 // 3 digits
@@ -997,7 +998,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Title = "Marvel's Spider-Man",
                     Description = "Swing your way through New York City as everyone's "
                                     + "favourite superhero Spider-Man!",
-                    Image = "spidermancoverart.jpg",
+                    CoverImage = "spiderman-cover.jpg",
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1014,41 +1015,41 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Title = "Destiny 2",
                     Description = "Destiny 2 is a free-to-play online-only multiplayer"
                     + "first-person shooter video game",
-                    Image = "Destiny2CoverArt.jpg",
+                    CoverImage = "destiny2-cover.jpg",
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
                     MatureContentLevel = MatureContentLevel.Moderate,
                     MatureContentDescription = "Contains moderate violence.",
                     ReleaseDate = DateTime.Parse("2017-09-06"),
-                    Price = 25,
-                    InStockQuantity = 10
+                    Price = 20,
+                    InStockQuantity = 15
                 },
 
                 new VideoGame
                 {
                     //VideoGameID = 3,
-                    Title = "Forza 5",
+                    Title = "Forza Horizon 5",
                     Description = "Set in an open world environment based in a"
                     + "fictional representation of Mexico.",
-                    Image = "Forza5CoverArt.jpg",
+                    CoverImage = "fh5-cover.jpg",
                     Genre = Genre.Racing,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
                     MatureContentLevel = MatureContentLevel.None,
                     MatureContentDescription = "Contains No Violence.",
                     ReleaseDate = DateTime.Parse("2021-11-09"),
-                    Price = 25,
-                    InStockQuantity = 10
+                    Price = 50,
+                    InStockQuantity = 8
                 },
 
                 new VideoGame
                 {
                     //VideoGameID = 4,
                     Title = "Baldur's Gate III",
-                    Description = "Return to the legendary city of Baldur’s Gate® in a tale of fellowship and betrayal,"
+                    Description = "Return to the legendary city of Baldur’s Gate in a tale of fellowship and betrayal,"
                     + "sacrifice and survival and the lure of absolute power.",
-                    Image = "BaldursGateIIICoverArt.jpg",
+                    CoverImage = "baldursgate3-cover.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Role_Playing,
                     PEGI = PEGI.PEGI_16,
@@ -1056,8 +1057,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     MatureContentLevel = MatureContentLevel.Mature,
                     MatureContentDescription = "Contains Violence.",
                     ReleaseDate = DateTime.Parse("2020-10-06"),
-                    Price = 25,
-                    InStockQuantity = 10
+                    Price = 36,
+                    InStockQuantity = 7
                 },
 
                  new VideoGame
@@ -1066,7 +1067,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Title = "God of War",
                     Description = "Many years after Kratos defeated the Olympian gods,"
                     + "he now lives with his son Atreus in ancient Scandinavia in the realm of Midgard.",
-                    Image = "GodOfWarCoverArt.jpg",
+                    CoverImage = "gow-cover.jpg",
                     // PlatformID = "Playstation 5" Not sure if this needs to be here.(Tyronne)
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
@@ -1074,8 +1075,8 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     MatureContentLevel = MatureContentLevel.Mature,
                     MatureContentDescription = "Contains high levels of Violence.",
                     ReleaseDate = DateTime.Parse("2018-04-20"),
-                    Price = 25,
-                    InStockQuantity = 10
+                    Price = 15,
+                    InStockQuantity = 15
                 },
 
                 new VideoGame
@@ -1085,15 +1086,15 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Description = "The Master Chief Collection originally consisted of Halo: Combat Evolved Anniversary," 
                     + "Halo 2 Anniversary, Halo 3, and Halo 4"
                     + "complete with their full catalog of extras, including all multiplayer maps and gameplay modes.",
-                    Image = "TheMasterChiefCollectionCoverArt.jpg",
+                    CoverImage = "halomcc-cover.jpg",
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
                     MatureContentLevel = MatureContentLevel.Mature,
                     MatureContentDescription = "Contains moderate Violence.",
                     ReleaseDate = DateTime.Parse("2014-11-11"),
-                    Price = 25,
-                    InStockQuantity = 10
+                    Price = 30,
+                    InStockQuantity = 6
                 },
 
                 new VideoGame
@@ -1103,14 +1104,14 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Description = "In the spring of 2015, as a global alien invasion begins." 
                     + "A group of countries called the Council of Nations has banded together to create XCOM,"
                     + "the most elite military and scientific organization in human history, tasked with defending them from the alien attack",
-                    Image = "X-COM.jpg",
+                    CoverImage = "xcom-cover.jpg",
                     Genre = Genre.Strategy,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
                     MatureContentLevel = MatureContentLevel.Mature,
                     MatureContentDescription = "Contains Moderate Violence.",
                     ReleaseDate = DateTime.Parse("2012-10-09"),
-                    Price = 25,
+                    Price = 10,
                     InStockQuantity = 10
                 },
 
@@ -1121,14 +1122,14 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Description = "Play the most immersive, realistic and authentic football sim – the all new FIFA 22."
                     +"Whether you're just playing a quick match with friends or challenging yourself in the career mode with your favourite team,"
                     + "you'll love the updated gameplay, physics and reinvented AI.",
-                    Image = "FIFA22.jpg",
+                    CoverImage = "fifa22-cover.jpg",
                     Genre = Genre.Simulation,
                     PEGI = PEGI.PEGI_3,
                     DifficultyLevel = DifficultyLevel.Easy,
                     MatureContentLevel = MatureContentLevel.None,
                     MatureContentDescription = "Contains no Violence.",
                     ReleaseDate = DateTime.Parse("2021-10-01"),
-                    Price = 25,
+                    Price = 45,
                     InStockQuantity = 10
                 },
 
@@ -1136,10 +1137,10 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                 {
                     //VideoGameID = 9,
                     Title = "Shadow of the Tomb Raider",
-                    Description = "players take on the role of Lara Croft as she explores environments across the continents of Central and South America."
+                    Description = "Players take on the role of Lara Croft as she explores environments across the continents of Central and South America."
                     + "In addition to standalone areas, the game has a large hub in the Hidden City of Paititi."
                     + "A new barter system allows players to trade and sell various resources gathered from the areas surrounding Paititi.",
-                    Image = "ShadowoftheTombRaider.jpg",
+                    CoverImage = "sotr-cover.jpg",
                     Genre = Genre.Action,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
@@ -1147,7 +1148,7 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     MatureContentDescription = "Contains Moderate Violence.",
                     ReleaseDate = DateTime.Parse("2018-09-14"),
                     Price = 25,
-                    InStockQuantity = 10
+                    InStockQuantity = 9
                 },
 
                 new VideoGame
@@ -1156,33 +1157,33 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     Title = "F1 2021",
                     Description = "F1 2021 is the official video game of the 2021 Formula One and" 
                     + "Formula 2 Championships developed by Codemasters and published by EA Sports.",
-                    Image = "F12021.jpg",
+                    CoverImage = "f12021-cover.jpg",
                     Genre = Genre.Racing,
                     PEGI = PEGI.PEGI_3,
                     DifficultyLevel = DifficultyLevel.Moderate,
                     MatureContentLevel = MatureContentLevel.None,
                     MatureContentDescription = "Contains no Violence.",
                     ReleaseDate = DateTime.Parse("2021-07-16"),
-                    Price = 25,
-                    InStockQuantity = 10
+                    Price = 45,
+                    InStockQuantity = 11
                 },
 
                 new VideoGame
                 {
                     //VideoGameID = 11,
                     Title = "Rise of the Tomb Raider",
-                    Description = "follows Lara Croft as she ventures into Siberia in search of the legendary city of Kitezh" 
+                    Description = "Follows Lara Croft as she ventures into Siberia in search of the legendary city of Kitezh" 
                     + "while battling the paramilitary organization Trinity,"
                     + "which intends to uncover the city's promise of immortality.",
-                    Image = "RiseoftheTOMBrAIDER.jpg",
+                    CoverImage = "rotr-cover.jpg",
                     Genre = Genre.Action_Adventure,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
                     MatureContentLevel = MatureContentLevel.Moderate,
                     MatureContentDescription = "Contains Moderate Violence.",
                     ReleaseDate = DateTime.Parse("2015-11-10"),
-                    Price = 25,
-                    InStockQuantity = 10
+                    Price = 18,
+                    InStockQuantity = 7
                 },
 
                 new VideoGame
@@ -1190,19 +1191,53 @@ namespace ASP_Razor_TeamEXPFarmers.Data
                     //VideoGameID = 12,
                     Title = "Tomb Raider",
                     Description = "The game is set on Yamatai, a fictional lost island in the Dragon's Triangle off the coast of Japan.",
-                    Image = "TombRaider.jpg",
+                    CoverImage = "tombraider-cover.jpg",
                     Genre = Genre.Action_Adventure,
                     PEGI = PEGI.PEGI_16,
                     DifficultyLevel = DifficultyLevel.Moderate,
                     MatureContentLevel = MatureContentLevel.Moderate,
                     MatureContentDescription = "Contains Moderate Violence.",
                     ReleaseDate = DateTime.Parse("2015-03-05"),
-                    Price = 25,
+                    Price = 7,
                     InStockQuantity = 10
                 },
             };
 
             context.VideoGames.AddRange(videoGames);
+            context.SaveChanges();
+        }
+
+        private static void AddGameImages(ApplicationDbContext context)
+        {
+            /// Look for any game images.
+            if (context.GameImages.Any())
+            {
+                return; // Database has been seeded.
+            }
+
+            // ss - screenshot
+            var gameImages = new GameImage[]
+            {
+                new GameImage{URL = "baldursgate3-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "destiny2-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "f12021-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "fh5-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "fifa22-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "gow-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "halomcc-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "rotr-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "sotr-cover.jpg", Caption = "Cover"},
+
+                new GameImage{URL = "spiderman-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "spiderman-ss1.jpg", Caption = "Exploration"},
+                new GameImage{URL = "spiderman-ss2.jpg", Caption = "Selfie"},
+                new GameImage{URL = "spiderman-ss3.jpg", Caption = "The Menace"},
+
+                new GameImage{URL = "tombraider-cover.jpg", Caption = "Cover"},
+                new GameImage{URL = "xcom-cover.jpg", Caption = "Cover"}
+            };
+
+            context.GameImages.AddRange(gameImages);
             context.SaveChanges();
         }
     }

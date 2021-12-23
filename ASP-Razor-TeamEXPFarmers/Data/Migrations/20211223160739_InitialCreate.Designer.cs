@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP_Razor_TeamEXPFarmers.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211202105853_InitialCreate")]
+    [Migration("20211223160739_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,6 +55,30 @@ namespace ASP_Razor_TeamEXPFarmers.Migrations
                     b.HasKey("AddressID");
 
                     b.ToTable("Address");
+                });
+
+            modelBuilder.Entity("ASP_Razor_TeamEXPFarmers.Models.GameImage", b =>
+                {
+                    b.Property<int>("GameImageID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Caption")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("URL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("VideoGameID")
+                        .HasColumnType("int");
+
+                    b.HasKey("GameImageID");
+
+                    b.HasIndex("VideoGameID");
+
+                    b.ToTable("GameImages");
                 });
 
             modelBuilder.Entity("ASP_Razor_TeamEXPFarmers.Models.Order", b =>
@@ -235,6 +259,10 @@ namespace ASP_Razor_TeamEXPFarmers.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("CoverImage")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
                     b.Property<string>("Description")
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
@@ -244,10 +272,6 @@ namespace ASP_Razor_TeamEXPFarmers.Migrations
 
                     b.Property<int>("Genre")
                         .HasColumnType("int");
-
-                    b.Property<string>("Image")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("InStockQuantity")
                         .HasColumnType("int");
@@ -508,6 +532,17 @@ namespace ASP_Razor_TeamEXPFarmers.Migrations
                     b.HasDiscriminator().HasValue("Staff");
                 });
 
+            modelBuilder.Entity("ASP_Razor_TeamEXPFarmers.Models.GameImage", b =>
+                {
+                    b.HasOne("ASP_Razor_TeamEXPFarmers.Models.VideoGame", "VideoGame")
+                        .WithMany("Images")
+                        .HasForeignKey("VideoGameID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("VideoGame");
+                });
+
             modelBuilder.Entity("ASP_Razor_TeamEXPFarmers.Models.Order", b =>
                 {
                     b.HasOne("ASP_Razor_TeamEXPFarmers.Models.Person", "Person")
@@ -635,6 +670,8 @@ namespace ASP_Razor_TeamEXPFarmers.Migrations
 
             modelBuilder.Entity("ASP_Razor_TeamEXPFarmers.Models.VideoGame", b =>
                 {
+                    b.Navigation("Images");
+
                     b.Navigation("OrderItems");
                 });
 #pragma warning restore 612, 618
