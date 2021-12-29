@@ -42,6 +42,8 @@
             @Html.DisplayFor(model => model.Person.DateOfBirth)
         </dd>
     </dl>
+    <a asp-page="./Edit" asp-route-id="@Model.Person.PersonID" 
+        class="btn btn-primary">Edit</a>
 </div>
 <div>
     <h2>Address</h2>
@@ -52,6 +54,8 @@
         City: @Model.Person.Address.City<br />
         Postcode: @Model.Person.Address.Postcode
     </p>
+    <a asp-page="Addresses/Edit" asp-route-id="@Model.Person.AddressID" 
+        class="btn btn-primary">Edit</a>
 </div>
 <div>
     <h2>Payment Card</h2>
@@ -63,9 +67,9 @@
         Expiry Year: @Model.Person.Payment.CardExpiryYear<br />
         CSV: @Model.Person.Payment.CardCSV
     </p>
+    <a asp-page="Payments/Edit" asp-route-id="@Model.Person.PaymentID" 
+        class="btn btn-primary">Edit</a>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Person.PersonID" 
-        class="btn btn-primary">Edit</a>
     <a asp-page="./Index" class="btn btn-success">Back to List</a>
 </div>

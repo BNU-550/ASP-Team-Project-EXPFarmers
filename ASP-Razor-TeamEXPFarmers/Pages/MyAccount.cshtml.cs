@@ -26,6 +26,7 @@ namespace ASP_Razor_TeamEXPFarmers.Pages
         public async Task<IActionResult> OnGetAsync()
         {
             string name = User.Identity.Name;
+            HomePage.Name = HomePage.MY_ACCOUNT;
 
             Person = await _context.Customers
                 .Include(p => p.Address)

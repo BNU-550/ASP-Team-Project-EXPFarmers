@@ -53,6 +53,12 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Addresses
             try
             {
                 await _context.SaveChangesAsync();
+
+                // TODO: Redirect not yet working.
+                //if (HomePage.Name == HomePage.MY_ACCOUNT)
+                //{
+                //    return RedirectToPage(HomePage.MY_ACCOUNT);
+                //}
             }
             catch (DbUpdateConcurrencyException)
             {
