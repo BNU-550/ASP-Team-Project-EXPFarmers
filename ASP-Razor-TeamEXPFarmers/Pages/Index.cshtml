@@ -17,7 +17,7 @@
     Reference: https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
 *@
 <style>
-    p 
+    p.card-text 
     {
         width: 250px;
         white-space: nowrap;
@@ -26,7 +26,19 @@
     }
 </style>
 
-<section>        
+<section>
+    @* Search box doesn't work, might be in the wrong place *@    
+    <form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by game title or platform:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" />
+            <a asp-page="./Index">Back to full list</a>
+        </p>
+    </div>
+    </form>
+
     <div class="row">
         @foreach (var item in Model.VideoGame) 
         {

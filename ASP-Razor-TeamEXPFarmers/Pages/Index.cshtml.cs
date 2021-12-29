@@ -20,9 +20,24 @@ namespace ASP_Razor_TeamEXPFarmers.Pages
         }
 
         public IList<VideoGame> VideoGame { get; set; }
+        public string CurrentFilter { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string searchString)
         {
+            CurrentFilter = searchString;
+            IQueryable<VideoGame> videoGameIQ = from v
+                                                in _context.VideoGames
+                                                select v;
+            IQueryable<Platform> platformIQ = from p
+                                              in _context.Platforms
+                                              select p;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                videoGameIQ = videoGameIQ.Where(v => v.Title.Contains(searchString));
+                platformIQ = platformIQ.Where(p => p.PlatformID.Contains(searchString));
+            }
+
             VideoGame = await _context.VideoGames.ToListAsync();
         }
     }

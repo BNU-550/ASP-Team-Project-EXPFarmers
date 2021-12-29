@@ -19,10 +19,10 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.VideoGames
             _context = context;
         }
 
-        public IList<VideoGame> VideoGame { get;set; }
+        public IList<VideoGame> VideoGame { get; set; }
 
         public async Task OnGetAsync()
-        {
+        { 
             VideoGame = await _context.VideoGames.ToListAsync();
         }
     }
