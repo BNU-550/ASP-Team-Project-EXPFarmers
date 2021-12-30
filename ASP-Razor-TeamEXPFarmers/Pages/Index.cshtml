@@ -1,9 +1,11 @@
 ﻿@page
+@using ASP_Razor_TeamEXPFarmers.Models
 @model ASP_Razor_TeamEXPFarmers.Pages.IndexModel
 
 @{
     ViewData["Title"] = "DigiGame Video Game Listing";
     int colNo = 0;
+    string filter = (string)ViewData["Platform"];
 }
 <header class="jumbotron">
     <h1>DigiGame Video Game Listing</h1>
@@ -28,8 +30,29 @@
 
 <section>        
     <div class="row">
-        @foreach (var item in Model.VideoGame) 
+        
+        @foreach (var item in Model.VideoGames) 
         {
+            bool isAvailable = false;
+            
+            if(String.IsNullOrEmpty(filter))
+            {
+                isAvailable = true;
+            }
+            
+            if(item.Platforms != null && !isAvailable)
+            {
+                foreach(Platform platform in item.Platforms)
+                {
+                    if(platform.PlatformID.StartsWith(filter))
+                    {
+                        isAvailable = true;
+                    }
+                }
+            }
+
+            if(isAvailable)
+            {
                 if (colNo > 0 && colNo % 3 == 0)
                 {
                     @:</div><div class="row">
@@ -47,7 +70,8 @@
                     </div>
                 </div>
 
-                colNo++;
+                colNo++;                
+            }
         }
     </div>
 </section>
