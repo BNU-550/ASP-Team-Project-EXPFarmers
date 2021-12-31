@@ -66,7 +66,8 @@
                       <div class="card-body">
                         <h5 class="card-title">@item.Title</h5>
                         <p class="card-text">@item.Description</p>
-                        <a href="#" class="btn btn-primary">View Game</a>
+                        <a asp-page="VideoGamesCustomer/Details" asp-route-id="@item.VideoGameID" 
+                            class="btn btn-primary">View Game</a>
                       </div>
                     </div>
                 </div>
