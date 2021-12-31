@@ -12,18 +12,25 @@ namespace ASP_Razor_TeamEXPFarmers.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public IndexModel(ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext context)
+        public IndexModel(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public IList<VideoGame> VideoGame { get; set; }
+        public IList<VideoGame> VideoGames { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string filter)
         {
-            VideoGame = await _context.VideoGames.ToListAsync();
+             if(!String.IsNullOrEmpty(filter))
+            {
+                ViewData["Platform"] = filter;
+            }
+
+            VideoGames = await _context.VideoGames
+                .Include(g => g.Platforms)
+                .ToListAsync();
         }
     }
 }
