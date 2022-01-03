@@ -2,13 +2,27 @@
 @model ASP_Razor_TeamEXPFarmers.Pages.Customers.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Person Details";
 }
 
-<partial name="_Person" model="Model.Person" />
+<header class="jumbotron">
+    <h1>
+        @if(Model.Person.IsCustomer)
+        {
+            <span>Customer: </span>
+        }
+        else if(Model.Person.IsStaff)
+        {
+            <span>Staff: </span>
+        }
+        @Model.Person.FullName
+    </h1>
+</header>
+
+<partial name="_PersonView" model="Model.Person" />
 
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Person.PersonID" 
-        class="btn btn-primary">Edit</a>
-    <a asp-page="./Index" class="btn btn-success">Back to List</a>
+        class="btn btn-success">Edit</a>
+    <a asp-page="./Index" class="btn btn-info">&lt;&lt; Back to List</a>
 </div>

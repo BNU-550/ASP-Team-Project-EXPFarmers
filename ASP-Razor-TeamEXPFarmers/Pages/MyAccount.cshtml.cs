@@ -30,12 +30,15 @@ namespace ASP_Razor_TeamEXPFarmers.Pages
 
             Person = await _context.Customers
                 .Include(p => p.Address)
-                .Include(p => p.Payment).FirstOrDefaultAsync(m => m.Email == name);
+                .Include(p => p.Payment)
+                .FirstOrDefaultAsync(m => m.Email == name);
 
             if (Person == null)
             {
-                return NotFound();
+                // TODO: Needs to go to the Customer create page.
+                return RedirectToPage(HomePage.CUSTOMER_CREATE);
             }
+
             return Page();
         }
     }

@@ -2,15 +2,70 @@
 @model ASP_Razor_TeamEXPFarmers.Pages.MyAccountModel
 
 @{
-    ViewData["Title"] = "Customer Details";
+    ViewData["Title"] = "Customer Account";
+    // TODO: Need to update third card with a _PaymentView (might need to scaffold Payment model first)
 }
 
-<h1>Customer Details</h1>
+<header class="jumbotron">
+    <h1>Customer Account</h1>
+    <h2>@Model.Person.FullName</h2>
+</header>
 
+<div class="card-deck">
+
+    <div class="card">
+        <img src="~/images/profile.png" class="card-img-top"
+            style="width:100%" alt="Profile Icon" />
+        <partial name="Customers\_PersonView" model="Model.Person" />
+        <a asp-page="Customers/Edit" asp-route-id="@Model.Person.PersonID"
+            class="btn btn-success">Edit</a>
+    </div>
+
+    <div class="card">
+        <img src="~/images/house.png" class="card-img-top"
+            style="width:100%" alt="House Icon" />
+        <partial name="Addresses\_AddressView" model="Model.Person.Address" />
+        <a asp-page="Addresses/Edit" asp-route-id="@Model.Person.AddressID"
+            class="btn btn-success">Edit</a>
+    </div>
+
+    <div class="card">
+        <img src="~/images/paymentcard.png" class="card-img-top"
+            style="width:100%" alt="Payment Card Icon" />
+        <partial name="Customers\_PersonView" model="Model.Person" />
+        <a asp-page="/Edit" asp-route-id="@Model.Person.PaymentID"
+            class="btn btn-success">Edit</a>
+    </div>
+
+</div>
+
+@*<div>
+    <h2>Address</h2>
+    <p>
+        House Number: @Model.Person.Address.HouseNo<br />
+        House Name: @Model.Person.Address.HouseName<br />
+        Street: @Model.Person.Address.Street<br />
+        City: @Model.Person.Address.City<br />
+        Postcode: @Model.Person.Address.Postcode
+    </p>
+    <a asp-page="Addresses/Edit" asp-route-id="@Model.Person.AddressID" 
+        class="btn btn-primary">Edit</a>
+</div>
 <div>
-    <h4>@Model.Person.FullName</h4>
-    <hr />
-    <dl class="row">
+    <h2>Payment Card</h2>
+    <p>
+        Card Number: @Model.Person.Payment.PaymentCardNo<br />
+        Start Month: @Model.Person.Payment.CardStartMonth<br />
+        Start Year: @Model.Person.Payment.CardStartYear<br />
+        Expiry Month: @Model.Person.Payment.CardExpiryMonth<br />
+        Expiry Year: @Model.Person.Payment.CardExpiryYear<br />
+        CSV: @Model.Person.Payment.CardCSV
+    </p>
+    <a asp-page="Payments/Edit" asp-route-id="@Model.Person.PaymentID" 
+        class="btn btn-primary">Edit</a>
+</div>
+
+<dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Person.FirstName)
         </dt>
@@ -44,32 +99,4 @@
     </dl>
     <a asp-page="./Edit" asp-route-id="@Model.Person.PersonID" 
         class="btn btn-primary">Edit</a>
-</div>
-<div>
-    <h2>Address</h2>
-    <p>
-        House Number: @Model.Person.Address.HouseNo<br />
-        House Name: @Model.Person.Address.HouseName<br />
-        Street: @Model.Person.Address.Street<br />
-        City: @Model.Person.Address.City<br />
-        Postcode: @Model.Person.Address.Postcode
-    </p>
-    <a asp-page="Addresses/Edit" asp-route-id="@Model.Person.AddressID" 
-        class="btn btn-primary">Edit</a>
-</div>
-<div>
-    <h2>Payment Card</h2>
-    <p>
-        Card Number: @Model.Person.Payment.PaymentCardNo<br />
-@*       Start Month: @Model.Person.Payment.CardStartMonth<br />
-        Start Year: @Model.Person.Payment.CardStartYear<br />*@
-        Expiry Month: @Model.Person.Payment.CardExpiryMonth<br />
-        Expiry Year: @Model.Person.Payment.CardExpiryYear<br />
-        CSV: @Model.Person.Payment.CardCSV
-    </p>
-    <a asp-page="Payments/Edit" asp-route-id="@Model.Person.PaymentID" 
-        class="btn btn-primary">Edit</a>
-</div>
-<div>
-    <a asp-page="./Index" class="btn btn-success">Back to List</a>
-</div>
+*@

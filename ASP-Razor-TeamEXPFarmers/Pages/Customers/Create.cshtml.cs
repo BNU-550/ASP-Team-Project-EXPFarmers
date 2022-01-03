@@ -21,8 +21,9 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Customers
 
         public IActionResult OnGet()
         {
-        ViewData["AddressID"] = new SelectList(_context.Address, "AddressID", "City");
-        ViewData["PaymentID"] = new SelectList(_context.Payment, "PaymentID", "PaymentCardNo");
+        //ViewData["AddressID"] = new SelectList(_context.Address, "AddressID", "City");
+        //ViewData["PaymentID"] = new SelectList(_context.Payment, "PaymentID", "PaymentCardNo");
+        
             return Page();
         }
 
@@ -35,6 +36,17 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Customers
             if (!ModelState.IsValid)
             {
                 return Page();
+            }
+
+            if (HomePage.Name == HomePage.MY_ACCOUNT)
+            {
+                Person.IsCustomer = true;
+                Person.IsStaff = false;
+            }
+            else
+            {
+                Person.IsCustomer = false;
+                Person.IsStaff = true;
             }
 
             _context.Customers.Add(Person);

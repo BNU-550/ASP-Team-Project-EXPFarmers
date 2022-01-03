@@ -70,7 +70,14 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Customers
                 }
             }
 
-            return RedirectToPage("./Index");
+            if (HomePage.Name == HomePage.CUSTOMERS)
+            {
+                return RedirectToPage("./Index");
+            }
+            else
+            {
+                return RedirectToPage("/MyAccount");
+            }
         }
 
         private bool PersonExists(int id)

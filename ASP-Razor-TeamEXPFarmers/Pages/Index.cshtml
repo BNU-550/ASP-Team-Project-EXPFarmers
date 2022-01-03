@@ -20,7 +20,7 @@
     Reference: https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
 *@
 <style>
-    p 
+    p#game-summary 
     {
         width: 250px;
         white-space: nowrap;
@@ -65,7 +65,7 @@
                         height=350 width=200 alt="Game cover">
                       <div class="card-body">
                         <h5 class="card-title">@item.Title</h5>
-                        <p class="card-text">@item.Description</p>
+                        <p id="game-summary" class="card-text">@item.Description</p>
                         <a asp-page="VideoGamesCustomer/Details" asp-route-id="@item.VideoGameID" 
                             class="btn btn-primary">View Game</a>
                       </div>
