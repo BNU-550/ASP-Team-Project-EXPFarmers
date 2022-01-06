@@ -1,22 +1,37 @@
 ﻿@page
 @model ASP_Razor_TeamEXPFarmers.Pages.VideoGames.DetailsModel
+@using ASP_Razor_TeamEXPFarmers.Models
 
 @{
-    ViewData["Title"] = "Details";
+    if (HomePage.Name == HomePage.INDEX)
+    {
+        Layout = "_Layout";
+    }
+    else
+    {
+        Layout = "_StaffLayout";
+    }
+
+    ViewData["Title"] = @Model.VideoGame.Title + " - DigiGame";
 }
 
-<h1>Details</h1>
+<header>
+    <h1>@Model.VideoGame.Title</h1>
+    <h5>Release Date: @Model.VideoGame.ReleaseDate</h5>
+    <h5>
+        Platform(s): 
+        @foreach (Platform platform in Model.VideoGame.Platforms)
+        {
+            <span>@platform.PlatformID</span>
+        }
+    </h5>
+    <h5>PEGI: @Model.VideoGame.PEGI</h5>
+    <img src="/images/@Model.VideoGame.CoverImage" height=350 width=300 alt="Game cover">
+</header>
 
 <div>
-    <h4>VideoGame</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.VideoGame.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.VideoGame.Title)
-        </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.VideoGame.Description)
         </dt>
@@ -24,22 +39,10 @@
             @Html.DisplayFor(model => model.VideoGame.Description)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.VideoGame.CoverImage)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.VideoGame.CoverImage)
-        </dd>
-        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.VideoGame.Genre)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.VideoGame.Genre)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.VideoGame.PEGI)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.VideoGame.PEGI)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.VideoGame.DifficultyLevel)
@@ -60,12 +63,6 @@
             @Html.DisplayFor(model => model.VideoGame.MatureContentDescription)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.VideoGame.ReleaseDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.VideoGame.ReleaseDate)
-        </dd>
-        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.VideoGame.Price)
         </dt>
         <dd class="col-sm-10">
@@ -80,6 +77,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.VideoGame.VideoGameID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a class="btn btn-success">Add to Basket</a> 
+    <a class="btn btn-info" asp-page="../Index">Back to List</a>
 </div>

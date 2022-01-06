@@ -13,10 +13,11 @@
     {
         // Constants
         public const string MY_ACCOUNT = "MyAccount";
+        public const string INDEX = "Index";
         public const string CUSTOMERS = "Customers/Index";
         public const string CUSTOMER_CREATE = "Customers/Create";
 
         // Properties
-        public static string Name { get; set; }
+        public static string Name { get; set; } = INDEX;
     }
 }

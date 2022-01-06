@@ -12,9 +12,9 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.VideoGames
 {
     public class DetailsModel : PageModel
     {
-        private readonly ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public DetailsModel(ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext context)
+        public DetailsModel(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -28,7 +28,9 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.VideoGames
                 return NotFound();
             }
 
-            VideoGame = await _context.VideoGames.FirstOrDefaultAsync(m => m.VideoGameID == id);
+            VideoGame = await _context.VideoGames
+                .Include(g => g.Platforms)
+                .FirstOrDefaultAsync(m => m.VideoGameID == id);
 
             if (VideoGame == null)
             {

@@ -52,7 +52,14 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Customers
             _context.Customers.Add(Person);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            if (HomePage.Name == HomePage.CUSTOMERS)
+            {
+                return RedirectToPage("./Index");
+            }
+            else
+            {
+                return RedirectToPage("/MyAccount");
+            }
         }
     }
 }
