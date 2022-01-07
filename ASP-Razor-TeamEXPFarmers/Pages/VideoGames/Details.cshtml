@@ -5,24 +5,17 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<header>
+    <h1>@Model.VideoGame.Title</h1>
+    <p>
+        @Model.VideoGame.Description
+    </p>
+</header>
 
 <div>
     <h4>VideoGame</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.VideoGame.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.VideoGame.Title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.VideoGame.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.VideoGame.Description)
-        </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.VideoGame.CoverImage)
         </dt>
@@ -79,7 +72,20 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.VideoGame.VideoGameID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
-</div>
+@if(HomePage.Name == HomePage.INDEX)
+{
+    <a class="btn btn-secondary" 
+        asp-page="/Index">&lt;&lt; Back</a>    
+    <a class="btn btn-warning" asp-page="/MyBasket" 
+        asp-route-id="@Model.VideoGame.VideoGameID">Add to Basket
+    </a>
+}
+else
+{
+    <div>
+        <a class="btn btn-secondary" 
+            asp-page="./Index">&lt;&lt; Back</a> 
+        <a class="btn btn-success" asp-page="./Edit" 
+            asp-route-id="@Model.VideoGame.VideoGameID">Edit</a>
+    </div>
+}

@@ -28,6 +28,8 @@ namespace ASP_Razor_TeamEXPFarmers.Pages
                 ViewData["Platform"] = filter;
             }
 
+            HomePage.Name = HomePage.INDEX;
+
             VideoGames = await _context.VideoGames
                 .Include(g => g.Platforms)
                 .ToListAsync();
