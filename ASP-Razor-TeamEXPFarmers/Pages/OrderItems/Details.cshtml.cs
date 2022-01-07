@@ -30,7 +30,8 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.OrderItems
 
             OrderItem = await _context.OrderItems
                 .Include(o => o.Order)
-                .Include(o => o.VideoGame).FirstOrDefaultAsync(m => m.OrderItemID == id);
+                .Include(o => o.VideoGame)
+                .FirstOrDefaultAsync(m => m.OrderItemID == id);
 
             if (OrderItem == null)
             {

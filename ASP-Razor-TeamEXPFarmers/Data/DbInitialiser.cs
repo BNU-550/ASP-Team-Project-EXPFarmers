@@ -1218,23 +1218,98 @@ namespace ASP_Razor_TeamEXPFarmers.Data
             // ss - screenshot
             var gameImages = new GameImage[]
             {
-                new GameImage{URL = "baldursgate3-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "destiny2-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "f12021-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "fh5-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "fifa22-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "gow-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "halomcc-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "rotr-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "sotr-cover.jpg", Caption = "Cover"},
+                new GameImage
+                {
+                    VideoGameID = 4,
+                    URL = "baldursgate3-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID= 3,
+                    URL = "destiny2-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID = 10,
+                    URL = "f12021-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID = 3,
+                    URL = "fh5-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID = 8,
+                    URL = "fifa22-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID = 5,
+                    URL = "gow-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID = 6,
+                    URL = "halomcc-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID = 11,
+                    URL = "rotr-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID = 9,
+                    URL = "sotr-cover.jpg", 
+                    Caption = "Cover"
+                },
 
-                new GameImage{URL = "spiderman-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "spiderman-ss1.jpg", Caption = "Exploration"},
-                new GameImage{URL = "spiderman-ss2.jpg", Caption = "Selfie"},
-                new GameImage{URL = "spiderman-ss3.jpg", Caption = "The Menace"},
+                new GameImage
+                {
+                    VideoGameID = 1,
+                    URL = "spiderman-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID = 1,
+                    URL = "spiderman-ss1.jpg", 
+                    Caption = "Exploration"
+                },
+                new GameImage
+                {
+                    VideoGameID = 1,
+                    URL = "spiderman-ss2.jpg", 
+                    Caption = "Selfie"
+                },
+                new GameImage
+                {
+                    VideoGameID = 1,
+                    URL = "spiderman-ss3.jpg", 
+                    Caption = "The Menace"
+                },
 
-                new GameImage{URL = "tombraider-cover.jpg", Caption = "Cover"},
-                new GameImage{URL = "xcom-cover.jpg", Caption = "Cover"}
+                new GameImage
+                {
+                    VideoGameID = 12,
+                    URL = "tombraider-cover.jpg", 
+                    Caption = "Cover"
+                },
+                new GameImage
+                {
+                    VideoGameID = 7,
+                    URL = "xcom-cover.jpg", 
+                    Caption = "Cover"
+                }
             };
 
             context.GameImages.AddRange(gameImages);
