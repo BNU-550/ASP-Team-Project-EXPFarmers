@@ -7,7 +7,7 @@
     public static class HomePage
     {
         // Constants
-        public const string MY_ACCOUNT = "MyAccount";
+        public const string MY_ACCOUNT = "/MyAccount";
 
         public const string CUSTOMERS = "Customers/Index";
 
