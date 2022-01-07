@@ -5,48 +5,57 @@
     ViewData["Title"] = "Customer Details";
 }
 
-<h1>Customer Details</h1>
+<header class="jumbotron">
+    
+    <h1>Customer Account</h1>
+    <h2>@Model.Person.FullName</h2>
+
+</header>
+
+<div class="card-deck">
+
+  <div class="card">
+    <img src="~/images/person.png" class="card-img-top" 
+        style="width:90%" alt="Person Icon">
+    <partial name="Customers\_PersonView" model="Model.Person"></partial>
+    <a asp-page="Customers/Edit" 
+        asp-route-id="@Model.Person.PersonID" 
+        class="btn btn-success">
+        Edit
+    </a>
+  </div>
+  
+  <div class="card">
+    <img src="~/images/house.jpeg" class="card-img-top" alt="Address Icon">
+    <partial name="Addresses\_AddressView" model="Model.Person.Address"></partial>
+    <a asp-page="Addresses/Edit" 
+        asp-route-id="@Model.Person.AddressID" 
+        class="btn btn-success">
+        Edit
+    </a>
+  </div>
+
+  <div class="card">
+    <img src="~/images/PaymentCard.png" class="card-img-top" alt="Person Icon">
+    <partial name="Customers\_PersonView" model="Model.Person"></partial>
+    <a asp-page="/Edit" 
+        asp-route-id="@Model.Person.PaymentID" 
+        class="btn btn-success">
+        Edit
+    </a>
+  </div>
+</div>
+
+@*<partial name="Customers\_PersonView" model="Model.Person"></partial>
+
+<a asp-page="Customers/Edit" 
+    asp-route-id="@Model.Person.PersonID" 
+    class="btn btn-success">
+    Edit
+</a>
 
 <div>
-    <h4>@Model.Person.FullName</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Person.FirstName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Person.FirstName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Person.LastName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Person.LastName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Person.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Person.Email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Person.ContactNumber)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Person.ContactNumber)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Person.DateOfBirth)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Person.DateOfBirth)
-        </dd>
-    </dl>
-    <a asp-page="./Edit" asp-route-id="@Model.Person.PersonID" 
-        class="btn btn-primary">Edit</a>
-</div>
-<div>
-    <h2>Address</h2>
+    <h4>Address</h4>
     <p>
         House Number: @Model.Person.Address.HouseNo<br />
         House Name: @Model.Person.Address.HouseName<br />
@@ -55,21 +64,19 @@
         Postcode: @Model.Person.Address.Postcode
     </p>
     <a asp-page="Addresses/Edit" asp-route-id="@Model.Person.AddressID" 
-        class="btn btn-primary">Edit</a>
+        class="btn btn-success">Edit</a>
 </div>
 <div>
-    <h2>Payment Card</h2>
+    <h4>Payment Card</h4>
     <p>
         Card Number: @Model.Person.Payment.PaymentCardNo<br />
-@*       Start Month: @Model.Person.Payment.CardStartMonth<br />
-        Start Year: @Model.Person.Payment.CardStartYear<br />*@
+       Start Month: @Model.Person.Payment.CardStartMonth<br />
+        Start Year: @Model.Person.Payment.CardStartYear<br />
         Expiry Month: @Model.Person.Payment.CardExpiryMonth<br />
         Expiry Year: @Model.Person.Payment.CardExpiryYear<br />
         CSV: @Model.Person.Payment.CardCSV
     </p>
     <a asp-page="Payments/Edit" asp-route-id="@Model.Person.PaymentID" 
-        class="btn btn-primary">Edit</a>
-</div>
-<div>
-    <a asp-page="./Index" class="btn btn-success">Back to List</a>
-</div>
+        class="btn btn-success">Edit</a>
+</div>*@
+

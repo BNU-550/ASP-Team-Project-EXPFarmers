@@ -1,21 +1,45 @@
 ﻿@using ASP_Razor_TeamEXPFarmers.Models
 @model Person
 
-<header class="jumbotron">
-    <h1>
-        @if(Model.IsCustomer)
-        {
-            <span>Customer: </span>
-        }
-        else if(Model.IsStaff)
-        {
-            <span>Staff: </span>
-        }
-        @Model.FullName
-    </h1>
-</header>
 
-<section>
+<div class="card-body">
+    <h5 class="card-title">Personal Details</h5>
+    <hr />
+    <div class="card-text">
+        <strong>
+            @Html.DisplayNameFor(model => model.FirstName) :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.FirstName)
+        </span><br/>
+        <strong>
+            @Html.DisplayNameFor(model => model.LastName) :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.LastName)
+        </span><br/>
+        <strong>
+            Phone :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.ContactNumber)
+        </span><br/>
+        <strong>
+            DoB :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </span><br/>
+        <strong>
+            Email :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.Email)
+        </span><br/>
+    </div>
+</div>
+
+@*<section>
     <h4>Personal Details</h4>
     <hr />
     <dl class="row">
@@ -50,6 +74,6 @@
             @Html.DisplayFor(model => model.DateOfBirth)
         </dd>
     </dl>
-</section>
+</section>*@
 
 

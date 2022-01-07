@@ -38,8 +38,10 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Customers
             {
                 return NotFound();
             }
-           ViewData["AddressID"] = new SelectList(_context.Address, "AddressID", "City");
-           ViewData["PaymentID"] = new SelectList(_context.Payment, "PaymentID", "PaymentCardNo");
+           
+            ViewData["AddressID"] = new SelectList(_context.Address, "AddressID", "City");
+            ViewData["PaymentID"] = new SelectList(_context.Payment, "PaymentID", "PaymentCardNo");
+            
             return Page();
         }
 
@@ -70,7 +72,14 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Customers
                 }
             }
 
-            return RedirectToPage("./Index");
+            if(HomePage.Name == HomePage.CUSTOMERS)
+            {
+                return RedirectToPage("./Index");
+            }
+            else
+            {
+                return RedirectToPage("/MyAccount");
+            }
         }
 
         private bool PersonExists(int id)

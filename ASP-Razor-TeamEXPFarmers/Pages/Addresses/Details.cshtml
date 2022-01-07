@@ -2,47 +2,16 @@
 @model ASP_Razor_TeamEXPFarmers.Pages.Addresses.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Address Details";
 }
+<header class="jumbotron">
 
-<h1>Details</h1>
+    <h1>Address Details</h1>
 
-<div>
-    <h4>Address</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Address.HouseNo)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Address.HouseNo)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Address.HouseName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Address.HouseName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Address.Street)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Address.Street)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Address.City)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Address.City)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Address.Postcode)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Address.Postcode)
-        </dd>
-    </dl>
-</div>
+</header>
+
+<partial name="_AddressView" model="Model.Address"/>
+
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Address.AddressID" class="btn btn-primary">Edit</a> |
     <a asp-page="./Index" class="btn btn-success">Back to List</a>

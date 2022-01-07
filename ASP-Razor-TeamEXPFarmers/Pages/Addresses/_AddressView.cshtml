@@ -1,0 +1,73 @@
+﻿@using ASP_Razor_TeamEXPFarmers.Models
+@model Address
+
+<div class="card-body">
+    <h5 class="card-title">Address Details</h5>
+    <hr />
+    <div class="card-text">
+        <strong>
+            @Html.DisplayNameFor(model => model.HouseNo) :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.HouseNo)
+        </span><br/>
+        <strong>
+            @Html.DisplayNameFor(model => model.HouseName) :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.HouseName)
+        </span><br/>
+        <strong>
+            @Html.DisplayNameFor(model => model.Street) :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.Street)
+        </span><br/>
+        <strong>
+            @Html.DisplayNameFor(model => model.City) :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.City)
+        </span><br/>
+        <strong>
+            @Html.DisplayNameFor(model => model.Postcode) :
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.Postcode)
+        </span><br/>
+    </div>
+</div>
+
+@*<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.HouseNo)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.HouseNo)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.HouseName)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.HouseName)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Street)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Street)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.City)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.City)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Postcode)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Postcode)
+    </dd>
+</dl>*@
+

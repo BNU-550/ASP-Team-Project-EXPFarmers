@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -14,9 +11,9 @@ namespace ASP_Razor_TeamEXPFarmers.Pages
     [Authorize]
     public class MyAccountModel : PageModel
     {
-        private readonly ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public MyAccountModel(ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext context)
+        public MyAccountModel(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -30,12 +27,15 @@ namespace ASP_Razor_TeamEXPFarmers.Pages
 
             Person = await _context.Customers
                 .Include(p => p.Address)
-                .Include(p => p.Payment).FirstOrDefaultAsync(m => m.Email == name);
+                .Include(p => p.Payment)
+                .FirstOrDefaultAsync(m => m.Email == name);
 
             if (Person == null)
             {
+                //todo: goto Customer Create
                 return NotFound();
             }
+
             return Page();
         }
     }

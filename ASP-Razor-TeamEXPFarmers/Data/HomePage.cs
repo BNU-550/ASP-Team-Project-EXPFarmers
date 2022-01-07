@@ -9,6 +9,8 @@
         // Constants
         public const string MY_ACCOUNT = "MyAccount";
 
+        public const string CUSTOMERS = "Customers/Index";
+
         // Properties
         public static string Name { get; set; }
     }
