@@ -31,9 +31,17 @@ namespace ASP_Razor_TeamEXPFarmers
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(options =>
+                options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+
+            // TODO: Fix this authorisation, see:
+            // https://docs.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-5.0
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireStaffRole", policy => policy.RequireRole("Staff"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

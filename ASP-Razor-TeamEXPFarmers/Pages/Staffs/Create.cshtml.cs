@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ASP_Razor_TeamEXPFarmers.Data;
 using ASP_Razor_TeamEXPFarmers.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ASP_Razor_TeamEXPFarmers.Pages.Staffs
 {
+    [Authorize(Policy = "RequireStaffRole")]
     public class CreateModel : PageModel
     {
         private readonly ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext _context;
