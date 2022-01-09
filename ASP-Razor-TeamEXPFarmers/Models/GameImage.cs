@@ -7,7 +7,7 @@ namespace ASP_Razor_TeamEXPFarmers.Models
     /// caption and a link to the video game it's related to.
     /// 
     /// Created by Jason Huggins
-	/// Modified by Jason Huggins (15/12/2021)
+	/// Modified by Jason Huggins (09/01/2022)
     /// </summary>
     public class GameImage
     {
@@ -25,12 +25,13 @@ namespace ASP_Razor_TeamEXPFarmers.Models
         /// <summary>
         /// The image's file path/URL.
         /// </summary>
+        [StringLength(200), Required]
         public string URL { get; set; }
 
         /// <summary>
         /// The image's caption.
         /// </summary>
-        [StringLength(50)]
+        [StringLength(50), Required]
         public string Caption { get; set; }
 
         // Navigation properties
