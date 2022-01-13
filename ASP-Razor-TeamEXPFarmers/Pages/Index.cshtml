@@ -56,7 +56,7 @@
             {
                 if (colNo > 0 && colNo % 3 == 0)
                 {
-                    @:</div><div class="row">
+                    @:</div><br/><div class="row">
                 }
         
                 <div class="col-lg-4">
@@ -65,6 +65,7 @@
                         height=350 width=200 alt="Game cover">
                       <div class="card-body">
                         <h5 class="card-title">@item.Title</h5>
+                        <h6 class="card-subtitle">£@item.Price.ToString("0.00")</h6>
                         <p id="game-summary" class="card-text">@item.Description</p>
                         <a asp-page="VideoGames/Details" asp-route-id="@item.VideoGameID" 
                             class="btn btn-primary">View Game</a>
