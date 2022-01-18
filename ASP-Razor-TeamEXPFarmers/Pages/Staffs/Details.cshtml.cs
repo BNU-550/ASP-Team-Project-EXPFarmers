@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ASP_Razor_TeamEXPFarmers.Pages.Staffs
 {
-    [Authorize]
+    [Authorize(Roles = "Staff")]
     public class DetailsModel : PageModel
     {
         private readonly ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext _context;

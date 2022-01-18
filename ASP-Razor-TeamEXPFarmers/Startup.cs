@@ -33,11 +33,12 @@ namespace ASP_Razor_TeamEXPFarmers
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<IdentityUser>(options =>
                 options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
+                .AddRoleManager<RoleManager<IdentityRole>>()
+                .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
 
-            // TODO: Fix this authorisation, see:
-            // https://docs.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-5.0
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("RequireStaffRole", policy => policy.RequireRole("Staff"));

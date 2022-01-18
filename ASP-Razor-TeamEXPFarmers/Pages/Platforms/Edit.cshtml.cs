@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ASP_Razor_TeamEXPFarmers.Pages.Platforms
 {
-    [Authorize]
+    [Authorize(Roles = "Staff")]
     public class EditModel : PageModel
     {
         private readonly ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext _context;

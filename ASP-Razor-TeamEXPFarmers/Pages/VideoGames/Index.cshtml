@@ -9,7 +9,7 @@
 <h1>List of Video Games</h1>
 
 <p>
-    <a asp-page="Create">Add New Video Game</a>
+    <a asp-page="Create" class="btn btn-success">Add New Video Game</a>
 </p>
 <table class="table">
     <thead>
@@ -87,9 +87,12 @@
                 @Html.DisplayFor(modelItem => item.InStockQuantity)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.VideoGameID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.VideoGameID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.VideoGameID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.VideoGameID"
+                    class="btn btn-success">Edit</a>
+                <a asp-page="./Details" asp-route-id="@item.VideoGameID"
+                    class="btn btn-info">Details</a>
+                <a asp-page="./Delete" asp-route-id="@item.VideoGameID"
+                    class="btn btn-danger">Delete</a>
             </td>
         </tr>
 }

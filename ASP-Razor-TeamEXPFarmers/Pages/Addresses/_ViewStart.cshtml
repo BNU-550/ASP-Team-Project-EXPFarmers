@@ -1,3 +1,6 @@
 ﻿@{
-    Layout = "_StaffLayout";
+    if (User.IsInRole("Staff"))
+    {
+        Layout = "_StaffLayout";
+    }
 }
