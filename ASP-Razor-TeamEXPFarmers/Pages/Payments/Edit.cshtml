@@ -1,0 +1,60 @@
+﻿@page
+@model ASP_Razor_TeamEXPFarmers.Pages.Payments.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Payment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Payment.PaymentID" />
+            <div class="form-group">
+                <label asp-for="Payment.PaymentCardNo" class="control-label"></label>
+                <input asp-for="Payment.PaymentCardNo" class="form-control" />
+                <span asp-validation-for="Payment.PaymentCardNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Payment.CardStartMonth" class="control-label"></label>
+                <input asp-for="Payment.CardStartMonth" class="form-control" />
+                <span asp-validation-for="Payment.CardStartMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Payment.CardStartYear" class="control-label"></label>
+                <input asp-for="Payment.CardStartYear" class="form-control" />
+                <span asp-validation-for="Payment.CardStartYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Payment.CardExpiryMonth" class="control-label"></label>
+                <input asp-for="Payment.CardExpiryMonth" class="form-control" />
+                <span asp-validation-for="Payment.CardExpiryMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Payment.CardExpiryYear" class="control-label"></label>
+                <input asp-for="Payment.CardExpiryYear" class="form-control" />
+                <span asp-validation-for="Payment.CardExpiryYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Payment.CardCSV" class="control-label"></label>
+                <input asp-for="Payment.CardCSV" class="form-control" />
+                <span asp-validation-for="Payment.CardCSV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
