@@ -13,27 +13,9 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Staff.JobPosition" class="control-label"></label>
-                <input asp-for="Staff.JobPosition" class="form-control" />
-                <span asp-validation-for="Staff.JobPosition" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Staff.Salary" class="control-label"></label>
-                <input asp-for="Staff.Salary" class="form-control" />
-                <span asp-validation-for="Staff.Salary" class="text-danger"></span>
-            </div>
             <input type="hidden" asp-for="Staff.PersonID" />
-            <div class="form-group">
-                <label asp-for="Staff.AddressID" class="control-label"></label>
-                <select asp-for="Staff.AddressID" class="form-control" asp-items="ViewBag.AddressID"></select>
-                <span asp-validation-for="Staff.AddressID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Staff.PaymentID" class="control-label"></label>
-                <select asp-for="Staff.PaymentID" class="form-control" asp-items="ViewBag.PaymentID"></select>
-                <span asp-validation-for="Staff.PaymentID" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="Staff.AddressID" />
+            <input type="hidden" asp-for="Staff.PaymentID" />
             <div class="form-group">
                 <label asp-for="Staff.FirstName" class="control-label"></label>
                 <input asp-for="Staff.FirstName" class="form-control" />
@@ -59,16 +41,18 @@
                 <input asp-for="Staff.DateOfBirth" class="form-control" />
                 <span asp-validation-for="Staff.DateOfBirth" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Staff.IsCustomer" /> @Html.DisplayNameFor(model => model.Staff.IsCustomer)
-                </label>
+            <div class="form-group">
+                <label asp-for="Staff.JobPosition" class="control-label"></label>
+                <input asp-for="Staff.JobPosition" class="form-control" />
+                <span asp-validation-for="Staff.JobPosition" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Staff.IsStaff" /> @Html.DisplayNameFor(model => model.Staff.IsStaff)
-                </label>
+            <div class="form-group">
+                <label asp-for="Staff.Salary" class="control-label"></label>
+                <input asp-for="Staff.Salary" class="form-control" />
+                <span asp-validation-for="Staff.Salary" class="text-danger"></span>
             </div>
+            <input type="hidden" asp-for="Staff.IsCustomer" />
+            <input type="hidden" asp-for="Staff.IsStaff" />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" /> 
             </div>

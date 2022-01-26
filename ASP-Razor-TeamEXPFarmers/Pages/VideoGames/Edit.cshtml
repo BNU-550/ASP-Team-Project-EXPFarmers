@@ -1,4 +1,5 @@
 ﻿@page
+@using ASP_Razor_TeamEXPFarmers.Models
 @model ASP_Razor_TeamEXPFarmers.Pages.VideoGames.EditModel
 
 @{
@@ -32,22 +33,26 @@
             </div>
             <div class="form-group">
                 <label asp-for="VideoGame.Genre" class="control-label"></label>
-                <select asp-for="VideoGame.Genre" class="form-control"></select>
+                <select asp-items="@Html.GetEnumSelectList<Genre>()"
+                    asp-for="VideoGame.Genre" class="form-control"></select>
                 <span asp-validation-for="VideoGame.Genre" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="VideoGame.PEGI" class="control-label"></label>
-                <select asp-for="VideoGame.PEGI" class="form-control"></select>
+                <select asp-items="@Html.GetEnumSelectList<PEGI>()" 
+                    asp-for="VideoGame.PEGI" class="form-control"></select>
                 <span asp-validation-for="VideoGame.PEGI" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="VideoGame.DifficultyLevel" class="control-label"></label>
-                <select asp-for="VideoGame.DifficultyLevel" class="form-control"></select>
+                <select asp-items="@Html.GetEnumSelectList<DifficultyLevel>()" 
+                    asp-for="VideoGame.DifficultyLevel" class="form-control"></select>
                 <span asp-validation-for="VideoGame.DifficultyLevel" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="VideoGame.MatureContentLevel" class="control-label"></label>
-                <select asp-for="VideoGame.MatureContentLevel" class="form-control"></select>
+                <select asp-items="@Html.GetEnumSelectList<MatureContentLevel>()"
+                    asp-for="VideoGame.MatureContentLevel" class="form-control"></select>
                 <span asp-validation-for="VideoGame.MatureContentLevel" class="text-danger"></span>
             </div>
             <div class="form-group">

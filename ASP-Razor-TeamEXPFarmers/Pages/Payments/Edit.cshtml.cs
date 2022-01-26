@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ASP_Razor_TeamEXPFarmers.Data;
 using ASP_Razor_TeamEXPFarmers.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ASP_Razor_TeamEXPFarmers.Pages.Payments
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private readonly ASP_Razor_TeamEXPFarmers.Data.ApplicationDbContext _context;
@@ -66,7 +68,14 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Payments
                 }
             }
 
-            return RedirectToPage("./Index");
+            if (HomePage.Name == HomePage.CUSTOMERS)
+            {
+                return RedirectToPage("./Index");
+            }
+            else
+            {
+                return RedirectToPage("/MyAccount");
+            }
         }
 
         private bool PaymentExists(int id)

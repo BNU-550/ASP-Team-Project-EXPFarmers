@@ -1,0 +1,45 @@
+﻿@using ASP_Razor_TeamEXPFarmers.Models
+@model Payment
+
+<div class="card-body">
+    <h5 class="card-title">Payment Details</h5>
+    <hr />
+    <div class="card-text">
+        <strong>
+            @Html.DisplayNameFor(model => model.PaymentCardNo) - 
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.PaymentCardNo) 
+        </span><br />
+        <strong>
+            @Html.DisplayNameFor(model => model.CardStartMonth) - 
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.CardStartMonth) 
+        </span><br />
+        <strong>
+            @Html.DisplayNameFor(model => model.CardStartYear) - 
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.CardStartYear)
+        </span><br />
+        <strong>
+            @Html.DisplayNameFor(model => model.CardExpiryMonth) - 
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.CardExpiryMonth)
+        </span><br />   
+        <strong>
+            @Html.DisplayNameFor(model => model.CardExpiryYear) - 
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.CardExpiryYear)
+        </span><br />
+        <strong>
+            @Html.DisplayNameFor(model => model.CardCSV) - 
+        </strong>
+        <span>
+            @Html.DisplayFor(model => model.CardCSV)
+        </span><br />
+    </div>
+</div>

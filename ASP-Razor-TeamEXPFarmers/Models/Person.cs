@@ -22,8 +22,8 @@ namespace ASP_Razor_TeamEXPFarmers.Models
 		public int PersonID { get; set; }
 
 		// Foreign keys
-		public int AddressID { get; set; }
-		public int PaymentID { get; set; }
+		public Nullable<int> AddressID { get; set; }
+		public Nullable<int> PaymentID { get; set; }
 
 		/// <summary>
 		/// The person's first name.

@@ -32,8 +32,8 @@
     <div class="card">
         <img src="~/images/paymentcard.png" class="card-img-top"
             style="width:100%" alt="Payment Card Icon" />
-        <partial name="Customers\_PersonView" model="Model.Person" />
-        <a asp-page="/Edit" asp-route-id="@Model.Person.PaymentID"
+        <partial name="Payments\_PaymentView" model="Model.Person.Payment" />
+        <a asp-page="Payments/Edit" asp-route-id="@Model.Person.PaymentID"
             class="btn btn-success">Edit</a>
     </div>
 

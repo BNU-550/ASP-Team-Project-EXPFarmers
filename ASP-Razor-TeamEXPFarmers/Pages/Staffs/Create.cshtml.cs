@@ -39,6 +39,9 @@ namespace ASP_Razor_TeamEXPFarmers.Pages.Staffs
                 return Page();
             }
 
+            Staff.IsCustomer = false;
+            Staff.IsStaff = true;
+
             _context.Staff.Add(Staff);
             await _context.SaveChangesAsync();
 
